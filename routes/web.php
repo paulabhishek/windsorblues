@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManageController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +20,11 @@ Route::get('/', function () {
     return view('master');
 });
 
-Route::get('manage', [ManageController::class, 'index']);
+Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
 
-Route::get('member', function () {
-    return 'member';
-});
+Route::get('member', [MemberController::class, 'index'])->name('member.index');
 
-Route::get('events', function () {
-    return 'events';
-});
+Route::get('events', [EventController::class, 'index'])->name('member.index');
 
 
 Route::get('museum', function () {
