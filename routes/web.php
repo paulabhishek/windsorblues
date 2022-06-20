@@ -24,7 +24,7 @@ Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
 
 Route::get('member', [MemberController::class, 'index'])->name('member.index');
 
-Route::get('events', [EventController::class, 'index'])->name('member.index');
+Route::get('events', [EventController::class, 'index'])->name('events.index');
 
 
 Route::get('museum', function () {

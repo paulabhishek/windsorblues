@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class MemberController extends Controller
 {
     public function index(){
-        return 'Member Page';
+        return view('members.index');
     }
 }
