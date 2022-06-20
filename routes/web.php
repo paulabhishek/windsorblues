@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ManageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ Route::get('/', function () {
     return view('master');
 });
 
-Route::get('manage', function () {
-    return 'manager';
-});
+Route::get('manage', [ManageController::class, 'index']);
 
 Route::get('member', function () {
     return 'member';
