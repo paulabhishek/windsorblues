@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('master');
 });
+
+Route::get('manage', function () {
+    return 'manager';
+});
+
+Route::get('member', function () {
+    return 'member';
+});
+
+Route::get('events', function () {
+    return 'events';
+});
+
+
+Route::get('museum', function () {
+    return 'museum';
+});
+
+Route::get('contact', function () {
+    return 'contact';
+});
+
+Route::get('about', function () {
+    return 'about';
+});
