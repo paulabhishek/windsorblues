@@ -20,6 +20,7 @@ return new class extends Migration
             $table-> string('email');
             $table-> string('phone');
             $table-> string('newsletter');
+            $table->bigInteger('user_id')->unsigned();
         });
     }
 
