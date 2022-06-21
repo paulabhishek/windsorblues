@@ -18,7 +18,11 @@ return new class extends Migration
             $table->timestamps();
             $table-> string('name');
             $table-> string('location');
-            $table-> string('image');
+            $table-> string('description');
+            $table-> string('artist');
+            $table-> string('yt_url');
+
+
         });
     }
 

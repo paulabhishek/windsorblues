@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ManageController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EventController;
 
@@ -19,8 +18,9 @@ use App\Http\Controllers\EventController;
 Route::get('/', function () {
     return view('master');
 });
+//Route::resource('manage', ManageController::class);
 
-Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
+//Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
 
 Route::get('member', [MemberController::class, 'index'])->name('member.index');
 
