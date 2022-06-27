@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EventController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +15,16 @@ use App\Http\Controllers\EventController;
 */
 
 Route::get('/', function () {
-    return view('master');
+    return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
 //Route::resource('manage', ManageController::class);
 
 //Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
