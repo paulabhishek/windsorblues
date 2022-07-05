@@ -32,6 +32,7 @@ require __DIR__.'/auth.php';
 Route::get('member', [MemberController::class, 'index'])->name('member.index');
 
 Route::get('events', [EventController::class, 'index'])->name('events.index');
+Route::get('events/{id}', [EventController::class, 'show'])->name('events.show');
 
 
 Route::get('museum', function () {

@@ -9,6 +9,9 @@ class MemberController extends Controller
 {
     public function index(){
         $members = Member::get();
+        return view('members.index', compact("members"));
         dd($members);
+
+
     }
 }

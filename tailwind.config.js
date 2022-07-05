@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {Partial<ThemeConfig & {extend: Partial<ThemeConfig>}>} */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
         // './storage/framework/views/*.php',
         // './resources/views/**/*.blade.php',
 
-        "./resources/**/*.blade.php",
+        "./resources/views/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
