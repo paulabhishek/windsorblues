@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EventController;
@@ -18,6 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::post('/member', function () {
+    $data = request(['first_name', 'last_name', 'phone', 'email']);
+    return $data;
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -34,6 +41,7 @@ Route::get('member', [MemberController::class, 'index'])->name('member.index');
 Route::get('events', [EventController::class, 'index'])->name('events.index');
 Route::get('events/{id}', [EventController::class, 'show'])->name('events.show');
 
+Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 
 Route::get('museum', function () {
     return 'museum';

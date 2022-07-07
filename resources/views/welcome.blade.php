@@ -301,8 +301,8 @@
 
 <nav class="bg-white border-gray-200 px-0 sm:px-4 py-2.5 rounded dark:bg-gray-800">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://flowbite.com/" class="flex items-center">
-            <img src="images/IMG_20220701_174812__02.png" class="mr-3 h-6 sm:h-9" style="height: 110px" alt="Flowbite Logo">
+        <a href="https://windsorblues.ca/" class="flex items-center">
+            <img src="images/logo_man_with_guitar.png" class="mr-3 h-6 sm:h-9" style="height: 200px" alt="Windsor Blues logo">
 {{--            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-red">Flowbite</span>--}}
         </a>
         <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
@@ -378,13 +378,14 @@
 </div>
 <h1 class="font-semibold text-4xl text-center mt-5 mb-3 ">Our Mission Statement</h1>
 <p class="mb-5 mx-5 text-sm font-medium text-gray-500 dark:text-gray-300 xl:mx-40">
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search
-</p>
+    The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
 
 <h1 class="font-semibold text-4xl text-center mt-5 mb-3 ">History</h1>
 <p class="mb-5 mx-5 text-sm font-medium text-gray-500 dark:text-gray-300 xl:mx-40">
-    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search
-</p>
+    The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012.
+    We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
+    In addition to hosting world class blues, rhythm & blues and roots artists on a regular basis we also host and/or support various benefits and charity fundraisers each year.
+    We annually hold a regional competition for the Road to Memphis challenge for local blues artists.  The winner represents our Society at the international competition in Memphis.</p>
 
 <footer class="bg-gray-800">
     <div class="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
