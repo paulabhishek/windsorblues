@@ -22,6 +22,7 @@ return new class extends Migration
             $table-> string('artist');
             $table-> string('yt_url');
             $table->bigInteger('user_id')->unsigned();
+            $table->date('date');
 
 
         });

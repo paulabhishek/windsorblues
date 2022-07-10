@@ -20,10 +20,7 @@ Route::get('/', function () {
 });
 
 
-Route::post('/member', function () {
-    $data = request(['first_name', 'last_name', 'phone', 'email']);
-    return $data;
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -36,10 +33,19 @@ require __DIR__.'/auth.php';
 
 //Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
 
-Route::get('member', [MemberController::class, 'index'])->name('member.index');
+Route::view('membership', 'members.memberForm')->name('form');
+Route::post('/send', [MemberController::class, 'sendForm'])->name('send.form');
+//Route::get('members', [MemberController::class, 'index'])->name('member.index');
 
-Route::get('events', [EventController::class, 'index'])->name('events.index');
-Route::get('events/{id}', [EventController::class, 'show'])->name('events.show');
+Route::get('event/create', [EventController::class, 'create'])->name('event.create');
+Route::post('event', [EventController::class, 'store'])->name('event.store');
+Route::get('event', [EventController::class, 'index'])->name('event.index');
+Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
+
+Route::get('event/{id}/edit', [EventController::class, 'edit'])->name('event.edit');
+Route::patch('event/{id}', [EventController::class, 'update'])->name('event.update');
+Route::delete('event/{id}', [EventController::class, 'destroy'])->name('event.delete');
+
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 

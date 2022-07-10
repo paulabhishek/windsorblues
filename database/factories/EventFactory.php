@@ -25,6 +25,7 @@ class EventFactory extends Factory
             'artist' => $this->faker->name(),
             'yt_url' => $this->faker->sentence(),
             'user_id' => $this->faker->randomElement($userIds),
+            'date' => $this->faker->date
 
 
         ];

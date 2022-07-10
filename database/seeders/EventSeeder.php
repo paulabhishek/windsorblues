@@ -14,6 +14,7 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
+
         factory('App/Event', 10)->create();
     }
 }
