@@ -32,7 +32,6 @@ class EventController extends Controller
     public function destroy(Event $id){
         $id->delete();
         return redirect('event');
-
     }
     public function edit($event){
         $event = Event::findorFail($event);

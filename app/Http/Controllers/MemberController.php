@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MembershipMail;
 use App\Models\Member;
+use App\Models\User;
 use http\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -12,31 +14,49 @@ class MemberController extends Controller
 {
     public function index(){
         $members = Member::get();
-        return view('members.index', compact("members"));
+        return view('member.index', compact("members"));
         dd($members);
     }
+    public function destroy(Member $id){
+        $id->delete();
+        return redirect('member');
+    }
 
-    public function sendForm(Request $request){
-        $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'phone'=>'required',
-            'email'=>'required'
-        ]);
+    public function create(){
+        $users = User::all()->pluck('id');
+        return view('member.create', compact("users"));
+    }
+    public function show($member){
+        $member = Member::find($member);
+        return view('member.show', compact("member"));
+    }
 
-        $formData = [
-        'first_name'=>$request->first_name,
-        'last_name'=>$request->last_name,
-        'phone'=>$request->phone,
-        'email'=>$request->email
-        ];
-        Mail::send('welcome',$formData, function($message)use($formData){
-            $message->to('1998vabhishekpaul@gmail.com')
-                ->from($formData['email'], $formData['first_name']);
-        });
-        return redirect()->back()->with('success', 'Email sent');
+    public function store(Request $request){
+        $user = User::findorFail($request->user_id);
+        $member = new member($request->all());
+        $user->members()->save($member);
+
+        return redirect('member');
+    }
+
+    public function edit($member){
+        $member = Member::findorFail($member);
+        return view('member.edit', compact("member"));
+    }
+    public function update(Request $request, $member){
+        $formdata = $request->all();
+        $member = Member::findorfail($member);
+        $member->update($formdata);
+        return redirect('member');
 
 
-//        return view('members.memberForm',);
+    }
+
+    public function showForm(){
+        return view('membership.index');
+    }
+    public function submit(Request $request){
+        Mail::to('1998vabhishekpaul@gmail.com')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email ));
+
     }
 }

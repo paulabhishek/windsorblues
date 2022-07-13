@@ -1,6 +1,4 @@
 <!doctype html>
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +13,7 @@
 </head>
 <body>
 
-<form class="mx-auto w-full max-w-lg min-h-screen items-center justify-start mt-8" action="{{route('send.form')}}" method="post" enctype="multipart/form-data">
+<form class="mx-auto w-full max-w-lg min-h-screen items-center justify-start mt-8" action="" method="post" enctype="multipart/form-data">
     @csrf
     <div class="grid xl:grid-cols-2 xl:gap-6">
         <div class="relative z-0 w-full mb-6 group">

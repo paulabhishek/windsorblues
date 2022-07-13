@@ -19,7 +19,8 @@ return new class extends Migration
             $table-> string('name');
             $table-> string('email');
             $table-> string('phone');
-            $table-> string('newsletter');
+            $table-> boolean('newsletter');
+            $table-> boolean('terms');
             $table->bigInteger('user_id')->unsigned();
         });
     }
