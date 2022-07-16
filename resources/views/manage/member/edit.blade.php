@@ -1,7 +1,7 @@
 
 
 <h1>Edit Member</h1>
-<form method="POST" action="{{ route ('member.update', $member->id) }}">
+<form method="POST" action="{{ route ('manage.member.update', $member->id) }}">
     {{method_field('PATCH')}}
     {{csrf_field()}}
     <label for="name">Member Name:</label>

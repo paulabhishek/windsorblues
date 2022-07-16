@@ -1,5 +1,5 @@
 <h1>Create Event</h1>
-<form method="POST" action="{{ route ('event.store') }}">
+<form method="POST" action="{{ route ('manage.event.store') }}">
     {{ csrf_field() }}
     <label for="name">Event Name:</label>
     <input name="name" type="text" ><br>

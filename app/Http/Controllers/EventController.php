@@ -14,10 +14,10 @@ class EventController extends Controller
         dd($events);
     }
 
-    public function show($event){
-        $event = Event::find($event);
-        return view('events.show', compact("event"));
-    }
+//    public function show($event){
+//        $event = Event::find($event);
+//        return view('events.show', compact("event"));
+//    }
     public function create(){
         $users = User::all()->pluck('id');
         return view('events.create', compact("users"));
@@ -42,7 +42,6 @@ class EventController extends Controller
         $event = Event::findorfail($event);
         $event->update($formdata);
         return redirect('event');
-
 
     }
 }

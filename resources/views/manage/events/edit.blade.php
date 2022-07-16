@@ -1,6 +1,6 @@
 <h1>Edit Event</h1>
 
-<form method="POST" action="{{ route('event.update', $event->id) }}">
+<form method="POST" action="{{ route('manage.event.update', $event->id) }}">
     {{method_field('PATCH')}}
     {{csrf_field()}}
     <label for="name">Event Name:</label>

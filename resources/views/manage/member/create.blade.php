@@ -1,5 +1,5 @@
 <h1>Create Member</h1>
-<form method="POST" action="{{ route ('member.store') }}">
+<form method="POST" action="{{ route ('manage.member.store') }}">
     {{ csrf_field() }}
     <label for="name">Member Name:</label>
     <input name="name" type="text" ><br>
