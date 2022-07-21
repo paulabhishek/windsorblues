@@ -1,4 +1,5 @@
-@extends('welcome')
+@include('includes.header')
+
 <h1 class="text-3xl font-bold underline">Events page</h1>
 <!-- This example requires Tailwind CSS v2.0+ -->
 @foreach ($events as $object)
@@ -12,5 +13,6 @@ user_id: {{ $object->user_id }}<br><br><br>
 
 @endforeach
 
+@include('includes.footer')
 
 

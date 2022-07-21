@@ -1,17 +1,20 @@
-<!doctype html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
-    {{--    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>--}}
-    {{--    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>--}}
-    {{--    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>--}}
-    {{--    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">--}}
-    <title>Members</title>
-</head>
-<body>
+{{--<!doctype html>--}}
+{{--<head>--}}
+{{--    <meta charset="UTF-8">--}}
+{{--    <meta name="viewport" content="width=device-width, initial-scale=1.0">--}}
+{{--    <link rel="stylesheet" href="{{asset('css/app.css')}}">--}}
+
+{{--    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />--}}
+{{--    --}}{{--    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>--}}
+{{--    --}}{{--    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>--}}
+
+{{--    <title>Members</title>--}}
+{{--</head>--}}
+{{--<body>--}}
+{{--<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />--}}
+{{--<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>--}}
+{{--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>--}}
+@include('includes.header')
 
 <form class="mx-auto w-full max-w-lg min-h-screen items-center justify-start mt-8" action="" method="post" enctype="multipart/form-data">
     @csrf
@@ -46,5 +49,7 @@
 </form>
 
 <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-</body>
-</html>
+@include('includes.footer')
+{{--<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>--}}
+{{--</body>--}}
+{{--</html>--}}
