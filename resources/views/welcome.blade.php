@@ -1,98 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-        <style>
-            li {
-                margin-bottom: 10px;
-            }
-
-            .cool-link {
-                display: inline-block;
-                color: #8e1212;
-                text-decoration: none;
-            }
-
-            .cool-link::after {
-                content: '';
-                display: block;
-                width: 0;
-                height: 2px;
-                background: red;
-                transition: width .3s;
-            }
-
-            .cool-link:hover::after {
-                width: 100%;
-            transition: width .3s;
-            }
-
-            h1, h3{
-                text-decoration: underline;
-                text-decoration-color: red;
-            }
-
-        </style>
-
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    </head>
-    <body>
-{{--    <div class="container">--}}
-{{--        <div class="row text-center">--}}
-{{--            <div class="col-lg-12 col-md-8">--}}
-{{--                <div class="col-sm-8 bg-primary">--}}
-{{--                    <img width="350" height="150" src="images/IMG_20220701_174812__02.png"/>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class=" col-md-2 col-sm-4 ">--}}
-{{--                <div class="navbar navbar-expand-lg navbar-primary bg-light">--}}
-{{--                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">--}}
-{{--                        <span class="navbar-toggler-icon"></span>--}}
-{{--                    </button>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-<div class="row text-center">
-    <div class="col-lg-12 col-md-12 col-sm-12 ">
-        <img width="350" height="150" src="images/IMG_20220701_174812__02.png"/>
-    </div>
-</div>
-    <nav class="navbar navbar-expand-lg navbar-primary " aria-label="Tenth navbar example">
-        <div class="container-fluid ">
-            <button class="navbar-toggler collapsed pull-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" style="">
-                <ul class="navbar-nav">
-                    <li class="nav-item px-4">
-                        <a class="nav-link cool-link" href="#">Become a Member</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link cool-link" href="#">Events</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link cool-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link cool-link" href="#">Blues in Schools</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link cool-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link cool-link" href="#">Museum</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
+@include('includes.header')
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -155,7 +61,7 @@
 
 <div class="container mt-4">
     <div class="row ">
-        <div class="col-sm-12 col-lg-6 col-md-6 text-center">
+        <div class="col-sm-12 col-lg-6 col-md-6 text-center .d-sm-none .d-md-block">
             <div class="mt-2">
                 <img src="images/logo_man_with_guitar.png" width="350" height="275">
             </div>
@@ -251,36 +157,6 @@
         </blockquote>
     </div>
 
-    <div class="container">
-        <footer class="row py-5 my-5 border-top ">
-            <div class="col-lg-4 col-sm-6 col-md-4 px-3">
-                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                    <img src="images/IMG_20220701_174812__02.png" width="250" height="100"/>
-                </a>
-                <p class="text-muted">© 2022</p>
-            </div>
 
-            <div class="col-lg-4 col-sm-3 col-md-4 px-3">
-                <h5>Company</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Events</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blues in Schools</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Museum</a></li>
-                </ul>
-            </div>
+@include('includes.footer')
 
-            <div class="col-lg-4 col-sm-3 col-md-4 px-3">
-                <h5>Help</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
-
-                </ul>
-            </div>
-
-        </footer>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    </body>
-</html>

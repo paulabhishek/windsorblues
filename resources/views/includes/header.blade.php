@@ -39,6 +39,7 @@
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
 </head>
 <body>
 {{--    <div class="container">--}}
@@ -70,13 +71,13 @@
         <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" style="">
             <ul class="navbar-nav">
                 <li class="nav-item px-4">
-                    <a class="nav-link cool-link" href="#">Become a Member</a>
+                    <a class="nav-link cool-link" href="{{route('membership.showform')}}">Become a Member</a>
                 </li>
                 <li class="nav-item px-4">
-                    <a class="nav-link cool-link" href="#">Events</a>
+                    <a class="nav-link cool-link" href="{{route('event.index')}}">Events</a>
                 </li>
                 <li class="nav-item px-4">
-                    <a class="nav-link cool-link" href="#">Contact</a>
+                    <a class="nav-link cool-link" href="{{route('contact.index')}}">Contact</a>
                 </li>
                 <li class="nav-item px-4">
                     <a class="nav-link cool-link" href="#">Blues in Schools</a>
