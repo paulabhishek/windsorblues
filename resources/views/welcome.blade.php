@@ -7,7 +7,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item">
-                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="500" src="images/da65a44a16402ca63c12e1b3d926009b.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>
+                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/da65a44a16402ca63c12e1b3d926009b.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>
 
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Buy Tickets Now!</h5>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="500" src="images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>
+                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>
 
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Sign up now!</h5>
@@ -23,7 +23,25 @@
                 </div>
             </div>
             <div class="carousel-item active">
-                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="500" src="images/monkeyjunk1.jpg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
+                <div class="row text-center">
+                    <div class="col-lg-3 col-md-6 mt-4 col-sm-4">
+                        <div>
+                            <p>!!</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-3 col-sm-4">
+                        <div>
+{{--                            <img width="100" height="85" src="images/75274204C4084884AC8373DD486C0793.jpg"/>--}}
+                            <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 mt-3 col-sm-4">
+                        <button type="button" class="btn btn-outline-primary">!!</button>
+                    </div>
+
+                </div>
 
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Donate to the Blues Society</h5>
@@ -51,10 +69,9 @@
                 <div>
                     <p>WHERE WE STRIVE TO KEEP THE BLUES ALIVE</p>
                 </div>
-
             </div>
             <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
-                <button type="button" class="btn btn-outline-primary">Visit Our Chatham Site</button>
+                <button type="button" href="{{route('chatham.home')}}" class="btn btn-outline-primary">Visit Our Chatham Site</button>
             </div>
         </div>
 </div>
@@ -63,13 +80,13 @@
     <div class="row ">
         <div class="col-sm-12 col-lg-6 col-md-6 text-center .d-sm-none .d-md-block">
             <div class="mt-2">
-                <img src="images/logo_man_with_guitar.png" width="350" height="275">
+                <img src="images/wingedwheel.png" width="350" height="300">
             </div>
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="card pt-10">
                 <div class="card-header text-center">
-                    Newsletter
+                    Windsor Blues News
                 </div>
                 <div class="card-body overflow-auto">
                     <h5 class="card-title">Special title treatment</h5>

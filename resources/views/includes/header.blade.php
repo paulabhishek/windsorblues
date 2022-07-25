@@ -60,7 +60,7 @@
 {{--    </div>--}}
 <div class="row text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
-        <img width="350" height="150" src="images/IMG_20220701_174812__02.png"/>
+        <img width="350" height="150" src="images/windsorblues.png"/>
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-primary " aria-label="Tenth navbar example">

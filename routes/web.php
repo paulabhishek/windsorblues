@@ -102,6 +102,10 @@ Route::get('about', function () {
     return 'about';
 });
 
+Route::get('chatham', function () {
+    return view('chatham.home');
+})->name('chatham.home');
+
 Route::get('/', function () {
     return view('welcome');
 });
