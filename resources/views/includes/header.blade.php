@@ -34,6 +34,9 @@
             text-decoration: underline;
             text-decoration-color: red;
         }
+        body {
+            overflow-x: hidden !important;
+        }
 
     </style>
 
@@ -63,6 +66,7 @@
         <img width="350" height="150" src="images/windsorblues.png"/>
     </div>
 </div>
+
 <nav class="navbar navbar-expand-lg navbar-primary " aria-label="Tenth navbar example">
     <div class="container-fluid ">
         <button class="navbar-toggler collapsed pull-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
