@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ManageController;
+use App\Http\Controllers\MuseumController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
@@ -46,7 +47,7 @@ require __DIR__.'/auth.php';
 //Route::get('event/create', [EventController::class, 'create'])->name('event.create');
 //Route::post('event', [EventController::class, 'store'])->name('event.store');
 Route::get('event', [EventController::class, 'index'])->name('event.index');
-//Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
+Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
 //Route::get('event/{id}/edit', [EventController::class, 'edit'])->name('event.edit');
 //Route::patch('event/{id}', [EventController::class, 'update'])->name('event.update');
 //Route::delete('event/{id}', [EventController::class, 'destroy'])->name('event.delete');
@@ -64,6 +65,11 @@ Route::get('member', [MemberController::class, 'index'])->name('member.index');
 // CONTACT
 Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('contact', [ContactController::class, 'submit'])->name('contact.submit');
+
+
+//MUSEUM
+Route::get('museum', [MuseumController::class, 'index'])->name('museum.index');
+
 
 //MEMBERSHIP
 Route::get('membership', [MemberController::class, 'showForm'])->name('membership.showform');
@@ -92,10 +98,11 @@ Route::delete('manage/member/{id}', [ManageController::class, 'memberDestroy'])-
 
 
 
-
-Route::get('museum', function () {
-    return 'museum';
+Route::get('/', function () {
+    return view('welcome');
 });
+
+
 
 
 Route::get('about', function () {
@@ -106,9 +113,7 @@ Route::get('chatham', function () {
     return view('chatham.home');
 })->name('chatham.home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

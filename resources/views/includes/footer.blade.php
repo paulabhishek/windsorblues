@@ -2,7 +2,7 @@
     <footer class="row py-5 my-5 border-top ">
         <div class="col-lg-4 col-sm-6 col-md-4 px-3">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <img src="images/IMG_20220701_174812__02.png" width="250" height="100"/>
+                <img src="../images/IMG_20220701_174812__02.png" width="250" height="100"/>
             </a>
             <p class="text-muted">© 2022</p>
         </div>

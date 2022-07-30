@@ -11,13 +11,12 @@ class ManageController extends Controller
 {
     public function index(){
         return view('manage.index');
-
     }
-
+//EVENTS
     public function eventIndex(){
         $events = Event::get();
         return view('manage.events.index', compact("events"));
-        dd($events);
+//        dd($events);
     }
 
     public function eventShow($event){
@@ -50,11 +49,11 @@ class ManageController extends Controller
         return redirect('manage/event');
     }
 
-
+//MEMBER
     public function memberIndex(){
         $members = Member::get();
         return view('manage.member.index', compact("members"));
-        dd($members);
+//        dd($members);
     }
     public function memberDestroy(Member $id){
         $id->delete();

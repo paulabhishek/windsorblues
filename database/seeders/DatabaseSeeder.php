@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
          User::factory(10)->create();
 
-        Event::factory(10)->create();
+        Event::factory(15)->create();
 
         Member::factory(10)->create();
 

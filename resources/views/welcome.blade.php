@@ -174,6 +174,5 @@
         </blockquote>
     </div>
 
-
 @include('includes.footer')
 

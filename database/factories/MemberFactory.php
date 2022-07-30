@@ -25,6 +25,7 @@ class MemberFactory extends Factory
             'phone' => $this->faker->phoneNumber(),
             'newsletter' => $this->faker->randomElement($bool),
             'user_id' => $this->faker->randomElement($userIds),
+            'terms' => $this->faker->numberBetween(1, 2),
         ];
     }
 }

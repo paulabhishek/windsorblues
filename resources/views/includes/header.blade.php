@@ -63,7 +63,7 @@
 {{--    </div>--}}
 <div class="row text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
-        <img width="350" height="150" src="images/windsorblues.png"/>
+        <img width="350" height="150" src="../images/windsorblues.png"/>
     </div>
 </div>
 
@@ -90,7 +90,7 @@
                     <a class="nav-link cool-link" href="#">About</a>
                 </li>
                 <li class="nav-item px-4">
-                    <a class="nav-link cool-link" href="#">Museum</a>
+                    <a class="nav-link cool-link" href="{{route('museum.index')}}">Museum</a>
                 </li>
             </ul>
         </div>
