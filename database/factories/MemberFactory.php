@@ -23,9 +23,9 @@ class MemberFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->email(),
             'phone' => $this->faker->phoneNumber(),
-            'newsletter' => $this->faker->randomElement($bool),
+            'newsletter' => $this->faker->boolean,
             'user_id' => $this->faker->randomElement($userIds),
-            'terms' => $this->faker->randomElement($bool),
+            'terms' => $this->faker->boolean,
         ];
     }
 }
