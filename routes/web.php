@@ -24,12 +24,14 @@ Route::get('/', function () {
 
 
 
+Auth::routes(['verify'=>true]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+//require __DIR__.'/auth.php';
+
 
 
 //EVENT
@@ -59,22 +61,28 @@ Route::post('membership', [MemberController::class, 'submit'])->name('membership
 Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
 
 //MANAGE EVENT
-Route::get('manage/event/create', [ManageController::class, 'eventCreate'])->name('manage.event.create');
-Route::post('manage/event', [ManageController::class, 'eventStore'])->name('manage.event.store');
-Route::get('manage/event', [ManageController::class, 'eventIndex'])->name('manage.event.index');
-Route::get('manage/event/{id}', [ManageController::class, 'eventShow'])->name('manage.event.show');
-Route::get('manage/event/{id}/edit', [ManageController::class, 'eventEdit'])->name('manage.event.edit');
-Route::patch('manage/event/{id}', [ManageController::class, 'eventUpdate'])->name('manage.event.update');
-Route::delete('manage/event/{id}', [ManageController::class, 'eventDestroy'])->name('manage.event.delete');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/event/create', [ManageController::class, 'eventCreate'])->name('manage.event.create');
+    Route::post('manage/event', [ManageController::class, 'eventStore'])->name('manage.event.store');
+    Route::get('manage/event', [ManageController::class, 'eventIndex'])->name('manage.event.index');
+    Route::get('manage/event/{id}', [ManageController::class, 'eventShow'])->name('manage.event.show');
+    Route::get('manage/event/{id}/edit', [ManageController::class, 'eventEdit'])->name('manage.event.edit');
+    Route::patch('manage/event/{id}', [ManageController::class, 'eventUpdate'])->name('manage.event.update');
+    Route::delete('manage/event/{id}', [ManageController::class, 'eventDestroy'])->name('manage.event.delete');
+
+});
 
 //MANAGE MEMBER
-Route::get('manage/member/create', [ManageController::class, 'memberCreate'])->name('manage.member.create');
-Route::post('manage/member', [ManageController::class, 'memberStore'])->name('manage.member.store');
-Route::get('manage/member', [ManageController::class, 'memberIndex'])->name('manage.member.index');
-Route::get('manage/member/{id}', [ManageController::class, 'memberShow'])->name('manage.member.show');
-Route::get('manage/member/{id}/edit', [ManageController::class, 'memberEdit'])->name('manage.member.edit');
-Route::patch('manage/member/{id}', [ManageController::class, 'memberUpdate'])->name('manage.member.update');
-Route::delete('manage/member/{id}', [ManageController::class, 'memberDestroy'])->name('manage.member.delete');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/member/create', [ManageController::class, 'memberCreate'])->name('manage.member.create');
+    Route::post('manage/member', [ManageController::class, 'memberStore'])->name('manage.member.store');
+    Route::get('manage/member', [ManageController::class, 'memberIndex'])->name('manage.member.index');
+    Route::get('manage/member/{id}', [ManageController::class, 'memberShow'])->name('manage.member.show');
+    Route::get('manage/member/{id}/edit', [ManageController::class, 'memberEdit'])->name('manage.member.edit');
+    Route::patch('manage/member/{id}', [ManageController::class, 'memberUpdate'])->name('manage.member.update');
+    Route::delete('manage/member/{id}', [ManageController::class, 'memberDestroy'])->name('manage.member.delete');
+
+});
 
 
 
@@ -94,15 +102,5 @@ Route::get('chatham', function () {
 })->name('chatham.home');
 
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

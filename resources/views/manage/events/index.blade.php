@@ -1,4 +1,5 @@
-@extends('welcome')
+@extends('layouts.app')
+@section('content')
 <h1 class="text-3xl font-bold underline">Events page</h1>
 <!-- This example requires Tailwind CSS v2.0+ -->
 @foreach ($events as $object)
@@ -15,6 +16,7 @@ user_id: {{ $object->user_id }}<br>
     <input type="submit" value="Delete"></form>
 </form> <br><br>
 @endforeach
+@endsection
 
 
 

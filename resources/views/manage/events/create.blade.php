@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <h1>Create Event</h1>
 @if(\Illuminate\Support\Facades\Auth::user())
     <form method="POST" action="{{ route ('manage.event.store') }}">
@@ -23,4 +25,5 @@
         <input type="submit" value="Create"><br>
     </form>
 @endif
+@endsection
 

@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <h1>Create Member</h1>
 <form method="POST" action="{{ route ('manage.member.store') }}">
     {{ csrf_field() }}
@@ -17,3 +19,4 @@
     </select><br>
     <input type="submit" value="Create"><br>
 </form>
+@endsection

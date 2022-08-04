@@ -1,4 +1,5 @@
-
+@extends('layouts.app')
+@section('content')
 
 <h1>Edit Member</h1>
 <form method="POST" action="{{ route ('manage.member.update', $member->id) }}">
@@ -14,4 +15,5 @@
     <input name="newsletter" type="text" value="{{$member->newsletter}}"><br>
     <input type="submit" value="Update"><br>
 </form>
+@endsection
 

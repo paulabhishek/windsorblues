@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <h1>Edit Event</h1>
 
 <form method="POST" action="{{ route('manage.event.update', $event->id) }}">
@@ -17,3 +19,5 @@
     <input name="date" type="date" value="{{$event->date}}"><br>
     <input type="submit" value="update"><br>
 </form> <br><br>
+
+@endsection

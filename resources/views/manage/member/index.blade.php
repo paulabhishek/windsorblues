@@ -1,4 +1,5 @@
-@extends('welcome')
+@extends('layouts.app')
+@section('content')
 <h1 class="text-3xl font-bold underline">Member page</h1>
 @foreach ($members as $object)
     Name:   {{ $object->name }}<br>
@@ -12,6 +13,6 @@
         <input type="submit" value="Delete"></form>
     </form> <br><br>
 @endforeach
-
+@endsection
 
 
