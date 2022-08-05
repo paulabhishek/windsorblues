@@ -84,6 +84,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 });
 
+Route::get('manage/admin', [ManageController::class, 'adminIndex'])->name('manage.admin.index')->middleware('can:isLevelTwo');
 
 
 Route::get('/', function () {

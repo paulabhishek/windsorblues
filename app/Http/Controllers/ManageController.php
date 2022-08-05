@@ -5,13 +5,32 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Member;
 use App\Models\User;
+//use http\Env\Response;
+use Illuminate\Auth\Access\Events\GateEvaluated;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Auth\Access\Response;
 
 class ManageController extends Controller
 {
     public function index(){
         return view('manage.index');
     }
+//ADMIN
+    public function adminIndex(){
+        $admin = User::get();
+
+        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+        return view('manage.admin.index', compact("admin"));
+//        dd($admin);
+    }
+
+    public function adminShow($admin){
+        $admin = User::find($admin);
+        return view('manage.admin.show', compact("admin"));
+    }
+
+
 //EVENTS
     public function eventIndex(){
         $events = Event::get();
