@@ -84,7 +84,18 @@ Route::group(['middleware' => 'auth'], function(){
 
 });
 
-Route::get('manage/admin', [ManageController::class, 'adminIndex'])->name('manage.admin.index')->middleware('can:isLevelTwo');
+//MANAGE ADMIN
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/admin/create', [ManageController::class, 'adminCreate'])->name('manage.admin.create')->middleware('can:isLevelTwo');
+    Route::post('manage/admin', [ManageController::class, 'adminStore'])->name('manage.admin.store')->middleware('can:isLevelTwo');
+    Route::get('manage/admin', [ManageController::class, 'adminIndex'])->name('manage.admin.index')->middleware('can:isLevelTwo');
+    Route::get('manage/admin/{id}', [ManageController::class, 'adminShow'])->name('manage.admin.index')->middleware('can:isLevelTwo');
+    Route::get('manage/admin/{id}/edit', [ManageController::class, 'adminEdit'])->name('manage.admin.edit')->middleware('can:isLevelTwo');
+    Route::patch('manage/admin/{id}', [ManageController::class, 'adminUpdate'])->name('manage.admin.update')->middleware('can:isLevelTwo');
+    Route::delete('manage/admin/{id}', [ManageController::class, 'adminDestroy'])->name('manage.admin.delete')->middleware('can:isLevelTwo');
+});
+
+
 
 
 Route::get('/', function () {

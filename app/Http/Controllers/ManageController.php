@@ -7,9 +7,12 @@ use App\Models\Member;
 use App\Models\User;
 //use http\Env\Response;
 use Illuminate\Auth\Access\Events\GateEvaluated;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Auth\Access\Response;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
 
 class ManageController extends Controller
 {
@@ -19,16 +22,57 @@ class ManageController extends Controller
 //ADMIN
     public function adminIndex(){
         $admin = User::get();
-
-        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
         return view('manage.admin.index', compact("admin"));
-//        dd($admin);
+        dd($admin);
     }
 
-    public function adminShow($admin){
-        $admin = User::find($admin);
-        return view('manage.admin.show', compact("admin"));
+    public function adminShow($id){
+        $id = User::find($id);
+
+        return view('manage.admin.show', compact("id"));
     }
+
+    public function adminCreate(){
+        $users = User::all()->pluck('id');
+        return view('manage.admin.create', compact("users"));
+    }
+
+    public function adminStore(Request $request){
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', Rules\Password::defaults()],
+            'level' => ['required', 'integer', 'digits_between:1,2'],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'level' => $request->level
+        ]);
+        event(new Registered($user));
+        return redirect('manage/admin');
+    }
+
+    public function adminDestroy(User $id){
+        $id->delete();
+        return redirect('manage/admin');
+    }
+
+    public function adminEdit($id){
+        $id = User::findorFail($id);
+        return view('manage.admin.edit', compact("id"));
+    }
+
+    public function adminUpdate(Request $request, $id){
+        $formdata = $request->all();
+        $id = User::findorfail($id);
+        $id->update($formdata);
+        return redirect('manage/admin');
+    }
+
 
 
 //EVENTS
@@ -42,6 +86,7 @@ class ManageController extends Controller
         $event = Event::find($event);
         return view('manage.events.show', compact("event"));
     }
+
     public function eventCreate(){
         $users = User::all()->pluck('id');
         return view('manage.events.create', compact("users"));
