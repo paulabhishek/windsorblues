@@ -50,5 +50,9 @@ public function members(){
     return $this->hasmany(Member::class);
 }
 
+public function news(){
+    return $this->hasmany(News::class);
+}
+
 
 }

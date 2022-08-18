@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Event;
 use App\Models\Member;
+use App\Models\News;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -23,6 +24,8 @@ class DatabaseSeeder extends Seeder
         Event::factory(15)->create();
 
         Member::factory(10)->create();
+
+        News::factory(10)->create();
 
     }
 }

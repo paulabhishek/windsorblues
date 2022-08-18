@@ -18,16 +18,18 @@ return new class extends Migration
             $table->timestamps();
             $table-> string('date');
             $table-> string('title');
+            $table-> string('author');
             $table-> mediumText('p1');
             $table-> mediumText('p2');
             $table-> mediumText('p3');
             $table-> mediumText('p4');
             $table-> mediumText('p5');
             $table->string('img_banner');
-            $table->string('img_banner');
-            $table->string('img_banner');
-            $table->string('img_banner');
-            $table->string('img_banner');
+            $table->string('img_highlight1');
+            $table->string('img_highlight2');
+            $table->string('img_highlight3');
+            $table->string('img_highlight4');
+            $table->string('img_highlight5');
             $table->foreignId('user_id');
         });
     }

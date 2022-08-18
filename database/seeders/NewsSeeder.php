@@ -4,8 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class EventSeeder extends Seeder
+class NewsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +15,8 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        factory('App/Event', 10)->create();
+        factory('App/News', 10)->create();
+
+
     }
 }
