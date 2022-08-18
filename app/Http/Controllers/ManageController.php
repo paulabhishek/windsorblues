@@ -19,6 +19,45 @@ class ManageController extends Controller
     public function index(){
         return view('manage.index');
     }
+
+//NEWS
+    public function newsIndex(){
+//        $admin = User::get();
+////        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+//        return view('manage.admin.index', compact("admin"));
+//        dd($admin);
+    }
+    public function newsShow($id){
+//        $id = User::find($id);
+//
+//        return view('manage.admin.show', compact("id"));
+    }
+
+    public function newsCreate(){
+//        $users = User::all()->pluck('id');
+//        return view('manage.admin.create', compact("users"));
+    }
+
+    public function newsStore(Request $request){}
+
+    public function newsDestroy(User $id){
+//        $id->delete();
+//        return redirect('manage/admin');
+    }
+
+    public function newsEdit($id){
+//        $id = User::findorFail($id);
+//        return view('manage.admin.edit', compact("id"));
+    }
+
+    public function newsUpdate(Request $request, $id){
+//        $formdata = $request->all();
+//        $id = User::findorfail($id);
+//        $id->update($formdata);
+//        return redirect('manage/admin');
+    }
+
+
 //ADMIN
     public function adminIndex(){
         $admin = User::get();

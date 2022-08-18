@@ -95,6 +95,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::delete('manage/admin/{id}', [ManageController::class, 'adminDestroy'])->name('manage.admin.delete')->middleware('can:isLevelTwo');
 });
 
+//MANAGE NEWS
 
 
 
