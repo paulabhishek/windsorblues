@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\Member;
+use App\Models\News;
 use App\Models\User;
 //use http\Env\Response;
 use Illuminate\Auth\Access\Events\GateEvaluated;
@@ -22,10 +23,11 @@ class ManageController extends Controller
 
 //NEWS
     public function newsIndex(){
-//        $admin = User::get();
-////        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
-//        return view('manage.admin.index', compact("admin"));
-//        dd($admin);
+        $news = NEWS::get();
+//        dd($news);
+//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+        return view('manage.news.index', compact("news"));
+
     }
     public function newsShow($id){
 //        $id = User::find($id);

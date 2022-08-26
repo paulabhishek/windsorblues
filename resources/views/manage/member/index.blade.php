@@ -6,6 +6,7 @@
     Email: {{ $object->email }}<br>
     phone: {{ $object->phone }}<br>
     newsletter: {{ $object->newsletter }}<br>
+    terms: {{ $object->terms }}<br>
     Admin ID: {{ $object->user_id }}<br>
     <form method="POST" action="{{ route('manage.member.delete', $object->id) }}">
         {{method_field('DELETE')}}

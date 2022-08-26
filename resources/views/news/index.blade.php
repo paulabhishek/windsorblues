@@ -1,16 +1,15 @@
-@include('layouts.app')
-@section('content')
+@include('includes.header')
 <h1 class="text-3xl font-bold underline text-center mb-4">News</h1>
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach ($news as $object)
             Title: {{ $object->title }}<br>
             author: {{ $object->author }}<br>
-            p1: {{ $object->p1 }}<br>
+           p1: {{ $object->p1 }}<br>
             p2: {{ $object->p2 }}<br>
             p3: {{ $object->p3 }}<br>
             p4: {{ $object->p4 }}<br>
-            p5:  {{ $object->p5 }}<br>
+           p5:  {{ $object->p5 }}<br>
             image_banner: {{ $object->image_banner }}<br>
             img_highlight1: {{ $object->img_highlight1 }}<br>
             img_highlight2: {{ $object->img_highlight2 }}<br>
@@ -22,7 +21,7 @@
         @endforeach
     </div><br><br><br><br>
 </div>
-@endsection
+@include('includes.footer')
 
 
 

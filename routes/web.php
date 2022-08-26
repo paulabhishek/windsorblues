@@ -3,10 +3,13 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ManageController;
 use App\Http\Controllers\MuseumController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EventController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +41,9 @@ Route::get('/dashboard', function () {
 Route::get('event', [EventController::class, 'index'])->name('event.index');
 Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
 
+//NEWS
+Route::get('news', [NewsController::class, 'index'])->name('news.index');
+Route::get('news/{id}', [NewsController::class, 'show'])->name('news.show');
 
 
 // MEMBER
@@ -86,17 +92,25 @@ Route::group(['middleware' => 'auth'], function(){
 
 //MANAGE ADMIN
 Route::group(['middleware' => 'auth'], function(){
-    Route::get('manage/admin/create', [ManageController::class, 'adminCreate'])->name('manage.admin.create')->middleware('can:isLevelTwo');
-    Route::post('manage/admin', [ManageController::class, 'adminStore'])->name('manage.admin.store')->middleware('can:isLevelTwo');
+//    Route::get('manage/admin/create', [ManageController::class, 'adminCreate'])->name('manage.admin.create')->middleware('can:isLevelTwo');
+//    Route::post('manage/admin', [ManageController::class, 'adminStore'])->name('manage.admin.store')->middleware('can:isLevelTwo');
     Route::get('manage/admin', [ManageController::class, 'adminIndex'])->name('manage.admin.index')->middleware('can:isLevelTwo');
-    Route::get('manage/admin/{id}', [ManageController::class, 'adminShow'])->name('manage.admin.index')->middleware('can:isLevelTwo');
-    Route::get('manage/admin/{id}/edit', [ManageController::class, 'adminEdit'])->name('manage.admin.edit')->middleware('can:isLevelTwo');
-    Route::patch('manage/admin/{id}', [ManageController::class, 'adminUpdate'])->name('manage.admin.update')->middleware('can:isLevelTwo');
+//    Route::get('manage/admin/{id}', [ManageController::class, 'adminShow'])->name('manage.admin.index')->middleware('can:isLevelTwo');
+//    Route::get('manage/admin/{id}/edit', [ManageController::class, 'adminEdit'])->name('manage.admin.edit')->middleware('can:isLevelTwo');
+//    Route::patch('manage/admin/{id}', [ManageController::class, 'adminUpdate'])->name('manage.admin.update')->middleware('can:isLevelTwo');
     Route::delete('manage/admin/{id}', [ManageController::class, 'adminDestroy'])->name('manage.admin.delete')->middleware('can:isLevelTwo');
 });
 
 //MANAGE NEWS
-
+Route::group(['middleware' => 'auth'], function(){
+//    Route::get('manage/news/create', [ManageController::class, 'newsCreate'])->name('manage.news.create');
+//    Route::post('manage/news', [ManageController::class, 'newsStore'])->name('manage.news.store');
+    Route::get('manage/news', [ManageController::class, 'newsIndex'])->name('manage.news.index');
+//    Route::get('manage/news/{id}', [ManageController::class, 'newsShow'])->name('manage.news.index');
+//    Route::get('manage/news/{id}/edit', [ManageController::class, 'newsEdit'])->name('manage.news.edit');
+//    Route::patch('manage/news/{id}', [ManageController::class, 'newsUpdate'])->name('manage.news.update');
+//    Route::delete('manage/news/{id}', [ManageController::class, 'newsDestroy'])->name('manage.news.delete');
+});
 
 
 Route::get('/', function () {

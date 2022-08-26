@@ -63,7 +63,7 @@
 {{--    </div>--}}
 <div class="row text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
-        <img width="350" height="150" src="../images/windsorblues.png"/>
+        <a href=""> <img width="350" height="150" src="../images/windsorblues.png"/></a>
     </div>
 </div>
 
