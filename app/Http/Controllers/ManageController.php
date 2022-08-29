@@ -25,45 +25,52 @@ class ManageController extends Controller
     public function newsIndex(){
         $news = NEWS::get();
 //        dd($news);
-//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
         return view('manage.news.index', compact("news"));
-
     }
-    public function newsShow($id){
-//        $id = User::find($id);
-//
-//        return view('manage.admin.show', compact("id"));
+
+    public function newsShow($news){
+        $news = News::find($news);
+        return view('manage.news.show', compact("news"));
     }
 
     public function newsCreate(){
-//        $users = User::all()->pluck('id');
-//        return view('manage.admin.create', compact("users"));
+        $users = User::all()->pluck('id');
+        return view('manage.news.create', compact("users"));
     }
 
-    public function newsStore(Request $request){}
+
+    public function newsStore(Request $request){
+        $user = User::findorFail($request->user_id);
+        $news = new news($request->all());
+        $user->news()->save($news);
+        return redirect('manage/news');
+    }
+
+
 
     public function newsDestroy(User $id){
-//        $id->delete();
-//        return redirect('manage/admin');
+        $id->delete();
+        return redirect('manage/news');
     }
 
     public function newsEdit($id){
-//        $id = User::findorFail($id);
-//        return view('manage.admin.edit', compact("id"));
+        $id = News::findorFail($id);
+        return view('manage.news.edit', compact("id"));
     }
 
-    public function newsUpdate(Request $request, $id){
-//        $formdata = $request->all();
-//        $id = User::findorfail($id);
-//        $id->update($formdata);
-//        return redirect('manage/admin');
+    public function newsUpdate(Request $request, $news){
+        $formdata = $request->all();
+        $news = News::findorfail($news);
+        $news->update($formdata);
+        return redirect('manage/news');
     }
 
 
 //ADMIN
     public function adminIndex(){
         $admin = User::get();
-//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
         return view('manage.admin.index', compact("admin"));
         dd($admin);
     }

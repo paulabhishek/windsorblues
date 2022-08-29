@@ -18,8 +18,8 @@
         <label for=p5">P5:</label>
         <input name="p5" type="text" ><br>
 
-        <label for="image_banner">Image_banner:</label>
-        <input name="image_banner" type="text" ><br>
+        <label for="img_banner">Image_banner:</label>
+        <input name="img_banner" type="text" ><br>
 
         <label for="img_highlight1">Image_banner1:</label>
         <input name="img_highlight1" type="text" ><br>
@@ -31,6 +31,8 @@
         <input name="img_highlight4" type="text" ><br>
         <label for="img_highlight5">Image_banner5:</label>
         <input name="img_highlight5" type="text" ><br>
+        <label for="date">News Date</label>
+        <input name="date" type="date" ><br>
         <select name="user_id">
             @foreach($users as $id )
                 <option value="{{$id}}">{{$id}}</option>

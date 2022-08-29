@@ -1,8 +1,6 @@
-@include('layouts.app')
+@extends('layouts.app')
 @section('content')
-<h1 class="text-3xl font-bold underline text-center mb-4">News</h1>
-<div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+<h1 class="text-3xl font-bold underline text-center mb-4">News page</h1>
         @foreach ($news as $object)
             Title: {{ $object->title }}<br>
             author: {{ $object->author }}<br>
@@ -17,11 +15,13 @@
             img_highlight3: {{ $object->img_highlight3 }}<br>
             img_highlight4: {{ $object->img_highlight4 }}<br>
             img_highlight5: {{ $object->img_highlight5 }}<br>
-            user_id: {{ $object->user_id }}<br><br><br>
-
-        @endforeach
-    </div><br><br><br><br>
-</div>
+            user_id: {{ $object->user_id }}<br>
+            <form method="POST" action="{{ route('manage.news.delete', $object->id) }}">
+                {{method_field('DELETE')}}
+                {{csrf_field()}}
+                <input type="submit" value="Delete"></form>
+            </form><br><br>
+@endforeach
 @endsection
 
 

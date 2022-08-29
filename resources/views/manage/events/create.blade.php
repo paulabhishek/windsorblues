@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1>Create Event</h1>
+<h1>Create News</h1>
 @if(\Illuminate\Support\Facades\Auth::user())
     <form method="POST" action="{{ route ('manage.event.store') }}">
         {{ csrf_field() }}
