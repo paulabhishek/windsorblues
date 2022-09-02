@@ -34,11 +34,7 @@
         <input name="img_highlight5" type="text" value="{{$news->img_highlight5}}"><br>
         <label for="date">News Date</label>
         <input name="date" type="date" value="{{$news->date}}"><br>
-        <select name="user_id">
-            @foreach($users as $id )
-                <option value="{{$id}}">{{$id}}</option>
-            @endforeach
-        </select><br>
+
         <input type="submit" value="Update"><br>
     </form>
 @endsection

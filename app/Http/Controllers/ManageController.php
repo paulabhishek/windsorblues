@@ -54,9 +54,9 @@ class ManageController extends Controller
         return redirect('manage/news');
     }
 
-    public function newsEdit($id){
-        $id = News::findorFail($id);
-        return view('manage.news.edit', compact("id"));
+    public function newsEdit($news){
+        $news = News::findorFail($news);
+        return view('manage.news.edit', compact("news"));
     }
 
     public function newsUpdate(Request $request, $news){

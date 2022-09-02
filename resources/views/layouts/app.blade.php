@@ -39,6 +39,7 @@
                         <li><a class="nav-link cool-link" href="{{route('manage.event.index')}}">Events</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.member.index')}}">Members</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.news.index')}}">News</a></li>
+                        <li><a class="nav-link cool-link" href="">MailChimp</a></li>
                         @can('isLevelTwo')
                         <li><a class="nav-link cool-link" href="{{route('manage.admin.index')}}">Manage Admins</a></li>
                         @endcan
@@ -60,6 +61,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
