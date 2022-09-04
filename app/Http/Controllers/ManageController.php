@@ -10,16 +10,19 @@ use App\Models\User;
 use Illuminate\Auth\Access\Events\GateEvaluated;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Newsletter;
 
 class ManageController extends Controller
 {
     public function index(){
         return view('manage.index');
     }
+
 
 //NEWS
     public function newsIndex(){
@@ -161,11 +164,49 @@ class ManageController extends Controller
         return redirect('manage/event');
     }
 
+    //MAILCHIMP
+    public function mailchimpSync(){
+        $member = DB::table('members')->select('name', 'email', 'phone')->where('newsletter', '=', 1)->where('terms', '=', 1)->get();
+        foreach ($member as $obj){
+            $name = trim($obj->name);
+            $parts = explode(" ", $name);
+            $lname  = array_pop($parts);
+            $fname = implode(" ", $parts);
+            $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone];
+
+        Newsletter::subscribe($obj->email, $arr);
+        }
+        dd(Newsletter::getLastError(), Newsletter::getApi());
+        return redirect('manage/member');
+    }
+    public function mailchimpUpdate(){
+        $member = DB::table('members')->select('name', 'email', 'phone')->where('newsletter', '=', 1)->where('terms', '=', 1)->get();
+        foreach ($member as $obj){
+            $name = trim($obj->name);
+            $parts = explode(" ", $name);
+            $lname  = array_pop($parts);
+            $fname = implode(" ", $parts);
+            $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone];
+
+            Newsletter::subscribeOrUpdate($obj->email, $arr);
+        }
+        dd(Newsletter::getLastError(), Newsletter::getApi());
+        return redirect('manage/member');
+    }
+
+    public function mailchimpUnsub(Request $request){
+//        dd($request->all());
+        Newsletter::unsubscribe($request['email']);
+        return 'unsubscribed!';
+    }
+
+
+
 //MEMBER
+
     public function memberIndex(){
         $members = Member::get();
         return view('manage.member.index', compact("members"));
-//        dd($members);
     }
     public function memberDestroy(Member $id){
         $id->delete();

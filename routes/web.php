@@ -90,6 +90,22 @@ Route::group(['middleware' => 'auth'], function(){
 
 });
 
+//MAILCHIMP
+
+//UNSUBSCRIBE
+Route::get('/unsubscribe', function () {
+    return view('manage.mailchimp.unsubscribe');
+});
+
+Route::post('unsubscribe', [ManageController::class, 'mailchimpUnsub'])->name('manage.mailchimp.unsubscribe');
+
+//SYNC
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/mailchimp', [ManageController::class, 'mailchimpSync'])->name('manage.mailchimp.sync');
+    Route::patch('manage/mailchimp', [ManageController::class, 'mailchimpUpdate'])->name('manage.mailchimp.update');
+
+});
+
 //MANAGE ADMIN
 Route::group(['middleware' => 'auth'], function(){
     Route::get('manage/admin/create', [ManageController::class, 'adminCreate'])->name('manage.admin.create')->middleware('can:isLevelTwo');
