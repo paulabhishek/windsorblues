@@ -22,23 +22,23 @@
                     <p>Get discounted tickets on memberships</p>
                 </div>
             </div>
+
+            <div class="carousel-item">
+                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Donate to the Blues Society</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+
             <div class="carousel-item active">
                 <div class="row text-center">
-                    <div class="col-lg-3 col-md-6 mt-4 col-sm-4">
-                        <div>
-                            <p>!!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-3 col-sm-4">
+                <div class="col-lg-6 col-md-3 col-sm-4">
                         <div>
 {{--                            <img width="100" height="85" src="images/75274204C4084884AC8373DD486C0793.jpg"/>--}}
                             <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
                         </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-3 mt-3 col-sm-4">
-                        <button type="button" class="btn btn-outline-primary">!!</button>
                     </div>
 
                 </div>
@@ -58,16 +58,19 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+{{--Chatham Site--}}
+
 <div class="container mt-4">
         <div class="row text-center " >
             <div class="col-lg-4 col-md-3 col-sm-4">
                 <div>
-                    <img width="100" height="85" src="images/75274204C4084884AC8373DD486C0793.jpg"/>
+                    <img width="105" height="95" src="images/75274204C4084884AC8373DD486C0793.jpg"/>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 col-sm-4">
                 <div>
-                    <p>WHERE WE STRIVE TO KEEP THE BLUES ALIVE</p>
+                    <p class="fs-5" style="font-family: 'Roboto Slab', serif;">WHERE WE STRIVE TO KEEP THE BLUES ALIVE</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
@@ -76,23 +79,31 @@
         </div>
 </div>
 
+{{--Wing man--}}
 <div class="container mt-4">
     <div class="row ">
         <div class="col-sm-12 col-lg-6 col-md-6 text-center .d-sm-none .d-md-block">
-            <div class="mt-2">
+            <div class="mt-5">
                 <img src="images/wingedwheel.png" width="350" height="300">
             </div>
         </div>
+{{--        <div class="overflow-auto p-3 mb-3 mb-md-0 me-md-3 bg-light" style="max-width: 260px; max-height: 100px;">--}}
+{{--            This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.--}}
+{{--        </div>--}}
+
         <div class="col-lg-6 col-md-6">
             <div class="card pt-10">
                 <div class="card-header text-center">
-                    Windsor Blues News
+                   Windsor Blues Latest News
                 </div>
-                <div class="card-body overflow-auto">
+                <div class="card-body overflow-auto" style="max-width: 100%; max-height: 400px;">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-sm btn-primary">Open</a>
 
+                    <h5 class="card-title mt-2">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-sm btn-primary">Open</a>
                     <h5 class="card-title mt-2">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <a href="#" class="btn btn-sm btn-primary">Open</a>
