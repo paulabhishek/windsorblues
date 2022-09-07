@@ -16,7 +16,7 @@
             img_highlight3: {{ $object->img_highlight3 }}<br>
             img_highlight4: {{ $object->img_highlight4 }}<br>
             img_highlight5: {{ $object->img_highlight5 }}<br>
-            user_id: {{ $object->user_id }}<br><br><br>
+{{--            user_id: {{ $object->user_id }}<br><br><br>--}}
 
         @endforeach
     </div><br><br><br><br>

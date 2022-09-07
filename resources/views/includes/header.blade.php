@@ -30,9 +30,9 @@
             transition: width .1s;
         }
 
-        h1, h3{
-            text-decoration: underline;
-            text-decoration-color: red;
+        .hdline{
+            border-bottom: 3px solid #337ab7;
+            padding-bottom: 5px;
         }
        /*Google Fonts*/
         .Playfair{
@@ -51,7 +51,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
 {{--    <div class="container">--}}
@@ -100,6 +100,9 @@
                 </li>
                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('museum.index')}}">Museum</a>
+                </li>
+                <li class="nav-item px-4 h4">
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('news.index')}}">News</a>
                 </li>
             </ul>
         </div>

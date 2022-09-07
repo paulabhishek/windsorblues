@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ManageController;
 use App\Http\Controllers\MuseumController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
@@ -35,6 +36,15 @@ Route::get('/dashboard', function () {
 
 //require __DIR__.'/auth.php';
 
+
+
+//WELCOME
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
+Route::post('/', [WelcomeController::class, 'newsletterStore'])->name('welcome.newsletterStore');
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
 //EVENT
@@ -130,9 +140,7 @@ Route::get('/dashboard', function () {
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 
