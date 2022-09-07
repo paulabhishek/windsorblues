@@ -36,7 +36,7 @@
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
             <li class="nav-item"><a href="{{route('news.index')}}" class="nav-link px-2 text-muted">News</a></li>
             <li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link px-2 text-muted">Contact</a></li>
-            <li class="nav-item"><a href="{{route('member.index')}}" class="nav-link px-2 text-muted">Membership</a></li>
+{{--            <li class="nav-item"><a href="{{route('member.index')}}" class="nav-link px-2 text-muted">Membership</a></li>--}}
         </ul>
         <p class="text-center text-muted">© 2022 Windsor South Blues Society</p>
     </footer>

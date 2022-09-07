@@ -1,13 +1,15 @@
 @component('mail::message')
-    # Introduction
-    {{$first_name}}{{$last_name}}
-    {{$phone}}
-    The body of your message.
-    {{$email}}
-    @component('mail::button', ['url' => 'windsorblues.ca'])
-        Button Text
+   Membership Request
+   Name: {{$first_name}}{{$last_name}}
+   Phone:  {{$phone}}
+   Email: {{$email}}
+   Newsletter: {{$newsletter}}
+   Terms: {{$terms}}
+
+
+    @component('mail::button', ['url' => 'windsorblues.ca/manage/member/'])
+        Add User
     @endcomponent
 
-    Thanks,<br>
-    {{ config('app.name') }}
+
 @endcomponent

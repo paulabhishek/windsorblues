@@ -17,6 +17,20 @@ class MemberController extends Controller
         return view('member.index', compact("members"));
         dd($members);
     }
+
+
+    public function submit(Request $request){
+//        dd($request);
+        Mail::to('membership@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter,$request->terms  ));
+
+        Mail::to('abhishek@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter,$request->terms  ));
+        return redirect('membership');
+    }
+
+
+    public function showForm(){
+        return view('membership.index');
+    }
 //    public function destroy(Member $id){
 //        $id->delete();
 //        return redirect('member');
@@ -50,11 +64,5 @@ class MemberController extends Controller
 //        return redirect('member');
 //    }
 
-    public function showForm(){
-        return view('membership.index');
-    }
-    public function submit(Request $request){
-        Mail::to('1998vabhishekpaul@gmail.com')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email ));
 
-    }
 }

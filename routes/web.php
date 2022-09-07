@@ -57,7 +57,7 @@ Route::post('/', [WelcomeController::class, 'newsletterStore'])->name('welcome.n
 
 
 // MEMBER
-    Route::get('member', [MemberController::class, 'index'])->name('member.index');
+//    Route::get('member', [MemberController::class, 'index'])->name('member.index');
 
 
 // CONTACT

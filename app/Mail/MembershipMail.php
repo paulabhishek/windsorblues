@@ -17,7 +17,7 @@ class MembershipMail extends Mailable
      *
      * @return void
      */
-    public function __construct(public string $first_name, public string $last_name, public string $phone, public string $email)
+    public function __construct(public string $first_name, public string $last_name, public string $phone, public string $email, public string $newsletter, public string $terms)
     {
         //
     }
