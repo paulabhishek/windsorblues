@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ManageController;
 use App\Http\Controllers\MuseumController;
@@ -46,6 +47,13 @@ Route::post('/', [WelcomeController::class, 'newsletterStore'])->name('welcome.n
 //    return view('welcome');
 //});
 
+//ABOUT
+Route::get('about', [AboutController::class, 'index'])->name('about.index');
+//Route::resource('/about', 'about.index');
+
+
+
+
 
 //EVENT
     Route::get('event', [EventController::class, 'index'])->name('event.index');
@@ -72,6 +80,7 @@ Route::post('/', [WelcomeController::class, 'newsletterStore'])->name('welcome.n
 //MEMBERSHIP
     Route::get('membership', [MemberController::class, 'showForm'])->name('membership.showform');
     Route::post('membership', [MemberController::class, 'submit'])->name('membership.submit');
+
 
 //MANAGE
     Route::get('manage', [ManageController::class, 'index'])->name('manage.index');
@@ -145,9 +154,7 @@ Route::post('/', [WelcomeController::class, 'newsletterStore'])->name('welcome.n
 
 
 
-Route::get('about', function () {
-    return view('about.index')->name('about.index');
-});
+
 
 Route::get('chatham', function () {
     return view('chatham.home');

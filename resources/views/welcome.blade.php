@@ -109,14 +109,14 @@
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
-                    <h1 class="text-center hdline mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
-                    <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
+                    <h1 class="hdline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
+                    <p class="fs-4" style="font-family: 'Source Sans Pro', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
-                    <h1 class="text-center hdline mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">History</h1>
-                    <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012.
+                    <h1 class="hdline mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">History</h1>
+                    <p class="text-right fs-4" style="font-family: 'Source Sans Pro', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012.
                         We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
                         In addition to hosting world class blues, rhythm & blues and roots artists on a regular basis we also host and/or support various benefits and charity fundraisers each year.
                         We annually hold a regional competition for the Road to Memphis challenge for local blues artists.  The winner represents our Society at the international competition in Memphis.</p>
@@ -158,11 +158,11 @@
     </div>
 
     <div class="container mt-5 text-center ">
-        <h1 class="text-center  mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">Message from our president</h1>
+        <h1 class="text-center  mb-4 hdline" style="color: #150185; font-family: 'Playfair Display', serif;">Message from our president</h1>
         <blockquote class="blockquote mt-4">
-            <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">Stay tuned.!</p>
         </blockquote>
     </div>
-
+<span class="ps">HEADLINE</span>
 @include('includes.footer')
 

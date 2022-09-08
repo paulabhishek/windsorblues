@@ -30,10 +30,11 @@
             transition: width .1s;
         }
 
-        .hdline{
-            border-bottom: 3px solid #337ab7;
-            padding-bottom: 5px;
-        }
+        /*.hdline{*/
+
+        /*    border-bottom: 3px solid #337ab7;*/
+        /*    padding-bottom: 5px;*/
+        /*}*/
        /*Google Fonts*/
         .Playfair{
             font-family: 'Playfair Display', serif;
@@ -43,6 +44,105 @@
             overflow-x: hidden !important;
         }
 
+        .hdline {
+
+            display: inline-block;
+            padding-bottom: 10px;
+            position: relative;
+
+        }
+
+        .hdline:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            bottom: 0;
+            left: 0%;
+            border-bottom: 5px solid #337ab7;
+        }
+
+        .h1,
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .container-fluid {
+            max-width: 1400px;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            border: 1px;
+            border-radius: 1rem;
+        }
+
+        .img-hover-zoom--colorize img {
+            border-radius: 50%;
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+            padding: 1px;
+            transition: transform .5s;
+            filter: grayscale(100%);
+        }
+
+        .img-hover-zoom--colorize:hover img {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .card h5 {
+            overflow: hidden;
+            height: 80px;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .card h5 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .role {
+            color: #7a7a7a;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fab {
+            font-size: 1.5rem;
+            color: darkgray;
+            transition: transform .5s;
+        }
+
+        .fab:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .card h2 {
+            font-size: 1rem;
+        }
+
+
+        @media only screen and (min-width: 1200px) {
+            .img-hover-zoom--colorize img {
+                width: 200px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .h1,
+            h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 
     <!-- CSS only -->
@@ -54,22 +154,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-{{--    <div class="container">--}}
-{{--        <div class="row text-center">--}}
-{{--            <div class="col-lg-12 col-md-8">--}}
-{{--                <div class="col-sm-8 bg-primary">--}}
-{{--                    <img width="350" height="150" src="images/IMG_20220701_174812__02.png"/>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class=" col-md-2 col-sm-4 ">--}}
-{{--                <div class="navbar navbar-expand-lg navbar-primary bg-light">--}}
-{{--                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">--}}
-{{--                        <span class="navbar-toggler-icon"></span>--}}
-{{--                    </button>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+
 <div class="row text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
         <a href="/"> <img width="350" height="150" src="../images/windsorblues.png"/></a>
@@ -96,7 +181,7 @@
                     <a class="nav-link cool-link Playfair fw-bold" href="#">Blues in Schools</a>
                 </li>
                 <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="#">About</a>
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('about.index')}}">About</a>
                 </li>
                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('museum.index')}}">Museum</a>
@@ -104,6 +189,7 @@
                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('news.index')}}">News</a>
                 </li>
+
             </ul>
         </div>
     </div>
