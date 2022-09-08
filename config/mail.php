@@ -37,10 +37,19 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => env('MAIL_PORT', 587),
+            'port' => env('587', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
+            'timeout' => null,
+        ],
+        'contact' => [
+            'transport' => 'smtp',
+            'host' => env('smtp.titan.email', 'smtp.titan.email'),
+            'port' => env('465', 465),
+            'encryption' => env('tls', 'tls'),
+            'username' => env('MAIL_USERNAME1'),
+            'password' => env('MAIL_PASSWORD1'),
             'timeout' => null,
         ],
 

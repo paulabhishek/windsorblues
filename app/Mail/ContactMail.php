@@ -28,6 +28,6 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Contact US')->replyTo($this->email)->markdown('emails.contact');
+        return $this->from('contact@windsorblues.ca')->subject('Contact US')->replyTo($this->email)->markdown('emails.contact');
     }
 }
