@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class EventController extends Controller
 {
     public function index(){
-        $events = Event::get();
+
+        $events = Event::orderByDesc('date')->limit(5)->get();
         return view('events.index', compact("events"));
 //        dd($events);
     }

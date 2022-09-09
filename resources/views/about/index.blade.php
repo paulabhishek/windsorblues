@@ -38,6 +38,7 @@
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">Vice President</h2>
+                        <h6 class=" mt-2 text-uppercase text-center role">glen@windsorblues.ca</h6>
                     </div>
                     <div class="box">
                         <div>
@@ -68,6 +69,8 @@
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">President</h2>
+                        <h6 class=" mt-2 text-uppercase text-center role">michael@windsorblues.ca</h6>
+
                     </div>
                     <div class="box">
                         <div>
@@ -98,6 +101,8 @@
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">Treasurer</h2>
+                        <h6 class=" mt-2 text-uppercase text-center role">mike@windsorblues.ca</h6>
+
                     </div>
                     <div class="box">
                         <div>
