@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
-                <button id="btnchatham" type="button" href="{{route('chatham.home')}}" class="btn btn-outline-danger">Visit Our Chatham Site</button>
+                <button href="{{route('welcome.chatham')}}" type="button"  class="btn btn-outline-danger">Visit Our Chatham Site</button>
             </div>
         </div>
 </div>

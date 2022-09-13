@@ -18,6 +18,10 @@ class WelcomeController extends Controller
 //        dd($events);
     }
 
+    public function chathamIndex(){
+        return view('chatham.home');
+    }
+
     public function newsletterStore(Request $request){
         $member = new Member($request->all());
 

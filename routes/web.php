@@ -38,10 +38,15 @@ Route::get('/dashboard', function () {
 //require __DIR__.'/auth.php';
 
 
+Route::get('chatham', function () {
+    return view('chatham.home');
+})->name('chatham.home');
+
 
 //WELCOME
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 Route::post('/', [WelcomeController::class, 'newsletterStore'])->name('welcome.newsletterStore');
+Route::get('/chatham', [WelcomeController::class, 'chathamIndex'])->name('welcome.chatham');
 
 //Route::get('/', function () {
 //    return view('welcome');
@@ -156,9 +161,7 @@ Route::get('about', [AboutController::class, 'index'])->name('about.index');
 
 
 
-Route::get('chatham', function () {
-    return view('chatham.home');
-})->name('chatham.home');
+
 
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

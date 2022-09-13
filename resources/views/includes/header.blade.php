@@ -178,18 +178,18 @@
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('contact.index')}}">Contact</a>
                 </li>
                 <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="#">Blues in Schools</a>
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('welcome.chatham')}}">Blues in Schools</a>
                 </li>
-                <li class="nav-item px-4 h4">
+                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('about.index')}}">About</a>
                 </li>
+
                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('museum.index')}}">Museum</a>
                 </li>
                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('news.index')}}">News</a>
                 </li>
-
             </ul>
         </div>
     </div>
