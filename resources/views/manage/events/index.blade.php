@@ -1,25 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="text-3xl font-bold underline">Events page</h1>
-<!-- This example requires Tailwind CSS v2.0+ -->
-@foreach ($events as $object)
-Name:   {{ $object->name }}<br>
-Location: {{ $object->location }}<br>
-des: {{ $object->description }}<br>
-artist: {{ $object->artist }}<br>
-date: {{ $object->date }}<br>
-yt_url: {{ $object->yt_url }}<br>
-user_id: {{ $object->user_id }}<br>
-<form method="POST" action="{{ route('manage.event.delete', $object->id) }}">
-    {{method_field('DELETE')}}
-    {{csrf_field()}}
-    <input type="submit" value="Delete"></form>
-</form> <br><br>
-@endforeach
 
-
-
+<h1 class="text-3xl font-bold underline text-center">Events page</h1>
 <div class="container">
+    <a href="{{ url('/manage/event/create')}}" class="btn btn-primary">Create</a>
+
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach ($events as $object)
             <div class="col">
@@ -39,7 +24,12 @@ user_id: {{ $object->user_id }}<br>
                             <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                         </svg>
                         <p style="display:inline" class="card-text px-1 ">{{ $object->date }}</p><br><br>
-                        <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
+                        <form method="POST" action="{{ route('manage.event.delete', $object->id) }}">
+                            {{method_field('DELETE')}}
+                            {{csrf_field()}}
+                            <a href="{{ url('/manage/event/')}}/{{$object->id }}/edit" class="btn btn-primary">update</a>
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form> <br><br>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Last updated 3 mins ago</small>
