@@ -16,12 +16,12 @@
         <input name="yt_url" type="text" ><br>
         <label for="date">Event Date</label>
         <input name="date" type="date" ><br>
-        <label for="user_id">User</label>
-        <select name="user_id">
-            @foreach($users as $id )
-                <option value="{{$id}}">{{$id}}</option>
-            @endforeach
-        </select><br>
+{{--        <label for="user_id">User</label>--}}
+{{--        <select name="user_id">--}}
+{{--            @foreach($users as $id )--}}
+{{--                <option value="{{$id}}">{{$id}}</option>--}}
+{{--            @endforeach--}}
+{{--        </select><br>--}}
         <input type="submit" value="Create"><br>
     </form>
 @endif

@@ -44,7 +44,7 @@ class ManageController extends Controller
 
 
     public function newsStore(Request $request){
-        $user = User::findorFail($request->user_id);
+        $user = auth()->user();
         $news = new news($request->all());
         $user->news()->save($news);
         return redirect('manage/news');
@@ -143,7 +143,7 @@ class ManageController extends Controller
         return view('manage.events.create', compact("users"));
     }
     public function eventStore(Request $request){
-        $user = User::findorFail($request->user_id);
+        $user = auth()->user();
         $event = new Event($request->all());
         $user->events()->save($event);
 
@@ -214,8 +214,8 @@ class ManageController extends Controller
     }
 
     public function memberCreate(){
-        $users = User::all()->pluck('id');
-        return view('manage.member.create', compact("users"));
+//        $users = User::all()->pluck('id');
+        return view('manage.member.create');
     }
     public function memberShow($member){
         $member = Member::find($member);
@@ -224,10 +224,9 @@ class ManageController extends Controller
 
 
     public function memberStore(Request $request){
-        $user = User::findorFail($request->user_id);
+        $user = auth()->user();
         $member = new member($request->all());
         $user->members()->save($member);
-
         return redirect('manage/member');
     }
 
