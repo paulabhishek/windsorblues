@@ -50,8 +50,6 @@ class ManageController extends Controller
         return redirect('manage/news');
     }
 
-
-
     public function newsDestroy(User $id){
         $id->delete();
         return redirect('manage/news');
@@ -226,9 +224,13 @@ class ManageController extends Controller
     public function memberStore(Request $request){
         $user = auth()->user();
         $member = new member($request->all());
-        $user->members()->save($member);
+//        if (Member::find($member->email))
+        if ($member->newsletter == 1 && $member->terms == 1 ) {
+            $user->members()->save($member);
+        }
         return redirect('manage/member');
     }
+
 
     public function memberEdit($member){
         $member = Member::findorFail($member);

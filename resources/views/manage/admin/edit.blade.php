@@ -2,21 +2,39 @@
 @section('content')
 <h1>Edit Admin</h1>
 
-<form method="POST" action="{{ route('manage.admin.update', $id->id) }}">
-    {{method_field('PATCH')}}
-    {{csrf_field()}}
-    <label for="name">Name:</label>
-    <input name="name" type="text" value="{{$id->name}}"><br>
-    <label for="email">Email</label>
-    <input name="email" type="email" value="{{$id->email}}"><br>
-    <label for="password">Password</label>
-    <input name="password" type="password" value="{{$id->password}}"><br>
-    <label for="level">Level</label>
-    <select name="level">
-        <option value="1">1</option>
-        <option value="2">2</option>
-    </select><br>
-    <input type="submit" value="update"><br>
-</form> <br><br>
-
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-1">
+            <form method="POST" action="{{ route('manage.admin.update', $id->id) }}">
+                {{ csrf_field() }}
+                {{method_field('PATCH')}}
+                <div class="form-group">
+                    <label for="name" class="form-label">Name:</label>
+                    <input class="form-control" name="name" type="text" value="{{$id->name}}" required/>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input class="form-control" name="email" type="email" value="{{$id->email}}" required/>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password:</label>
+                    <input class="form-control" name="password" type="password" value="{{$id->password}}" required/>
+                </div>
+                <div class="form-group">
+                    <label class="col-form-label" for="level">Select Levels</label>
+                    <div class="col-md-6">
+                        <select name="level" id="level" class="form-control">
+                            <option selected="">Choose...</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection

@@ -1,43 +1,73 @@
 @extends('layouts.app')
 @section('content')
     <h1>Create News</h1>
-    <form method="POST" action="{{ route ('manage.news.store') }}">
-        {{ csrf_field() }}
-        <label for="title">Title:</label>
-        <input name="title" type="text" ><br>
-        <label for="author">Author:</label>
-        <input name="author" type="text" ><br>
-        <label for="p1">P1:</label>
-        <input name="p1" type="text" ><br>
-        <label for="p2">P2:</label>
-        <input name="p2" type="text" ><br>
-        <label for="p3">P3:</label>
-        <input name="p3" type="text" ><br>
-        <label for="p4">P4:</label>
-        <input name="p4" type="text" ><br>
-        <label for=p5">P5:</label>
-        <input name="p5" type="text" ><br>
 
-        <label for="img_banner">Image_banner:</label>
-        <input name="img_banner" type="text" ><br>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 offset-md-1">
+                <form class="mt-4 mt-md-0" method="POST" action=" {{ route ('manage.news.store') }}">
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        <label for="title" class="form-label">Title:</label>
+                        <input class="form-control" name="title" type="text" id="validationTextarea3" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="author" class="form-label">Author:</label>
+                        <input class="form-control" name="author" type="text" id="validationTextarea2" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="p1" class="form-label">P1:</label>
+                        <input class="form-control" name="p1" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="p2" class="form-label">P2:</label>
+                        <input class="form-control" name="p2" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="p3" class="form-label">P3:</label>
+                        <input class="form-control" name="p3" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="p4" class="form-label">P4:</label>
+                        <input class="form-control" name="p4" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="p5" class="form-label">P5:</label>
+                        <input class="form-control" name="p5" type="text" id="validationTextarea" required/>
+                    </div>
 
-        <label for="img_highlight1">Image_banner1:</label>
-        <input name="img_highlight1" type="text" ><br>
-        <label for="img_highlight2">Image_banner2:</label>
-        <input name="img_highlight2" type="text" ><br>
-        <label for="img_highlight3">Image_banner3:</label>
-        <input name="img_highlight3" type="text" ><br>
-        <label for="img_highlight4">Image_banner4:</label>
-        <input name="img_highlight4" type="text" ><br>
-        <label for="img_highlight5">Image_banner5:</label>
-        <input name="img_highlight5" type="text" ><br>
-        <label for="date">News Date</label>
-        <input name="date" type="date" ><br>
-{{--        <select name="user_id">--}}
-{{--            @foreach($users as $id )--}}
-{{--                <option value="{{$id}}">{{$id}}</option>--}}
-{{--            @endforeach--}}
-{{--        </select><br>--}}
-        <input type="submit" value="Create"><br>
-    </form>
+                    <div class="form-group">
+                        <label for="img_banner" class="form-label">Image_banner:</label>
+                        <input class="form-control" name="img_banner" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="img_highlight1" class="form-label">Image_highlight1:</label>
+                        <input class="form-control" name="img_highlight1" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="img_highlight2" class="form-label">Image_highlight2:</label>
+                        <input class="form-control" name="img_highlight2" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="img_highlight3" class="form-label">Image_highlight3:</label>
+                        <input class="form-control" name="img_highlight3" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="img_highlight4" class="form-label">Image_highlight4:</label>
+                        <input class="form-control" name="img_highlight4" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="img_highlight5" class="form-label">Image_highlight5:</label>
+                        <input class="form-control" name="img_highlight5" type="text" id="validationTextarea" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="date" class="form-label">Date:</label>
+                        <input class="form-control" name="date" type="date" id="validationTextarea" required/>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+        </div>
+    </div>
 @endsection
