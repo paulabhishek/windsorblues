@@ -124,7 +124,26 @@
             </div>
         </div>
     </div>
+{{--Our Sponsors--}}
+<div class="container text-center mt-4">
+    <h1 class="text-center  mb-4 hdline" style="color: #150185; font-family: 'Playfair Display', serif;">Our Sponsors</h1>
+    <div class="row">
+        <div class="col-sm-2 col-md-4">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+        </div>
+        <div class="col-sm-2 col-md-4">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+        </div>
+        <div class="col-sm-2 col-md-4">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
 
+        </div>
+        <div class="col-sm-2 col-md-4 p-2">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+
+        </div>
+    </div>
+</div>
 
     <div class="container mt-5">
         <div class="row">
@@ -164,5 +183,6 @@
             <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">Stay tuned.!</p>
         </blockquote>
     </div>
+
 @include('includes.footer')
 
