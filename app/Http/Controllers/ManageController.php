@@ -144,7 +144,12 @@ class ManageController extends Controller
         $user = auth()->user();
         $event = new Event($request->all());
         $user->events()->save($event);
-
+        if ($request->hasFile('file') &&
+            $request->file('file')->isValid()) {
+            $path = $request->file->storePublicly('images', 'public');
+            $event->file =$path;
+            $event->save();
+        }
         return redirect('manage/event');
     }
     public function eventDestroy(Event $id){

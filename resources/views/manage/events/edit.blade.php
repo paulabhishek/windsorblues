@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 offset-md-1">
-            <form class="mt-4 mt-md-0" method="POST" action="{{ route ('manage.member.update', $member->id) }}">
+            <form class="mt-4 mt-md-0" method="POST" action="{{ route ('manage.event.update', $event->id) }}">
                 {{ csrf_field() }}
                 {{method_field('PATCH')}}
                 <div class="form-group">

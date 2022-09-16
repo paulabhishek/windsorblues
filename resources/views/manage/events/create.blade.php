@@ -5,7 +5,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-6 offset-md-1">
-                    <form class="mt-4 mt-md-0" method="POST" action=" {{route('manage.event.store')}}">
+                    <form class="mt-4 mt-md-0" method="POST" action=" {{route('manage.event.store')}}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="name" class="form-label">Event title:</label>
@@ -30,6 +30,10 @@
                         <div class="form-group">
                             <label for="date" class="form-label">date</label>
                             <input class="form-control" name="date" type="date" id="validationTextarea" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="file" class="form-label">File:</label>
+                            <input class="form-control" name="file" type="file" accept="/images*" required/>
                         </div>
                         <div class="col-12 mt-3">
                             <button type="submit" class="btn btn-primary">Create</button>

@@ -3,7 +3,10 @@
     <div class="card mb-3" style="max-width:100%;">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="../images/monkeyjunk1.jpg" class="img-fluid rounded-start" alt="...">
+{{--                <img src="../images/monkeyjunk1.jpg" class="img-fluid rounded-start" alt="...">--}}
+                @isset($event->file)
+                    <img class="img-fluid rounded-start" src="{{ asset('storage/' . $event->file) }}"  height="200px" alt="Card image cap">
+                @endisset
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -20,6 +23,7 @@
                     <p style="display:inline" class="card-text px-1">{{$event->location }}</p><br><br>
 
                     <b>Overview:</b><p class="card-text">{{$event->description }}</p>
+                    <a href="https://www.ticketscene.ca/events/42349/"  target="_blank" class="btn btn-primary">Buy Tickets</a>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
