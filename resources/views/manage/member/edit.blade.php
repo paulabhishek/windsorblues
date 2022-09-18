@@ -21,6 +21,10 @@
                     <input class="form-control" name="phone" type="tel" value="{{$member->phone}}" required/>
                 </div>
                 <div class="form-group">
+                    <label for="phone" class="form-label">Date</label>
+                    <input class="form-control" name="phone" type="tel" value="{{$member->date}}" required/>
+                </div>
+                <div class="form-group">
                     <label for="newsletter" class="form-label">Newsletter</label>
                     <input class="form-control" name="newsletter" type="text" value="{{$member->newsletter}}" required/>
                 </div>

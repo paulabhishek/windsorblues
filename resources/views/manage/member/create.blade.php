@@ -40,6 +40,10 @@
                     <label for="email" class="form-label">Member email</label>
                     <input class="form-control" name="email" type="email" id="validationTextarea" required/>
                 </div>
+                <div class="form-group">
+                        <label for="date" class="form-label">Date</label>
+                    <input class="form-control" name="date" type="date" id="validationTextarea" required/>
+                </div>
 {{--                <div class="form-group">--}}
 {{--                    <label for="newsletter" class="form-label">Newsletter</label>--}}
 {{--                    <input class="form-control" name="newsletter" type="text" id="validationTextarea" required/>--}}

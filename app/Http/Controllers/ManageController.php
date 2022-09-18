@@ -34,6 +34,7 @@ class ManageController extends Controller
 
     public function newsShow($news){
         $news = News::find($news);
+
         return view('manage.news.show', compact("news"));
     }
 
@@ -47,6 +48,52 @@ class ManageController extends Controller
         $user = auth()->user();
         $news = new news($request->all());
         $user->news()->save($news);
+
+//        if ($request->hasFile('img_banner') &&
+//            $request->file('img_banner')->isValid()) {
+////            dd( $request->file('img_banner'));
+//            $path = $request->file->storePublicly('images', 'public');
+//
+//            $news->file =$path;
+//            $news->save();
+//        }
+//        if ($request->hasFile('img_highlight1') &&
+//            $request->file('img_highlight1')->isValid()) {
+//            $path = $request->file->storePublicly('images', 'public');
+//            $news->file =$path;
+//            $news->save();
+//            if ($request->hasFile('img_highlight2') &&
+//                $request->file('img_highlight2')->isValid()) {
+//                $path = $request->file->storePublicly('images', 'public');
+//                $news->file =$path;
+//                $news->save();
+//                if ($request->hasFile('img_highlight3') &&
+//                    $request->file('img_highlight3')->isValid()) {
+//                    $path = $request->file->storePublicly('images', 'public');
+//                    $news->file =$path;
+//                    $news->save();
+//                    if ($request->hasFile('img_highlight3') &&
+//                        $request->file('img_highlight3')->isValid()) {
+//                        $path = $request->file->storePublicly('images', 'public');
+//                        $news->file =$path;
+//                        $news->save();
+//                        if ($request->hasFile('img_highlight4') &&
+//                            $request->file('img_highlight4')->isValid()) {
+//                            $path = $request->file->storePublicly('images', 'public');
+//                            $news->file =$path;
+//                            $news->save();
+//                            if ($request->hasFile('img_highlight5') &&
+//                                $request->file('img_highlight5')->isValid()) {
+//                                $path = $request->file->storePublicly('images', 'public');
+//                                $news->file =$path;
+//                                $news->save();
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+
         return redirect('manage/news');
     }
 
@@ -229,6 +276,7 @@ class ManageController extends Controller
     public function memberStore(Request $request){
         $user = auth()->user();
         $member = new member($request->all());
+
 //        if (Member::find($member->email))
         if ($member->newsletter == 1 && $member->terms == 1 ) {
             $user->members()->save($member);

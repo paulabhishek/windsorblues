@@ -168,28 +168,34 @@
         </button>
         <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" style="">
             <ul class="navbar-nav">
-                <li class="nav-item px-4 h4 mb-0 ">
-                  <a class="nav-link cool-link Playfair fw-bold" href="{{route('membership.showform')}}">Become a Member</a>
-                </li>
-                <li class="nav-item px-4 h4 cool-link">
-                    <a class="nav-link  Playfair fw-bold" href="{{route('event.index')}}">Events</a>
-                </li>
                 <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('contact.index')}}">Contact</a>
-                </li>
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('welcome.chatham')}}">Blues in Schools</a>
-                </li>
-                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('about.index')}}">About</a>
                 </li>
+                <li class="nav-item px-4 h4 cool-link">
 
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('museum.index')}}">Museum</a>
+                    <a class="nav-link  Playfair fw-bold" href="{{route('event.index')}}">Events</a>
+                </li>
+                <li class="nav-item px-4 h4 mb-0 ">
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('membership.showform')}}">Become a Member</a>
                 </li>
                 <li class="nav-item px-4 h4">
                     <a class="nav-link cool-link Playfair fw-bold" href="{{route('news.index')}}">News</a>
                 </li>
+                <li class="nav-item px-4 h4">
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('museum.index')}}">Museum</a>
+                </li>
+                <li class="nav-item px-4 h4">
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('welcome.chatham')}}">Blues in Schools</a>
+                </li>
+
+                <li class="nav-item px-4 h4">
+                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('contact.index')}}">Contact</a>
+                </li>
+
+
+
+
+
             </ul>
         </div>
     </div>

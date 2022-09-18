@@ -38,27 +38,27 @@
 
                     <div class="form-group">
                         <label for="img_banner" class="form-label">Image_banner:</label>
-                        <input class="form-control" name="img_banner" type="text" id="validationTextarea" required/>
+                        <input class="form-control" name="img_banner" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight1" class="form-label">Image_highlight1:</label>
-                        <input class="form-control" name="img_highlight1" type="text" id="validationTextarea" required/>
+                        <input class="form-control" name="img_highlight1" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight2" class="form-label">Image_highlight2:</label>
-                        <input class="form-control" name="img_highlight2" type="text" id="validationTextarea" required/>
+                        <input class="form-control" name="img_highlight2" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight3" class="form-label">Image_highlight3:</label>
-                        <input class="form-control" name="img_highlight3" type="text" id="validationTextarea" required/>
+                        <input class="form-control" name="img_highlight3" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight4" class="form-label">Image_highlight4:</label>
-                        <input class="form-control" name="img_highlight4" type="text" id="validationTextarea" required/>
+                        <input class="form-control" name="img_highlight4" type="file" accept="/image*"/>
                     </div>
                     <div class="form-group">
                         <label for="img_highlight5" class="form-label">Image_highlight5:</label>
-                        <input class="form-control" name="img_highlight5" type="text" id="validationTextarea" required/>
+                        <input class="form-control" name="img_highlight5" type="file" accept="/image*"/>
                     </div>
                     <div class="form-group">
                         <label for="date" class="form-label">Date:</label>
