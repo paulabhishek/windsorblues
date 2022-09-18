@@ -258,6 +258,21 @@ class ManageController extends Controller
         $members = Member::get();
         return view('manage.member.index', compact("members"));
     }
+//YEAR_TO_DAYS
+    public static function dateDiffInDays($date1){
+        $date2 = date("d-m-Y");
+        $timestamp = strtotime($date1);
+        $date1 = date("d-m-Y", $timestamp);
+        $diff = strtotime($date2) - strtotime($date1);
+        $dateDiff = abs(round($diff / 86400));
+        if ($dateDiff >= 365){
+            return '-'. $dateDiff .' days' . ' (expired)';
+        }
+        else
+        return $dateDiff . ' days';
+    }
+
+
     public function memberDestroy(Member $id){
         $id->delete();
         return redirect('manage/member');
@@ -289,10 +304,13 @@ class ManageController extends Controller
         $member = Member::findorFail($member);
         return view('manage.member.edit', compact("member"));
     }
+
     public function memberUpdate(Request $request, $member){
         $formdata = $request->all();
         $member = Member::findorfail($member);
         $member->update($formdata);
         return redirect('manage/member');
     }
+
+    public function serachMember(){}
 }

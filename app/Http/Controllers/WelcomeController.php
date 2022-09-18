@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use App\Models\News;
+use Carbon\Carbon;
 use DateTime;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Null_;
@@ -28,6 +29,7 @@ class WelcomeController extends Controller
         if ($member->newsletter == 1) {
             $member->terms = 0;
             $member->user_id = 0;
+            $member->date = Carbon::today()->toDateString();
             $member->save();
         }
         return redirect('/');
