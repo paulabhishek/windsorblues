@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email" class="form-label">Member email</label>
-                    <input class="form-control" name="email" type="email" id="validationTextarea" required/>
+                    <input class="form-control" name="email" type="email" id="validationTextarea"  required/>
                 </div>
                 <div class="form-group">
                         <label for="date" class="form-label">Date</label>

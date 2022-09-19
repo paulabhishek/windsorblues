@@ -31,6 +31,10 @@
                     <label for="date" class="form-label">date</label>
                     <input class="form-control" name="date" type="date" value="{{$event->date}}" required/>
                 </div>
+                <div class="form-group">
+                    <label for="file" class="form-label">File:</label>
+                    <input class="form-control" name="file" type="file" value="{{$event->file}}" accept="/images*" required/>
+                </div>
                 <div class="col-12 mt-3">
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>

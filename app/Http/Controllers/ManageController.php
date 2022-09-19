@@ -217,18 +217,27 @@ class ManageController extends Controller
     //MAILCHIMP
     public function mailchimpSync(){
         $member = DB::table('members')->select('name', 'email', 'phone')->where('newsletter', '=', 1)->where('terms', '=', 1)->get();
+//        dd($member);
         foreach ($member as $obj){
             $name = trim($obj->name);
+//            dump($name);
             $parts = explode(" ", $name);
+//            dump($parts);
             $lname  = array_pop($parts);
+//            dump($lname);
             $fname = implode(" ", $parts);
-            $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone];
+            $fname = preg_replace('/[^A-Za-z0-9\-]/', '', $fname);
+            dump($fname);
+            $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone, 'EMAIL'=>$obj->email];
+//            dump($arr);
 
         Newsletter::subscribe($obj->email, $arr);
+//            dump(Newsletter::getLastError(), Newsletter::getApi());
         }
-        dd(Newsletter::getLastError(), Newsletter::getApi());
+//        dd(Newsletter::getLastError(), Newsletter::getApi());
         return redirect('manage/member');
     }
+
     public function mailchimpUpdate(){
         $member = DB::table('members')->select('name', 'email', 'phone')->where('newsletter', '=', 1)->where('terms', '=', 1)->get();
         foreach ($member as $obj){
@@ -236,11 +245,13 @@ class ManageController extends Controller
             $parts = explode(" ", $name);
             $lname  = array_pop($parts);
             $fname = implode(" ", $parts);
-            $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone];
+            $fname = preg_replace('/[^A-Za-z0-9\-]/', '', $fname);
+            $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone, 'EMAIL'=>$obj->email];
 
             Newsletter::subscribeOrUpdate($obj->email, $arr);
+//            dump(Newsletter::getLastError(), Newsletter::getApi());
         }
-        dd(Newsletter::getLastError(), Newsletter::getApi());
+//        dd(Newsletter::getLastError(), Newsletter::getApi());
         return redirect('manage/member');
     }
 
@@ -282,10 +293,10 @@ class ManageController extends Controller
 //        $users = User::all()->pluck('id');
         return view('manage.member.create');
     }
-    public function memberShow($member){
-        $member = Member::find($member);
-        return view('manage.member.show', compact("member"));
-    }
+//    public function memberShow($member){
+//        $member = Member::find($member);
+//        return view('manage.member.show', compact("member"));
+//    }
 
 
     public function memberStore(Request $request){
@@ -312,5 +323,16 @@ class ManageController extends Controller
         return redirect('manage/member');
     }
 
-    public function serachMember(){}
+    public function searchMember(Request $request){
+
+         $get_name = $request->search;
+         $member =  Member::where(function ($query) use($request){
+             $query->where('name', 'LIKE', '%' . $request->search .'%');
+             $query->orWhere('email', 'LIKE', '%' . $request->search .'%');
+             $query->orWhere('phone', 'LIKE', '%' . $request->search .'%');
+         })->get();
+//        return dd($member);
+         return view('manage.member.search', compact('member', 'get_name'));
+
+    }
 }

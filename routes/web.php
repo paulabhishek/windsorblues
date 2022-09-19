@@ -107,11 +107,15 @@ Route::get('about', [AboutController::class, 'index'])->name('about.index');
         Route::get('manage/member/create', [ManageController::class, 'memberCreate'])->name('manage.member.create');
         Route::post('manage/member', [ManageController::class, 'memberStore'])->name('manage.member.store');
         Route::get('manage/member', [ManageController::class, 'memberIndex'])->name('manage.member.index');
-        Route::get('manage/member/{id}', [ManageController::class, 'memberShow'])->name('manage.member.show');
         Route::get('manage/member/{id}/edit', [ManageController::class, 'memberEdit'])->name('manage.member.edit');
         Route::patch('manage/member/{id}', [ManageController::class, 'memberUpdate'])->name('manage.member.update');
         Route::delete('manage/member/{id}', [ManageController::class, 'memberDestroy'])->name('manage.member.delete');
     });
+//MEMBER SEARCH
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/member/search', [ManageController::class, 'searchMember'])->name('manage.member.search');
+
+});
 
 //MAILCHIMP
 
@@ -125,7 +129,7 @@ Route::get('about', [AboutController::class, 'index'])->name('about.index');
     //SYNC
         Route::group(['middleware' => 'auth'], function(){
             Route::get('manage/mailchimp', [ManageController::class, 'mailchimpSync'])->name('manage.mailchimp.sync');
-            Route::patch('manage/mailchimp', [ManageController::class, 'mailchimpUpdate'])->name('manage.mailchimp.update');
+            Route::post('manage/mailchimp', [ManageController::class, 'mailchimpUpdate'])->name('manage.mailchimp.update');
 
         });
 

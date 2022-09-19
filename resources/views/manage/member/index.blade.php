@@ -2,11 +2,27 @@
 @section('content')
 
 <div class="container">
+    <form class="d-flex" role="search" accept-charset="utf-8" method="GET" action=" {{route('manage.member.search')}}">
+                    <input class="form-control " name="search" type="search" placeholder="search by name, phone, email" aria-label="Search" required>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
     <h1 class="text-3xl font-bold underline">Sync members to MailChimp</h1>
-{{--    <a class="btn btn-primary" href="{{route('manage.mailchimp.sync')}}">Sync now</a>--}}
-{{--    <a class="btn btn-primary" href="{{route('manage.mailchimp.update')}}">Update now</a>--}}
+    <form method="post" action="{{route('manage.mailchimp.update')}}">
+        {{ csrf_field() }}
+        <button type="submit" class="btn btn-primary">update</button>
+    </form>
+        <a class="btn btn-primary mt-2" href="{{route('manage.mailchimp.sync')}}">Sync</a>
+
+
+
+    {{--    <a class="btn btn-primary" >Sync</a>--}}
+
+    {{--        <a class="btn btn-primary" href="{{route('manage.mailchimp.update')}}">Update</a>--}}
+
     <h1 class="text-3xl font-bold underline">Member page</h1>
-    <a href="{{ url('/manage/member/create')}}" class="btn btn-primary">Add new member</a>
+    <p class="small-text">(sorting function work in progress  )</p>
+
+    <a href="{{ url('/manage/member/create')}}" class="btn btn-primary mb-3">Add new member</a>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach ($members as $object)
         <div class="col">
