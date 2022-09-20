@@ -5,7 +5,7 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-6 offset-md-1">
-                <form class="mt-4 mt-md-0" method="POST" action=" {{ route ('manage.news.store') }}">
+                <form class="mt-4 mt-md-0" method="POST" action=" {{ route ('manage.news.store') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="title" class="form-label">Title:</label>

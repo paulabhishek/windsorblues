@@ -43,56 +43,72 @@ class ManageController extends Controller
         return view('manage.news.create', compact("users"));
     }
 
-
+//    public function eventStore(Request $request){
+////        dd($request->file('file'));
+//        $user = auth()->user();
+//        $event = new Event($request->all());
+////        dd($event);
+//        $user->events()->save($event);
+//
+//        if ($request->hasFile('file') &&
+//            $request->file('file')->isValid()) {
+//            $path = $request->file->storePublicly('images', 'public');
+//            $event->file = $path;
+//            $event->save();
+//        }
+//        return redirect('manage/event');
+//    }
     public function newsStore(Request $request){
+//        dd($request->img_banner);
+//        dd($request->file('img_banner'));
         $user = auth()->user();
         $news = new news($request->all());
         $user->news()->save($news);
 
-//        if ($request->hasFile('img_banner') &&
-//            $request->file('img_banner')->isValid()) {
-////            dd( $request->file('img_banner'));
-//            $path = $request->file->storePublicly('images', 'public');
-//
-//            $news->file =$path;
-//            $news->save();
-//        }
-//        if ($request->hasFile('img_highlight1') &&
-//            $request->file('img_highlight1')->isValid()) {
-//            $path = $request->file->storePublicly('images', 'public');
-//            $news->file =$path;
-//            $news->save();
-//            if ($request->hasFile('img_highlight2') &&
-//                $request->file('img_highlight2')->isValid()) {
-//                $path = $request->file->storePublicly('images', 'public');
-//                $news->file =$path;
-//                $news->save();
-//                if ($request->hasFile('img_highlight3') &&
-//                    $request->file('img_highlight3')->isValid()) {
-//                    $path = $request->file->storePublicly('images', 'public');
-//                    $news->file =$path;
-//                    $news->save();
-//                    if ($request->hasFile('img_highlight3') &&
-//                        $request->file('img_highlight3')->isValid()) {
-//                        $path = $request->file->storePublicly('images', 'public');
-//                        $news->file =$path;
-//                        $news->save();
-//                        if ($request->hasFile('img_highlight4') &&
-//                            $request->file('img_highlight4')->isValid()) {
-//                            $path = $request->file->storePublicly('images', 'public');
-//                            $news->file =$path;
-//                            $news->save();
-//                            if ($request->hasFile('img_highlight5') &&
-//                                $request->file('img_highlight5')->isValid()) {
-//                                $path = $request->file->storePublicly('images', 'public');
-//                                $news->file =$path;
-//                                $news->save();
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+        if ($request->hasFile('img_banner') &&
+            $request->file('img_banner')->isValid()) {
+//            dd( $request->file('img_banner'));
+            $path = $request->img_banner->storePublicly('images', 'public');
+            $news->img_banner =$path;
+            $news->save();
+
+            if ($request->hasFile('img_highlight1') &&
+                $request->file('img_highlight1')->isValid()) {
+                $path = $request->img_highlight1->storePublicly('images', 'public');
+                $news->img_highlight1 = $path;
+                $news->save();
+                if ($request->hasFile('img_highlight2') &&
+                    $request->file('img_highlight2')->isValid()) {
+                    $path = $request->img_highlight2->storePublicly('images', 'public');
+                    $news->img_highlight2 = $path;
+                    $news->save();
+                    if ($request->hasFile('img_highlight3') &&
+                        $request->file('img_highlight3')->isValid()) {
+                        $path = $request->img_highlight3->storePublicly('images', 'public');
+                        $news->img_highlight3 = $path;
+                        $news->save();
+                        if ($request->hasFile('img_highlight3') &&
+                            $request->file('img_highlight3')->isValid()) {
+                            $path = $request->img_highlight3->storePublicly('images', 'public');
+                            $news->img_highlight3 = $path;
+                            $news->save();
+                            if ($request->hasFile('img_highlight4') &&
+                                $request->file('img_highlight4')->isValid()) {
+                                $path = $request->img_highlight4->storePublicly('images', 'public');
+                                $news->img_highlight4 = $path;
+                                $news->save();
+                                if ($request->hasFile('img_highlight5') &&
+                                    $request->file('img_highlight5')->isValid()) {
+                                    $path = $request->img_highlight5->storePublicly('images', 'public');
+                                    $news->img_highlight5 = $path;
+                                    $news->save();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         return redirect('manage/news');
     }
@@ -114,6 +130,55 @@ class ManageController extends Controller
         return redirect('manage/news');
     }
 
+
+
+
+//EVENTS
+    public function eventIndex(){
+        $events = Event::get();
+        return view('manage.events.index', compact("events"));
+//        dd($events);
+    }
+
+    public function eventShow($event){
+        $event = Event::find($event);
+        return view('manage.events.show', compact("event"));
+    }
+
+    public function eventCreate(){
+        $users = User::all()->pluck('id');
+        return view('manage.events.create', compact("users"));
+    }
+    public function eventStore(Request $request){
+        dd($request->file('file'));
+        $user = auth()->user();
+        $event = new Event($request->all());
+//        dd($event);
+        $user->events()->save($event);
+
+        if ($request->hasFile('file') &&
+            $request->file('file')->isValid()) {
+            $path = $request->file->storePublicly('images', 'public');
+            $event->file = $path;
+            $event->save();
+        }
+        return redirect('manage/event');
+    }
+    public function eventDestroy(Event $id){
+        $id->delete();
+        return redirect('manage/event');
+    }
+    public function eventEdit($event){
+        $event = Event::findorFail($event);
+        return view('manage.events.edit', compact("event"));
+    }
+    public function eventUpdate(Request $request, $event){
+        $formdata = $request->all();
+        dd($formdata);
+        $event = Event::findorfail($event);
+        $event->update($formdata);
+        return redirect('manage/event');
+    }
 
 //ADMIN
     public function adminIndex(){
@@ -170,49 +235,6 @@ class ManageController extends Controller
     }
 
 
-
-//EVENTS
-    public function eventIndex(){
-        $events = Event::get();
-        return view('manage.events.index', compact("events"));
-//        dd($events);
-    }
-
-    public function eventShow($event){
-        $event = Event::find($event);
-        return view('manage.events.show', compact("event"));
-    }
-
-    public function eventCreate(){
-        $users = User::all()->pluck('id');
-        return view('manage.events.create', compact("users"));
-    }
-    public function eventStore(Request $request){
-        $user = auth()->user();
-        $event = new Event($request->all());
-        $user->events()->save($event);
-        if ($request->hasFile('file') &&
-            $request->file('file')->isValid()) {
-            $path = $request->file->storePublicly('images', 'public');
-            $event->file =$path;
-            $event->save();
-        }
-        return redirect('manage/event');
-    }
-    public function eventDestroy(Event $id){
-        $id->delete();
-        return redirect('manage/event');
-    }
-    public function eventEdit($event){
-        $event = Event::findorFail($event);
-        return view('manage.events.edit', compact("event"));
-    }
-    public function eventUpdate(Request $request, $event){
-        $formdata = $request->all();
-        $event = Event::findorfail($event);
-        $event->update($formdata);
-        return redirect('manage/event');
-    }
 
     //MAILCHIMP
     public function mailchimpSync(){
