@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 offset-md-1">
-            <form class="mt-4 mt-md-0" method="POST" action="{{ route ('manage.event.update', $event->id) }}">
+            <form class="mt-4 mt-md-0" method="POST" action="{{ route ('manage.event.update', $event->id) }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{method_field('PATCH')}}
                 <div class="form-group">
@@ -33,7 +33,8 @@
                 </div>
                 <div class="form-group">
                     <label for="file" class="form-label">File:</label>
-                    <input class="form-control" name="file" type="file" value="{{$event->file}}" accept="/images*" required/>
+                    <input class="form-control" name="file" type="file" accept="/images*" required/>
+{{--                    <input class="form-control" name="oldfile" type="hidden" value="{{$event->file}}" accept="/images*" required/>--}}
                 </div>
                 <div class="col-12 mt-3">
                     <button type="submit" class="btn btn-primary">Update</button>

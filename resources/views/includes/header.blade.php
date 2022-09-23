@@ -6,6 +6,12 @@
 
     <title>Laravel</title>
     <style>
+
+
+        .bluecor{
+            color: #0f0e40;
+        }
+
         li {
             margin-bottom: 10px;
         }
@@ -151,7 +157,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -166,36 +172,29 @@
         <button class="navbar-toggler collapsed pull-left" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" style="">
+        <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" >
             <ul class="navbar-nav">
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('about.index')}}">About</a>
+                <li class="nav-item px-3 h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;"  href="{{route('about.index')}}">About</a>
                 </li>
-                <li class="nav-item px-4 h4 cool-link">
-
-                    <a class="nav-link  Playfair fw-bold" href="{{route('event.index')}}">Events</a>
+                <li class="nav-item px-3 h4 ">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('event.index')}}">Events</a>
                 </li>
-                <li class="nav-item px-4 h4 mb-0 ">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('membership.showform')}}">Become a Member</a>
+                <li class="nav-item px-3 h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('membership.showform')}}">Become a Member</a>
                 </li>
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('news.index')}}">News</a>
+                <li class="nav-item px-3  h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('news.index')}}">News</a>
                 </li>
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('museum.index')}}">Museum</a>
+                <li class="nav-item px-3 h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>
                 </li>
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('welcome.chatham')}}">Blues in Schools</a>
+                <li class="nav-item px-3 h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('welcome.chatham')}}">Blues in Schools</a>
                 </li>
-
-                <li class="nav-item px-4 h4">
-                    <a class="nav-link cool-link Playfair fw-bold" href="{{route('contact.index')}}">Contact</a>
+                <li class="nav-item px-3 h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('contact.index')}}">Contact</a>
                 </li>
-
-
-
-
-
             </ul>
         </div>
     </div>

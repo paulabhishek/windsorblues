@@ -14,7 +14,7 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">{{$object->title}}</h5>
-                <p class="card-text">{{  Str::limit($object->p1, 50 }}</p>
+                <p class="card-text">{{  Str::limit($object->p1, 50) }}</p>
                 <p class="card-text"><small class="text-muted">{{\App\Http\Controllers\NewsController::time_elapsed_string($object->date, false)}}</small></p>
                 <a href="{{ url('/news/')}}/{{$object->id }}" class="btn btn-sm btn-primary btn-end">Read more</a>
             </div>

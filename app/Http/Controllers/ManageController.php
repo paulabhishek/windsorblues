@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
 use Newsletter;
 
@@ -67,7 +68,7 @@ class ManageController extends Controller
 
         if ($request->hasFile('img_banner') &&
             $request->file('img_banner')->isValid()) {
-//            dd( $request->file('img_banner'));
+//            dd( $request->hasFile('img_banner'));
             $path = $request->img_banner->storePublicly('images', 'public');
             $news->img_banner =$path;
             $news->save();
@@ -149,8 +150,9 @@ class ManageController extends Controller
         $users = User::all()->pluck('id');
         return view('manage.events.create', compact("users"));
     }
+
     public function eventStore(Request $request){
-        dd($request->file('file'));
+//        dd($request->file('file'));
         $user = auth()->user();
         $event = new Event($request->all());
 //        dd($event);
@@ -164,6 +166,22 @@ class ManageController extends Controller
         }
         return redirect('manage/event');
     }
+
+    public function eventUpdate(Request $request, $event){
+        $formdata = $request->all();
+        $event = Event::findorfail($event);
+        $event->update($formdata);
+        // checks if request has file
+        if ($request->hasFile('file')){
+            //deletes the previous file
+            Storage::disk('public')->delete($event->file);
+            $path = $request->file->storePublicly('images', 'public');
+            $event->file = $path;
+            $event->update();
+        }
+        return redirect('manage/event');
+    }
+
     public function eventDestroy(Event $id){
         $id->delete();
         return redirect('manage/event');
@@ -172,13 +190,7 @@ class ManageController extends Controller
         $event = Event::findorFail($event);
         return view('manage.events.edit', compact("event"));
     }
-    public function eventUpdate(Request $request, $event){
-        $formdata = $request->all();
-        dd($formdata);
-        $event = Event::findorfail($event);
-        $event->update($formdata);
-        return redirect('manage/event');
-    }
+
 
 //ADMIN
     public function adminIndex(){

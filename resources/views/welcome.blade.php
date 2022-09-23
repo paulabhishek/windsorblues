@@ -10,17 +10,18 @@
 {{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/da65a44a16402ca63c12e1b3d926009b.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">First slide</text></svg>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Buy Tickets Now!</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <button type="button" class="btn btn-outline-light">Buy Tickets Now!</button>
+                    <p>The Cash Box Kings</p>
                 </div>
             </div>
-
 
             <div class="carousel-item" data-bs-interval="2000">
 {{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>--}}
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Second slide</text></svg>
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Sign up now!</h5>
+                    <button type="button" class="btn btn-outline-light">Sign up now!</button>
+
+{{--                    <h5>Sign up now!</h5>--}}
                     <p>Get discounted tickets on memberships</p>
                 </div>
             </div>
@@ -30,7 +31,7 @@
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Donate to the Blues Society</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+{{--                    <p>Some representative placeholder content for the third slide.</p>--}}
                 </div>
             </div>
         </div>
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
-                <button href="{{route('welcome.chatham')}}" type="button"  class="btn btn-outline-danger">Visit Our Chatham Site</button>
+                <button href="{{route('welcome.chatham')}}" type="button"  class="btn btn-outline-primary" style="color: #150185">Visit Our Chatham Site</button>
             </div>
         </div>
 </div>
@@ -79,7 +80,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="card pt-10">
                 <div class="card-header text-center">
-                   Windsor Blues Latest News
+                    <small class="fs-3" style="font-family: 'Lobster', cursive; color: #0f0e40">Blues Latest News</small>
                 </div>
                 <div class="card-body overflow-auto" style="max-width: 100%; max-height: 400px;">
                     @foreach ($news as $object)
