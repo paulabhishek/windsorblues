@@ -1,11 +1,14 @@
 @include('includes.header')
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
         </div>
         <div class="carousel-inner">
+{{--        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532" src="images/Blues Foundation logo - horizontal stacked.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
+
             <div class="carousel-item active" data-bs-interval="10000">
 {{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/da65a44a16402ca63c12e1b3d926009b.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">First slide</text></svg>

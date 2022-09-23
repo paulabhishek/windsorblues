@@ -30,7 +30,7 @@
                         <form method="POST" action="{{ route('manage.event.delete', $object->id) }}">
                             {{method_field('DELETE')}}
                             {{csrf_field()}}
-                            <a href="{{ url('/manage/event/')}}/{{$object->id }}/edit" class="btn btn-primary">update</a>
+                            <a href="{{ url('/manage/event/')}}/{{$object->id }}/edit" class="btn btn-primary">Edit</a>
                             <button class="btn btn-danger" type="submit">Delete</button>
                         </form> <br><br>
                     </div>
