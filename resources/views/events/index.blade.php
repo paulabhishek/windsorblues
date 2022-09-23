@@ -1,7 +1,16 @@
 @include('includes.header')
 {{--<h1 class="text-3xl font-bold underline text-center mb-4">Events</h1>--}}
-<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>
-
+{{--<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>--}}
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <p class="fw-bold text-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif; ">Upcoming Events</p>
+        </div>
+        <div class="col">
+            <p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach ($events as $object)

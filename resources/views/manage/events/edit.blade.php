@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="file" class="form-label">File:</label>
-                    <input class="form-control" name="file" type="file" accept="/images*" required/>
+                    <input class="form-control" name="file" type="file" accept="/images*" />
 {{--                    <input class="form-control" name="oldfile" type="hidden" value="{{$event->file}}" accept="/images*" required/>--}}
                 </div>
                 <div class="col-12 mt-3">

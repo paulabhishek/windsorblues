@@ -170,13 +170,20 @@ class ManageController extends Controller
     public function eventUpdate(Request $request, $event){
         $formdata = $request->all();
         $event = Event::findorfail($event);
-        $event->update($formdata);
         // checks if request has file
         if ($request->hasFile('file')){
             //deletes the previous file
             Storage::disk('public')->delete($event->file);
             $path = $request->file->storePublicly('images', 'public');
+            $event->update($formdata);
             $event->file = $path;
+            $event->update();
+        }
+        // if there was no file submitted in the update form
+        else{
+            $old_file = $event->file;
+            $event->update($formdata);
+            $event->file = $old_file;
             $event->update();
         }
         return redirect('manage/event');
