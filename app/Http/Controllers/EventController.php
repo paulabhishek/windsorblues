@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
     public function index(){
-
-        $events = Event::orderByDesc('date')->limit(5)->get();
+        $events = Event::where('date', '>', date('Y-m-d'))->get();
         return view('events.index', compact("events"));
-//        dd($events);
     }
+
+    public function eventIndexPast(){
+        $events = Event::where('date', '<', date('Y-m-d'))->orderByDesc('date')->get();
+        return view('events.indexPast', compact("events"));
+    }
+
 
     public function show($event){
 

@@ -4,10 +4,10 @@
 <div class="container text-center">
     <div class="row">
         <div class="col">
-            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold t ext-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif; ">Upcoming Events</p></a>
+           <a href="{{route('event.index')}}" style="text-decoration: none; "> <p class="fw-bold text-justify text-center fs-1 text-uppercase " style="color: #150185; font-family: 'Source Sans Pro', sans-serif; ">Upcoming Events</p></a>
         </div>
         <div class="col">
-            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p></a>
+            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p href="{{route('event.index.past')}}" class="fw-bold text-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p></a>
         </div>
     </div>
 </div>
@@ -18,16 +18,15 @@
                 <div class="card h-100">
                     <p class=" fs-1 text-center mb-1">{{$object->name}}</p>
                     {{--            <img width="20" height="100" src="images/75274204C4084884AC8373DD486C0793.jpg" class="card-img-top" alt="...">--}}
-{{--                    @dump($object->file)--}}
+                    {{--                    @dump($object->file)--}}
                     @isset($object->file)
                         <a href="{{ url('/event/')}}/{{$object->id }}">
-                        <img class="card-img-top" src="{{ asset('storage/' . $object->file) }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('storage/' . $object->file) }}" alt="Card image cap">
                         </a>
                     @endisset
-{{--                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>--}}
+                    {{--                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>--}}
                     <div class="card-body">
-                            <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
-                            <button href="" class="btn btn-primary" type="button">Buy ticket</button>
+                        <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
                     </div>
                 </div>
             </div>

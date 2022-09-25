@@ -137,6 +137,7 @@ class ManageController extends Controller
 //EVENTS
     public function eventIndex(){
         $events = Event::get();
+//        dd($events);
         return view('manage.events.index', compact("events"));
 //        dd($events);
     }
