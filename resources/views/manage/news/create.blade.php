@@ -16,25 +16,26 @@
                         <input class="form-control" name="author" type="text" id="validationTextarea2" required/>
                     </div>
                     <div class="form-group">
-                        <label for="p1" class="form-label">P1:</label>
-                        <input class="form-control" name="p1" type="text" id="validationTextarea" required/>
+                        <label for="p1" class="form-label">Paragraph 1</label>
+                        <textarea class="form-control" name="p1" type="text" rows="5"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="p2" class="form-label">P2:</label>
-                        <input class="form-control" name="p2" type="text" id="validationTextarea" required/>
+                        <label for="p2" class="form-label">Paragraph 2</label>
+                        <textarea class="form-control" name="p2" type="text" rows="5"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="p3" class="form-label">P3:</label>
-                        <input class="form-control" name="p3" type="text" id="validationTextarea" required/>
+                        <label for="p3" class="form-label">Paragraph 3</label>
+                        <textarea class="form-control" name="p3" type="text" rows="5"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="p4" class="form-label">P4:</label>
-                        <input class="form-control" name="p4" type="text" id="validationTextarea" required/>
+                        <label for="p4" class="form-label">Paragraph 41</label>
+                        <textarea class="form-control" name="p4" type="text" rows="5"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="p5" class="form-label">P5:</label>
-                        <input class="form-control" name="p5" type="text" id="validationTextarea" required/>
+                        <label for="p5" class="form-label">Paragraph 5</label>
+                        <textarea class="form-control" name="p5" type="text" rows="5"></textarea>
                     </div>
+
 
                     <div class="form-group">
                         <label for="img_banner" class="form-label">Image_banner:</label>
