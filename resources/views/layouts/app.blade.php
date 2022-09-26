@@ -39,6 +39,7 @@
                         <li><a class="nav-link cool-link" href="{{route('manage.event.index')}}">Events</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.member.index')}}">Members</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.news.index')}}">News</a></li>
+                        <li><a class="nav-link cool-link" href="{{route('manage.museum.index')}}">Museum</a></li>
                         @can('isLevelTwo')
                         <li><a class="nav-link cool-link" href="{{route('manage.admin.index')}}">Manage Admins</a></li>
                         @endcan

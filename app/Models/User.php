@@ -54,7 +54,7 @@ public function news(){
     return $this->hasmany(News::class);
 }
 
-public function museum(){
+public function museums(){
     return $this->hasmany(Museum::class);
 }
 

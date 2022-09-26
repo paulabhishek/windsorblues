@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\Member;
+use App\Models\Museum;
 use App\Models\News;
 use App\Models\User;
 //use http\Env\Response;
@@ -23,7 +24,62 @@ class ManageController extends Controller
     public function index(){
         return view('manage.index');
     }
+//MUSEUM
+    public function museumIndex(){
+        $museum = Museum::get();
+//        dd($news);
+//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+        return view('manage.museum.index', compact("museum"));
+    }
 
+    public function museumCreate(){
+        $museum = User::all()->pluck('id');
+        return view('manage.museum.create', compact("museum"));
+    }
+
+    public function museumStore(Request $request){
+//        dd($request->file('file'));
+        $user = auth()->user();
+        $museum = new Museum($request->all());
+//        dd($museum);
+        $user->museums()->save($museum);
+
+        if ($request->hasFile('image1') &&
+            $request->file('image1')->isValid()) {
+            $path = $request->image1->storePublicly('images', 'public');
+            $museum->image1 = $path;
+            $museum->save();
+            if ($request->hasFile('image2') &&
+                $request->file('image2')->isValid()) {
+                $path = $request->image2->storePublicly('images', 'public');
+                $museum->image2 = $path;
+                $museum->save();
+            }
+        }
+        return redirect('manage/museum');
+    }
+
+    public function museumDestroy(User $id){
+        $id->delete();
+        return redirect('manage/museum');
+    }
+
+    public function museumUpdate(Request $request, $museum){
+        $formdata = $request->all();
+        $museum = Museum::findorfail($museum);
+        $museum->update($formdata);
+        return redirect('manage/museum');
+    }
+
+    public function museumShow($museum){
+        $museum = Museum::find($museum);
+        return view('manage.museum.show', compact("museum"));
+    }
+
+    public function museumEdit($museum){
+        $museum = Museum::findorFail($museum);
+        return view('manage.museum.edit', compact("museum"));
+    }
 
 //NEWS
     public function newsIndex(){

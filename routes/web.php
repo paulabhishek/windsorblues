@@ -104,6 +104,18 @@ Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
 
     });
 
+//MANAGE MUSEUM
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/museum/create', [ManageController::class, 'museumCreate'])->name('manage.museum.create');
+    Route::post('manage/museum', [ManageController::class, 'museumStore'])->name('manage.museum.store');
+    Route::get('manage/museum', [ManageController::class, 'museumIndex'])->name('manage.museum.index');
+    Route::get('manage/museum/{id}', [ManageController::class, 'museumShow'])->name('manage.museum.show');
+    Route::get('manage/museum/{id}/edit', [ManageController::class, 'museumEdit'])->name('manage.museum.edit');
+    Route::patch('manage/museum/{id}', [ManageController::class, 'museumUpdate'])->name('manage.museum.update');
+    Route::delete('manage/museum/{id}', [ManageController::class, 'museumDestroy'])->name('manage.museum.delete');
+
+});
+
 //MANAGE MEMBER
     Route::group(['middleware' => 'auth'], function(){
         Route::get('manage/member/create', [ManageController::class, 'memberCreate'])->name('manage.member.create');
