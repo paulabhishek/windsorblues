@@ -17,23 +17,27 @@
                     </div>
                     <div class="form-group">
                         <label for="p1" class="form-label">P1:</label>
-                        <input class="form-control" name="p1" type="text" value="{{$news->p1}}" required/>
+                        <textarea class="form-control" name="p1" type="text" rows="5" required>{{$news->p1}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="p2" class="form-label">P2:</label>
-                        <input class="form-control" name="p2" type="text" value="{{$news->p2}}" required/>
+                        <textarea class="form-control" name="p2" type="text" rows="5" required>{{$news->p2}}</textarea>
                     </div>
+{{--                    <div class="form-group">--}}
+{{--                        <label for="p5" class="form-label">Paragraph 5</label>--}}
+{{--                        <textarea class="form-control" name="p5" type="text" rows="5"></textarea>--}}
+{{--                    </div>--}}
                     <div class="form-group">
                         <label for="p3" class="form-label">P3:</label>
-                        <input class="form-control" name="p3" type="text" value="{{$news->p3}}" required/>
+                        <textarea class="form-control" name="p3" type="text" rows="5" required>{{$news->p3}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="p4" class="form-label">P4:</label>
-                        <input class="form-control" name="p4" type="text" value="{{$news->p4}}" required/>
+                        <textarea class="form-control" name="p4" type="text" rows="5" required>{{$news->p4}}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="p5" class="form-label">P5:</label>
-                        <input class="form-control" name="p5" type="text" value="{{$news->p5}}" required/>
+                        <textarea class="form-control" name="p5" type="text" rows="5" required>{{$news->p5}}</textarea>
                     </div>
 
                     <div class="form-group">

@@ -8,7 +8,7 @@
             <div class="col-md-4">
 {{--                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>--}}
                     @isset($object->img_banner)
-                        @dump(asset('storage/' . $object->img_banner))
+{{--                        @dump(asset('storage/' . $object->img_banner))--}}
                         <img class="bd-placeholder-img img-fluid rounded-start" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="Card image cap">
                     @endisset
             </div>
@@ -31,7 +31,7 @@
                     <form method="POST" action="{{ route('manage.news.delete', $object->id) }}">
                         {{method_field('DELETE')}}
                         {{csrf_field()}}
-                        <a href="{{ url('/manage/news/')}}/{{$object->id }}/edit" class="btn btn-primary">update</a>
+                        <a href="{{ url('/manage/news/')}}/{{$object->id }}/edit" class="btn btn-primary">Edit</a>
                         <button class="btn btn-danger" type="submit">Delete</button>
                     </form>
                 </div>
