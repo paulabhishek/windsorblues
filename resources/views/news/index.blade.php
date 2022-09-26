@@ -2,20 +2,26 @@
 
 <svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">News and updates</text></svg>
 @foreach ($news as $object)
+
 <div class="container card my-5">
     <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
 {{--            <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>--}}
             @isset($object->img_banner)
 {{--                @dump(asset('storage/' . $object->img_banner))--}}
-                <img class="img-fluid rounded-start" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="Card image cap">
+                <img class="" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="news">
             @endisset
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">{{$object->title}}</h5>
-                <p class="card-text">{{  Str::limit($object->p1, 50) }}</p>
-                <p class="card-text"><small class="text-muted">{{\App\Http\Controllers\NewsController::time_elapsed_string($object->date, false)}}</small></p>
+                <p class="card-title fs-2" style="font-family: 'Abyssinica SIL', serif; font-weight: bold; color: #150185;">{!! $object->title !!}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"></path>
+                    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                </svg>
+                <text class="text-muted"> {{date('l' . ', '. 'F Y', strtotime($object->date))}}</text>
+                <p class="mt-3">{{  Str::limit($object->p1, 150) }}</p>
+{{--                <p class="card-text"><small class="text-muted">{{\App\Http\Controllers\NewsController::time_elapsed_string($object->date, false)}}</small></p>--}}
                 <a href="{{ url('/news/')}}/{{$object->id }}" class="btn btn-sm btn-primary btn-end">Read more</a>
             </div>
         </div>

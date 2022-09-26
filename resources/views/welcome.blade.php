@@ -83,7 +83,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="card pt-10">
                 <div class="card-header text-center">
-                    <small class="fs-3" style="font-family: 'Lobster', cursive; color: #0f0e40">Blues Latest News</small>
+                    <small class="fs-3" style="font-family: 'Lobster', cursive; color: #0f0e40">Windsor Blues News</small>
                 </div>
                 <div class="card-body overflow-auto" style="max-width: 100%; max-height: 400px;">
                     @foreach ($news as $object)

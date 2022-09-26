@@ -16,68 +16,82 @@
 
 <div class="card mb-3">
     <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">{{ $news->title }}</text></svg>
+    <div class="container">
+        <div class="card-body">
+            <div class="py-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+                    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"></path>
+                    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                </svg>
+                <text class="text-muted" style=" font-size: large;"> {{date('l' . ', '. 'F Y', strtotime($news->date))}}</text>
+            </div>
 
-    <div class="card-body">
-        <h5 class="card-title">{{ $news->title }}</h5>
-        <p class="card-text">{{ $news->p1 }}</p>
-        @isset($news->p2)
-            <p class="card-text">{{ $news->p2}}</p>
-        @endisset
-        @isset($news->p3)
-            <p class="card-text">{{ $news->p3}}</p>
-        @endisset
-        @isset($news->p4)
-            <p class="card-text">{{ $news->p4}}</p>
-        @endisset
-        @isset($news->p5)
-            <p class="card-text">{{ $news->p5}}</p>
-        @endisset
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            @isset($news->img_banner)
+{{--                <img class="" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="news">--}}
+                <img src="{{ asset('storage/' . $news->img_banner) }}" class="img-fluid" alt="...">
+            @endisset
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
-            @if($news->img_highlight1 == Null)
-            @else
-            <div class="col">
-                <div class="card" >
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-                </div>
-            </div>
-            @endif
-                @if($news->img_highlight2 == Null)
+            <p class="fs-5 mt-3">{!! $news->p1 !!}</p>
+            @isset($news->p2)
+                <p class="fs-5">{!! $news->p2!!}</p>
+            @endisset
+            @isset($news->p3)
+                <p class="fs-5">{!! $news->p3!!}</p>
+            @endisset
+            @isset($news->p4)
+                <p class="fs-5">{!! $news->p4!!}</p>
+            @endisset
+            @isset($news->p5)
+                <p class="fs-5">{!! $news->p5 !!}</p>
+            @endisset
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+                @if($news->img_highlight1 == Null)
                 @else
-            <div class="col">
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-                </div>
-            </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="{{ asset('storage/' . $news->img_highlight1) }}" class="img-fluid" alt="...">
+{{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+                        </div>
+                    </div>
                 @endif
                 @if($news->img_highlight2 == Null)
                 @else
-            <div class="col">
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-                </div>
-            </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ asset('storage/' . $news->img_highlight2) }}" class="img-fluid" alt="...">
+{{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+                        </div>
+                    </div>
                 @endif
-                @if($news->img_highlight2 == Null)
+                @if($news->img_highlight3 == Null)
                 @else
-            <div class="col">
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-                </div>
-            </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ asset('storage/' . $news->img_highlight3) }}" class="img-fluid" alt="...">
+{{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+                        </div>
+                    </div>
                 @endif
-                @if($news->img_highlight2 == Null)
+                @if($news->img_highlight4 == Null)
                 @else
-            <div class="col">
-                <div class="card">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-                </div>
-            </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ asset('storage/' . $news->img_highlight4) }}" class="img-fluid" alt="...">
+{{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+                        </div>
+                    </div>
                 @endif
+                @if($news->img_highlight5 == Null)
+                @else
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{ asset('storage/' . $news->img_highlight5) }}" class="img-fluid" alt="...">
+{{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+                        </div>
+                    </div>
+                @endif
+            </div>
         </div>
-
-
     </div>
 </div>
 
