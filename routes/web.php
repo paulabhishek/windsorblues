@@ -101,7 +101,6 @@ Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
         Route::get('manage/event/{id}/edit', [ManageController::class, 'eventEdit'])->name('manage.event.edit');
         Route::patch('manage/event/{id}', [ManageController::class, 'eventUpdate'])->name('manage.event.update');
         Route::delete('manage/event/{id}', [ManageController::class, 'eventDestroy'])->name('manage.event.delete');
-
     });
 
 //MANAGE MUSEUM
@@ -113,7 +112,6 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('manage/museum/{id}/edit', [ManageController::class, 'museumEdit'])->name('manage.museum.edit');
     Route::patch('manage/museum/{id}', [ManageController::class, 'museumUpdate'])->name('manage.museum.update');
     Route::delete('manage/museum/{id}', [ManageController::class, 'museumDestroy'])->name('manage.museum.delete');
-
 });
 
 //MANAGE MEMBER

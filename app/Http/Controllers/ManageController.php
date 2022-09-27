@@ -59,7 +59,7 @@ class ManageController extends Controller
         return redirect('manage/museum');
     }
 
-    public function museumDestroy(User $id){
+    public function museumDestroy(Museum $id){
         $id->delete();
         return redirect('manage/museum');
     }
@@ -170,7 +170,7 @@ class ManageController extends Controller
         return redirect('manage/news');
     }
 
-    public function newsDestroy(User $id){
+    public function newsDestroy(News $id){
         $id->delete();
         return redirect('manage/news');
     }

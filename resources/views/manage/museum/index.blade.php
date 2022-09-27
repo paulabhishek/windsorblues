@@ -2,45 +2,58 @@
 @section('content')
 <h1 class="text-3xl font-bold underline text-center mb-4">Museum page</h1>
 <a href="{{ url('/manage/museum/create')}}" class="btn btn-primary text-center">Create new</a>
-@foreach ($museum as $object)
-    <div class="container card my-5">
-            <div class="row g-0">
-            <div class="col-md-4">
-{{--                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>--}}
-                    @isset($object->img_banner)
-{{--                        @dump(asset('storage/' . $object->img_banner))--}}
-                        <img class="bd-placeholder-img img-fluid rounded-start" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="Card image cap">
-                    @endisset
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">title: {{$object->artist_name}}</h5>
-                    <p class="card-text">video_url1:{{ $object->video_url1 }}</p>
-                    <p class="card-text">video_url2:{{ $object->video_url2 }}</p>
-                    <p class="card-text">p1:{{ $object->p1 }}</p>
-                    <p class="card-text">p2:{{ $object->p2 }}</p>
-                    <p class="card-text">p3:{{ $object->p3 }}</p>
-                    <p class="card-text">Date: {{$object->date }}</p>
-{{--                    <img class="" {{$object->image1 }}/>--}}
-                    @isset($object->image1)
 
-                        <img class="img-thumbnail" src="{{ asset('storage/' . $object->image1) }}"  height="200px" alt="Card image cap">
-                    @endisset
-                    @isset($object->image2)
-                        <img class="img-thumbnail" src="{{ asset('storage/' . $object->image2) }}"  height="200px" alt="Card image cap">
-                    @endisset
-                    <p class="card-text">User ID: {{ $object->user_id }}</p>
+<div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            @foreach ($museum as $object)
+{{--                {{dump($object->id)}}--}}
+            <div class="col">
+                <div class="card h-100">
+                    @php
+                        $id =('carouselExampleControls' . $object->id)
+                    @endphp
+                    <div id="{{$id}}" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                @isset($object->image1)
+                                    <img class="bd-placeholder-img img-fluid rounded-start d-block w-100" src="{{ asset('storage/' . $object->image1) }}"  width="800" height="400" alt="Card image cap">
+                                @endisset
+                            </div>
+                            <div class="carousel-item active">
+                                @isset($object->image2)
+                                    <img class="bd-placeholder-img img-fluid rounded-start d-block w-100" src="{{ asset('storage/' . $object->image2) }}"  width="800" height="400" alt="Card image cap">
+                                @endisset
+{{--                                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>--}}
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#{{$id}}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#{{$id}}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{$object->artist_name}}</h5>
+                        <p class="card-text">{{ $object->p1 }}</p>
+                    </div>
                     <form method="POST" action="{{ route('manage.museum.delete', $object->id) }}">
                         {{method_field('DELETE')}}
                         {{csrf_field()}}
                         <a href="{{ url('/manage/museum/')}}/{{$object->id }}/edit" class="btn btn-primary">Edit</a>
                         <button class="btn btn-danger" type="submit">Delete</button>
                     </form>
+                    <div class="card-footer">
+{{--                        <small class="text-muted">Inducted in 2020</small>--}}
+                        <small class="text-muted text-center">Inducted In {{ $object->date }}</small>
+                    </div>
                 </div>
             </div>
+            @endforeach
         </div>
-    </div>
-@endforeach
+</div>
 @endsection
 
 

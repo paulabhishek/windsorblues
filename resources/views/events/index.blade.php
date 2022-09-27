@@ -41,7 +41,10 @@
                             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                         </svg>
                         <p style="display:inline" class="card-text px-1">{{$object->location }}</p><br><br>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20{{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="col">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
+                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="550" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <b>Overview:</b><p class="card-text">{{$object->description }}</p>
 {{--                        <a href="https://www.ticketscene.ca/events/42349/"  target="_blank" class="btn btn-primary">Buy Tickets</a>--}}
                             <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
@@ -56,12 +59,9 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
                 @endforeach
-
             </div>
         </div>
     </div>
-
-
 
 @else
     <div class="container">
