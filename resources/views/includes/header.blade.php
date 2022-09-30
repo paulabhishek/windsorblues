@@ -49,13 +49,25 @@
         body {
             overflow-x: hidden !important;
         }
-
-        .hdline {
-
+        .redline {
             display: inline-block;
             padding-bottom: 10px;
             position: relative;
+        }
+        .redline:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            bottom: 0;
+            left: 0%;
+            border-bottom: 5px solid red;
+        }
 
+        .hdline {
+            display: inline-block;
+            padding-bottom: 10px;
+            position: relative;
         }
 
         .hdline:before {
@@ -149,6 +161,25 @@
                 font-size: 2rem;
             }
         }
+
+        .iframe-container{
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+        }
+        .iframe-container > *{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
     </style>
 
     <!-- CSS only -->
@@ -157,8 +188,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Bebas+Neue&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet"> </head>
-<body>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Cormorant+Garamond&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet"><body>
 
 <div class=" text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">

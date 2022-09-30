@@ -23,6 +23,7 @@
                     <p style="display:inline" class="card-text px-1">{{$event->location }}</p><br><br>
 
                     <b>Overview:</b><p class="card-text">{{$event->description }}</p>
+                    <b>Watch Video:</b><a href="{{$event->yt_url }}">  {{$event->yt_url }}</a><br>
                     <a href="https://www.ticketscene.ca/events/42349/"  target="_blank" class="btn btn-primary">Buy Tickets</a>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>

@@ -4,7 +4,6 @@
 <h1 class="text-3xl font-bold underline text-center">Events page</h1>
 <div class="container">
     <a href="{{ url('/manage/event/create')}}" class="btn btn-primary">Create</a>
-
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach ($events as $object)
             <div class="col">

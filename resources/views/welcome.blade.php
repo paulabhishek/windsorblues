@@ -1,5 +1,17 @@
 @include('includes.header')
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+
+<div class="container">
+    
+</div>
+<img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532" src="images/Blues Foundation logo - horizontal stacked.jpg"
+     role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice"
+     focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777">
+</rect>
+<text x="50%" y="50%" fill="#555" dy=".3em">
+
+</text>
+</img>
+    <div id="carouselExampleCaptions" class="carousel slide col-12 col-md-8" data-bs-ride="false">
 
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>

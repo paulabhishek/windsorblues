@@ -1,6 +1,8 @@
 @include('includes.header')
 {{--<h1 class="text-3xl font-bold underline text-center mb-4">Events</h1>--}}
 {{--<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>--}}
+<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Windsor Blues Past Events</text></svg>
+
 <div class="container text-center">
     <div class="row">
         <div class="col">

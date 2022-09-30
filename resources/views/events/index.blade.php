@@ -6,10 +6,10 @@
 <div class="container text-center">
     <div class="row">
         <div class="col">
-            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold t ext-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif; ">Upcoming Events</p></a>
+            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold t ext-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Upcoming Events</p></a>
         </div>
         <div class="col">
-            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p></a>
+            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Past Events</p></a>
         </div>
     </div>
 </div>
@@ -31,21 +31,28 @@
                 <div class="col-md-8">
                     <div class="card-body text-center">
                         <h1 class="card-title "> {{ $object->name }}</h1>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                        </svg>
-                        <p style="display:inline" class="card-text px-1">{{ $object->artist }}</p>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                        </svg>
-                        <p style="display:inline" class="card-text px-1">{{$object->location }}</p><br><br>
-                        <div class="col">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
-                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="550" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                    </svg>
+                                    <p style="display:inline" class="card-text px-1">{{ $object->artist }}</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                    </svg>
+                                    <p style="display:inline" class="card-text px-1">{{$object->location }}</p><br><br>
+                                </div>
+                                <b>Overview:</b><p class="card-text">{{$object->description }}</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8 col-sm-2 iframe-container">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
+                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca"  style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
                         </div>
-                        <b>Overview:</b><p class="card-text">{{$object->description }}</p>
+
 {{--                        <a href="https://www.ticketscene.ca/events/42349/"  target="_blank" class="btn btn-primary">Buy Tickets</a>--}}
                             <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
                             <button href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary" type="button">Buy ticket</button>
@@ -89,7 +96,10 @@
         </div>
     </div>
 @endif
-
+{{--<div class="iframe-container">--}}
+{{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20--}}
+{{--                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="550" height="350" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>--}}
+{{--</div>--}}
 @include('includes.footer')
 
 
