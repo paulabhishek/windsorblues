@@ -3,7 +3,7 @@
 {{--<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>--}}
 <svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Windsor Blues Events</text></svg>
 
-<div class="container text-center">
+<div class="container text-center mt-4">
     <div class="row">
         <div class="col">
             <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold t ext-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Upcoming Events</p></a>
@@ -15,7 +15,7 @@
 </div>
 {{--{{dd(count($events))}}--}}
 @if(count($events) == 1)
-    <div class="container">
+    <div class="container mt-4">
         <div class="card mb-3" style="max-width:100%;">
             <div class="row g-0">
                 @foreach ($events as $object)
@@ -43,21 +43,29 @@
                                     </svg>
                                     <p style="display:inline" class="card-text px-1">{{$object->location }}</p><br><br>
                                 </div>
-                                <b>Overview:</b><p class="card-text">{{$object->description }}</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-8 col-sm-2 iframe-container">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
-                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca"  style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
                             </div>
                         </div>
-
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <b>Overview:</b><p class="card-text">{{$object->description }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-sm-12 iframe-container">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
+                                {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca"  style="height: 50%; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-sm-12 iframe-container">
+                                        <iframe style="height: 50%;"  src="https://www.youtube.com/embed/WXfWHmmpz6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                        </div>
 {{--                        <a href="https://www.ticketscene.ca/events/42349/"  target="_blank" class="btn btn-primary">Buy Tickets</a>--}}
                             <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
                             <button href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary" type="button">Buy ticket</button>
 
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+{{--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>--}}
                     </div>
                 </div>
 {{--                    <div class="col">--}}
@@ -69,7 +77,6 @@
             </div>
         </div>
     </div>
-
 @else
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
