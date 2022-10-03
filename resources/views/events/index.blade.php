@@ -29,7 +29,7 @@
                     @endif
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body text-center">
+                    <div class=" text-center">
                         <h1 class="card-title "> {{ $object->name }}</h1>
                         <div class="container ">
                             <div class="row">
@@ -57,7 +57,7 @@
                                 {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca"  style="height: 50%; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-sm-12 iframe-container">
-                                        <iframe style="height: 50%;"  src="https://www.youtube.com/embed/WXfWHmmpz6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <iframe style="height: 50%;"  src="https://www.youtube.com/embed/iUCyU_U0J2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
                                 </div>
                         </div>

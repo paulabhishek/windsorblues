@@ -5,14 +5,14 @@
 
 <div class="container card my-5">
     <div class="row g-0">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 col-lg-3 text-center">
 {{--            <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>--}}
             @isset($object->img_banner)
 {{--                @dump(asset('storage/' . $object->img_banner))--}}
-                <img class="" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="news">
+                <img class="img-thumbnail" src="{{ asset('storage/' . $object->img_banner) }}"  alt="news">
             @endisset
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-lg-9">
             <div class="card-body">
                 <p class="card-title fs-2" style="font-family: 'Abyssinica SIL', serif; font-weight: bold; color: #150185;">{!! $object->title !!}</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
