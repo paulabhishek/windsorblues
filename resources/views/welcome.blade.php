@@ -1,65 +1,77 @@
 @include('includes.header')
-
 <div class="container">
-    
-</div>
-<img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532" src="images/Blues Foundation logo - horizontal stacked.jpg"
-     role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice"
-     focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777">
-</rect>
-<text x="50%" y="50%" fill="#555" dy=".3em">
-
-</text>
-</img>
-    <div id="carouselExampleCaptions" class="carousel slide col-12 col-md-8" data-bs-ride="false">
-
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    <div class="row">
+        <div class="col-sm-12">
+            <img class="img-fluid d-block d-sm-none"  src="images/Blues Foundation logo - horizontal stacked.jpg"/>
         </div>
-        <div class="carousel-inner">
-{{--        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532" src="images/Blues Foundation logo - horizontal stacked.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
-
-            <div class="carousel-item active" data-bs-interval="10000">
-{{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/da65a44a16402ca63c12e1b3d926009b.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">First slide</text></svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <button type="button" class="btn btn-outline-light">Buy Tickets Now!</button>
-                    <p>The Cash Box Kings</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" data-bs-interval="2000">
-{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>--}}
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Second slide</text></svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <button type="button" class="btn btn-outline-light">Sign up now!</button>
-
-{{--                    <h5>Sign up now!</h5>--}}
-                    <p>Get discounted tickets on memberships</p>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>--}}
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Donate to the Blues Society</h5>
-{{--                    <p>Some representative placeholder content for the third slide.</p>--}}
-                </div>
-            </div>
-        </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
+</div>
+
+    <div class="row justify-content-start">
+        <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-0">
+            <img class="img-fluid d-none d-md-inline"  src="images/Blues Foundation logo - vertical stacked.jpg"/>
+        </div>
+        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-11 ">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                </div>
+                <div class="carousel-inner">
+                    {{--        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532" src="images/Blues Foundation logo - horizontal stacked.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
+
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        {{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/da65a44a16402ca63c12e1b3d926009b.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">First slide</text></svg>
+                        <div class="carousel-caption d-none d-md-block">
+                            <button type="button" class="btn btn-outline-light">Buy Tickets Now!</button>
+                            <p>The Cash Box Kings</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="2000">
+                        {{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>--}}
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Second slide</text></svg>
+                        <div class="carousel-caption d-none d-md-block">
+                            <button type="button" class="btn btn-outline-light">Sign up now!</button>
+
+                            {{--                    <h5>Sign up now!</h5>--}}
+                            <p>Get discounted tickets on memberships</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        {{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>--}}
+                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Donate to the Blues Society</h5>
+                            {{--                    <p>Some representative placeholder content for the third slide.</p>--}}
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-0 col-sm-0 text-center">
+                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Blues Foundation logo - vertical stacked.jpg"/>
+        </div>
+    </div>
+
+{{--<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>--}}
+{{--<text x="50%" y="50%" fill="#555" dy=".3em">--}}
+
+{{--</text>--}}
+
 
 
 
@@ -67,7 +79,7 @@
 
 <div class="container mt-4">
         <div class="row text-center">
-            <div class="col-lg-4 col-md-3 col-sm-4">
+            <div class="col-md-3 col-sm-4">
                 <div>
                     <img width="105" height="95" src="images/75274204C4084884AC8373DD486C0793.jpg"/>
                 </div>
