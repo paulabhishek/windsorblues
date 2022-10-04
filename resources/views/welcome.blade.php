@@ -11,9 +11,8 @@
         <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-0">
             <img class="img-fluid d-none d-md-inline"  src="images/Blues Foundation logo - vertical stacked.jpg"/>
         </div>
-        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-11 ">
+        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-11">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>

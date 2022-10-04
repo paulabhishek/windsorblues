@@ -39,6 +39,7 @@
 {{--            <li class="nav-item"><a href="{{route('member.index')}}" class="nav-link px-2 text-muted">Membership</a></li>--}}
         </ul>
         <p class="text-center text-muted">© 2022 Windsor South Blues Society</p>
+        <p class="text-center text-muted">This website is fully built and maintained by <a href="https://www.linkedin.com/in/paul-abhishek17/" class="link-primary">Abhishek Vincent</a> </p>
     </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
