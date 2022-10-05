@@ -6,8 +6,6 @@
 
     <title>Laravel</title>
     <style>
-
-
         .bluecor{
             color: #0f0e40;
         }
@@ -180,6 +178,11 @@
             width: 100%;
         }
 
+        .header {
+            background-image: url('../images/IMG_20210725_204540.jpg');
+            background-position: 50% 90%;
+            background-size: cover;
+        }
     </style>
 
     <!-- CSS only -->
@@ -188,8 +191,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Cormorant+Garamond&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet"><body>
-
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <div class=" text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
         <a href="/"> <img width="350" height="150" src="../images/windsorblues.png"/></a>

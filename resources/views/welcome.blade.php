@@ -142,13 +142,13 @@
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-md-12 text-center ">
                 <div class="p-2 m-1">
-                    <h1 class=" text-center hdline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
+                    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
                     <p class="px-4 fs-4" style="text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
-                    <h1 class="hdline mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">History</h1>
+                    <h1 class="redline mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">History</h1>
                     <p class="text-right fs-4 px-2" style="text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012.
                         We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
                         In addition to hosting world class blues, rhythm & blues and roots artists on a regular basis we also host and/or support various benefits and charity fundraisers each year.
@@ -159,7 +159,7 @@
     </div>
 {{--Our Sponsors--}}
 <div class="container text-center mt-4">
-    <h1 class="text-center  mb-4 hdline" style="color: #150185; font-family: 'Playfair Display', serif;">Our Sponsors</h1>
+    <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif;">Our Sponsors</h1>
     <div class="row">
         <div class="col-sm-2 col-md-4">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
@@ -181,7 +181,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-5 d-flex align-items-center">
-                <p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Sign up to our Newsletter today!</p>
+                <p class="fw-bold text-justify text-center fs-1 text-uppercase " style="color: #150185; font-family: 'Carter One', cursive;">Sign up to our Newsletter today!</p>
             </div>
             <div class="col-md-6 offset-md-1">
                 <form class="mt-4 mt-md-0" method="POST" action=" {{route('welcome.newsletterStore')}}">
@@ -198,10 +198,37 @@
                         <label for="email" class="form-label">E-mail</label>
                         <input class="form-control" name="email" type="email" id="validationTextarea" required/>
                     </div>
+
                     <div class="form-group mt-3">
                         <input class="form-check-input" name="newsletter" type="checkbox" value="1" id="validationFormCheck1" required/>
-                        <label for="validationFormCheck1" class="form-check-label">I accept terms and conditions</label>
+                        <label for="validationFormCheck1" data-bs-toggle="modal" data-bs-target="#exampleModal" class="form-check-label text-primary">I accept terms and conditions</label>
+{{--                        <label data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary">read here</label>--}}
                     </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Terms and Conditions/ Privacy Policy</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    By agreeing to the terms and conditions of our privacy policy you give the Canada South Blues Society
+                                    the right to communicate with you via the contact information provided. At no time will your
+                                    information be shared with a third party. Our communications will consist of mainly notices of upcoming
+                                    concerts and news regarding our society. All questions regarding these terms and conditions can be
+                                    forwarded to (contact@windsorblues.ca). These terms and conditions may be updated from time to
+                                    time as deemed by the board of directors.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Agree & Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-12 mt-3">
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </div>
@@ -211,7 +238,7 @@
     </div>
 
     <div class="container mt-5 text-center ">
-        <h1 class="text-center  mb-4 hdline" style="color: #150185; font-family: 'Playfair Display', serif;">Message from our president</h1>
+        <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif;">Message from our president</h1>
         <blockquote class="blockquote mt-4">
             <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">Stay tuned.!</p>
         </blockquote>

@@ -1,19 +1,25 @@
 @include('includes.header')
 {{--<h1 class="text-3xl font-bold underline text-center mb-4">Events</h1>--}}
 {{--<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>--}}
-<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Windsor Blues Past Events</text></svg>
 
-<div class="container text-center">
+<div class="row header">
+    <div class="col-3"></div>
+    <div class="col-12 col-md-6 text-light text-center p-5"><br><br>
+        <h1 style="font-weight:bold">WINDSOR BLUES PAST EVENTS</h1><br><br>
+    </div>
+    <div class="col-3"></div>
+</div>
+<div class="container text-center mt-4">
     <div class="row">
         <div class="col">
            <a href="{{route('event.index')}}" style="text-decoration: none; "> <p class="fw-bold text-justify text-center fs-1 text-uppercase " style="color: #150185; font-family: 'Source Sans Pro', sans-serif; ">Upcoming Events</p></a>
         </div>
         <div class="col">
-            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p href="{{route('event.index.past')}}" class="fw-bold text-justify text-center fs-1 text-uppercase hdline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p></a>
+            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p href="{{route('event.index.past')}}" class="fw-bold text-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p></a>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container mt-3">
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach ($events as $object)
             <div class="col">
