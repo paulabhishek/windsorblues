@@ -1,12 +1,12 @@
 @include('includes.header');
 <div class="container mt-4 text-center">
-    <h1>This Day In History</h1>
+    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">This Day In History</h1>
     <blockquote class="blockquote mt-4">
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
 </div>
 <div class="container mt-4 text-center">
-    <h1>Our Hall Of Fame Inductees</h1>
+    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">Our Hall Of Fame Inductees</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
         @foreach ($museum as $object)
         <div class="col">
@@ -14,7 +14,7 @@
                 @php
                     $id =('carouselExampleControls' . $object->id)
                 @endphp
-                <div id="{{$id}}" class="carousel slide" data-bs-ride="carousel">
+                <div id="{{$id}}" class="carousel slide"  data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item">
                             @isset($object->image1)

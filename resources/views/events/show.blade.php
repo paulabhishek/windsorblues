@@ -31,6 +31,15 @@
 {{--        </div>--}}
 {{--    </div>--}}
 {{--</div>--}}
+<div class="row header">
+    <div class="col-3"></div>
+    <div class="col-12 col-md-6 text-light text-center p-5"><br><br>
+        <h1 style="font-weight:bold">WINDSOR BLUES EVENT</h1><br><br>
+        {{--        <p>Phasellus congue commodo magna ut ultricies. Curabitur a nisi et lectus fringilla sodales. Duis dictum at dolor non luctus. Donec dapibus arcu eget tortor ullamcorper bibendum. Quisque mattis scelerisque malesuada. Cras velit lectus, sagittis vitae dui vehicula, cursus consequat nunc. Integer a pulvinar ante, quis molestie nunc. Ut eget lacus in lacus venenatis dignissim a at sapien.</p>--}}
+        {{--        <button type="button" class="btn btn-outline-light">Learn More</button>--}}
+    </div>
+    <div class="col-3"></div>
+</div>
 
 <div class="container mt-4">
     <div class="card mb-3" style="max-width:100%;">
