@@ -21,8 +21,7 @@ class MemberController extends Controller
 
     public function submit(Request $request){
 //        dd($request);
-        Mail::to('membership@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter,$request->terms  ));
-
+        Mail::to('membership@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter, $request->terms  ));
         Mail::to('abhishek@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter,$request->terms  ));
         return redirect('membership');
     }

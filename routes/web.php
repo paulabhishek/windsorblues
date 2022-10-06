@@ -82,6 +82,7 @@ Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
 
 //MUSEUM
     Route::get('museum', [MuseumController::class, 'index'])->name('museum.index');
+    Route::get('museum/{id}', [MuseumController::class, 'show'])->name('museum.show');
 
 
 //MEMBERSHIP

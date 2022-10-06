@@ -44,6 +44,8 @@
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">Inducted in {{ $object->date }}</small>
+                    <a href="{{ url('museum/')}}/{{$object->id }}" class="btn btn-sm btn-primary btn-end">Read more</a>
+
                 </div>
             </div>
         </div>
@@ -51,3 +53,5 @@
     </div>
 </div>
 @include('includes.footer');
+
+

@@ -11,4 +11,9 @@ class MuseumController extends Controller
         $museum = Museum::get();
         return view('museum.index', compact("museum"));
     }
+    public function show($museum){
+
+        $museum = Museum::find($museum);
+        return view('museum.show', compact("museum"));
+    }
 }
