@@ -28,7 +28,7 @@
             </div>
             <div class="row g-2 justify-content-md-center">
                 <div class="col-md-6">
-                    <button class="btn btn-primary" type="submit">Submit request</button>
+                    <button class="btn btn-primary" type="submit">Send message</button>
                 </div>
             </div>
         </form>

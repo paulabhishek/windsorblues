@@ -30,7 +30,7 @@ class MembershipMail extends Mailable
     public function build()
     {
 
-        return $this->subject('Membership')->replyTo($this->email)->markdown('emails.membership');
+        return $this->subject('Membership Request')->replyTo($this->email)->markdown('emails.membership');
 
     }
 }

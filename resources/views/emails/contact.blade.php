@@ -1,11 +1,10 @@
 @component('mail::message')
-Contact
-Name: {{$name}}
-{{$email}}
-The body of your message.
-Message: {{$message}}
+    <h1>Contact message</h1>
+    <p>Name: {{$name}}</p>
+    <p>Email: {{$email}}</p>
+    <p>Message: {{$message}}</p>
 @component('mail::button', ['url' => 'windsorblues.ca'])
-Button Text
+Reply to {{$email}}
 @endcomponent
 
 Thanks,<br>
