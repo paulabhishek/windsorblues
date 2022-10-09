@@ -20,9 +20,18 @@ class MemberController extends Controller
 
 
     public function submit(Request $request){
+
+        $validatedData = $request->validate([
+            'first_name' => ['required'],
+            'last_name' => ['required'],
+            'phone' => ['required'],
+            'email' => ['required'],
+            'newsletter' => ['required'],
+            'terms' => ['required'],
+        ]);
 //        dd($request);
-        Mail::to('membership@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter, $request->terms  ));
-        Mail::to('abhishek@windsorblues.ca')->send(new MembershipMail($request->first_name, $request->last_name, $request->phone, $request->email, $request->newsletter,$request->terms  ));
+        Mail::to('membership@windsorblues.ca')->send(new MembershipMail($validatedData['first_name'], $validatedData['last_name'], $validatedData['phone'], $validatedData['email'], $validatedData['newsletter'], $validatedData['terms']  ));
+        Mail::to('abhishek@windsorblues.ca')->send(new MembershipMail($validatedData['first_name'], $validatedData['last_name'], $validatedData['phone'], $validatedData['email'], $validatedData['newsletter'],$validatedData['terms']  ));
         return redirect('membership');
     }
 

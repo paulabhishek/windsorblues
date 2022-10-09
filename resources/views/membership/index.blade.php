@@ -5,36 +5,47 @@
     <div class="col-12 text-center">
         <p class="fw-bold t ext-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Become a member today!</p>
     </div>
+    <div class="container row g-3">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+    </div>
     <form class="row g-2 mt-5" method="POST" action=" {{route('membership.submit')}}">
         {{ csrf_field() }}
         <div class="row justify-content-md-center">
             <div class="col-md-6 text">
                 <label for="first_name" class="form-label">First name</label>
-                <input type="text" name="first_name"  class="form-control" id="first_name" value="" required/>
+                <input type="text" name="first_name"  class="form-control" id="first_name" value="{{ old('first_name') }}" />
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
             <div class="col-md-6">
                 <label for="last_name" class="form-label">Last name</label>
-                <input type="text" name="last_name" class="form-control" id="last_name" value="" required/>
+                <input type="text" name="last_name" class="form-control" id="last_name" value="{{ old('last_name') }}" />
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
             <div class="col-md-6">
                 <label for="phone" class="form-label">Phone</label>
-                <input type="phone" name="phone" class="form-control" id="phone" value="" required/>
+                <input type="phone" name="phone" class="form-control" id="phone" value="{{ old('phone') }}" />
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
             <div class="col-md-6">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control" id="email" value="" required/>
+                <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}" />
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
             <div class="col-md-6">
                 <div class="form-check">
-                    <input class="form-check-input" name="terms" type="checkbox" value="1" id="terms" required>
+                    <input class="form-check-input" name="terms" type="checkbox" value="1" id="terms" >
                     <label class="form-check-label text-primary" for="terms" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Agree to terms and conditions
                     </label>
@@ -44,7 +55,7 @@
         <div class="row g-2 justify-content-md-center">
             <div class="col-md-6">
                 <div class="form-check">
-                    <input class="form-check-input" name="newsletter" type="checkbox" value="1" id="newsletter" required>
+                    <input class="form-check-input" name="newsletter" type="checkbox" value="1" id="newsletter" >
                     <label class="form-check-label text-primary" for="newsletter" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Agree to receiving News and Updates
                     </label>

@@ -42,7 +42,7 @@
 </div>
 
 <div class="container mt-4">
-    <div class="card mb-3" style="max-width:100%;">
+    <div class="mb-3" style="max-width:100%;">
         <div class="row g-0">
                 <div class="col-md-4">
                     {{--                <img src="../images/monkeyjunk1.jpg" class="img-fluid rounded-start" alt="...">--}}

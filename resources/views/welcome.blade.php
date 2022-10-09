@@ -8,10 +8,10 @@
 </div>
 
     <div class="row justify-content-start">
-        <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-0">
-            <img class="img-fluid d-none d-md-inline"  src="images/Blues Foundation logo - vertical stacked.jpg"/>
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-0">
+{{--            <img class="img-fluid d-none d-md-inline"  src="images/Blues Foundation logo - vertical stacked.jpg"/>--}}
         </div>
-        <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-11">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-11">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -61,8 +61,8 @@
                 </button>
             </div>
         </div>
-        <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-0 col-sm-0 text-center">
-                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Blues Foundation logo - vertical stacked.jpg"/>
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-0 col-sm-0 h-50 text-center">
+{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Blues Foundation logo - vertical stacked.jpg"/>--}}
         </div>
     </div>
 
@@ -171,9 +171,14 @@
             <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
 
         </div>
-        <div class="col-sm-2 col-md-4 p-2">
+        <div class="col-sm-2 col-md-4 mt-2">
             <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-
+        </div>
+        <div class="col-sm-2 col-md-4 mt-2">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
+        </div>
+        <div class="col-sm-2 col-md-4 mt-2">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
         </div>
     </div>
 </div>

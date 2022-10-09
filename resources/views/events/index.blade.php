@@ -24,7 +24,7 @@
 {{--{{dd(count($events))}}--}}
 @if(count($events) == 1)
     <div class="container mt-4">
-        <div class="card mb-3" style="max-width:100%;">
+        <div class="mb-3" style="max-width:100%;">
             <div class="row g-0">
                 @foreach ($events as $object)
                 <div class="col-md-4">

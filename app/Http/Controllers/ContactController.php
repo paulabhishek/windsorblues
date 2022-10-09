@@ -17,9 +17,14 @@ class ContactController extends Controller
 
     public function submit(Request $request)
     {
-        Mail::mailer('contact')->to('abhishek@windsorblues.ca')->send(new ContactMail($request->name, $request->email, $request->message ));
+        $validatedData = $request->validate([
+            'name' => ['required'],
+            'email' => ['required'],
+            'message' => ['required'],
+        ]);
+        Mail::mailer('contact')->to('abhishek@windsorblues.ca')->send(new ContactMail($validatedData['name'], $validatedData['email'], $validatedData['message'] ));
 
-        Mail::mailer('contact')->to('contact@windsorblues.ca')->send(new ContactMail($request->name, $request->email, $request->message ));
+        Mail::mailer('contact')->to('contact@windsorblues.ca')->send(new ContactMail($validatedData['name'], $validatedData['email'], $validatedData['message'] ));
        return redirect('/');
     }
 

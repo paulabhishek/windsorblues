@@ -14,7 +14,7 @@
 {{--img_highlight5: {{ $news->img_highlight5 }}<br>--}}
 {{--user_id: {{ $news->user_id }}<br><br><br>--}}
 
-<div class="card mb-3">
+<div class=" mb-3">
     <div class="row header">
         <div class="col-3"></div>
         <div class="col-12 col-md-6 text-light text-center p-5"><br><br>
