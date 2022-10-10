@@ -179,7 +179,7 @@
         }
 
         .header {
-            background-image: url('../images/IMG_20210725_204540.jpg');
+            background-image: url('../images/8e7b2a399fb7688908cc2cb99fcd9fcf.jpg');
             background-position: 50% 90%;
             background-size: cover;
         }

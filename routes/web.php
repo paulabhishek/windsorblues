@@ -167,6 +167,18 @@ Route::group(['middleware' => 'auth'], function(){
         Route::patch('manage/news/{id}', [ManageController::class, 'newsUpdate'])->name('manage.news.update');
         Route::delete('manage/news/{id}', [ManageController::class, 'newsDestroy'])->name('manage.news.delete');
     });
+
+//MANAGE Presidents MSG
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('manage/presidentmsg/create', [ManageController::class, 'presidentmsgCreate'])->name('manage.presidentmsg.create');
+    Route::post('manage/presidentmsg', [ManageController::class, 'presidentmsgStore'])->name('manage.presidentmsg.store');
+    Route::get('manage/presidentmsg', [ManageController::class, 'presidentmsgIndex'])->name('manage.presidentmsg.index');
+    Route::get('manage/presidentmsg/{id}', [ManageController::class, 'presidentmsgShow'])->name('manage.presidentmsg.show');
+    Route::get('manage/presidentmsg/{id}/edit', [ManageController::class, 'presidentmsgEdit'])->name('manage.presidentmsg.edit');
+    Route::patch('manage/presidentmsg/{id}', [ManageController::class, 'presidentmsgUpdate'])->name('manage.presidentmsg.update');
+    Route::delete('manage/presidentmsg/{id}', [ManageController::class, 'presidentmsgDestroy'])->name('manage.presidentmsg.delete');
+});
+
 //Route::get('manage/news', [ManageController::class, 'newsIndex'])->name('manage.news.index');
 
 

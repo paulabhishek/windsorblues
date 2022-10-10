@@ -28,8 +28,10 @@
                     <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
                 </svg>
                 <text class="text-muted"> {{date('l' . ', '. 'F Y', strtotime($object->date))}}</text>
-                <p class="mt-3">{{  Str::limit($object->p1, 150) }}</p>
-{{--                <p class="card-text"><small class="text-muted">{{\App\Http\Controllers\NewsController::time_elapsed_string($object->date, false)}}</small></p>--}}
+                <p class="mt-3">{!! Str::limit($object->p1, 150) !!}</p>
+{{--                <p class="fs-5 mt-3">{!! $news->p1 !!}</p>--}}
+
+                {{--                <p class="card-text"><small class="text-muted">{{\App\Http\Controllers\NewsController::time_elapsed_string($object->date, false)}}</small></p>--}}
                 <a href="{{ url('/news/')}}/{{$object->id }}" class="btn btn-sm btn-primary btn-end">Read more</a>
             </div>
         </div>

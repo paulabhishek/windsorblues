@@ -16,11 +16,11 @@
                 <div class="card-body">
                     <h5 class="card-title">title: {{$object->title}}</h5>
                     <h5 class="card-title">author: {{$object->author}}</h5>
-                    <p class="card-text">p1:{{ $object->p1 }}</p>
+                    <p class="card-text">p1:{!! $object->p1 !!}</p>
                     <p class="card-text">p2:{{ $object->p2 }}</p>
                     <p class="card-text">p3:{{ $object->p3 }}</p>
                     <p class="card-text">p4:{{ $object->p4 }}</p>
-                    <p class="card-text">p5:{{ $object->p5 }}</p>
+                    <p class="card-text">p5:{!! $object->p5 !!}</p>
                     <p class="card-text">image_banner: {{$object->image_banner }}</p>
                     <p class="card-text">img_highlight1: {{ $object->img_highlight1 }}</p>
                     <p class="card-text">img_highlight2:{{ $object->img_highlight2 }}</p>

@@ -6,6 +6,7 @@ use App\Models\Event;
 use App\Models\Member;
 use App\Models\Museum;
 use App\Models\News;
+use App\Models\PresidentMSG;
 use App\Models\User;
 //use http\Env\Response;
 use Illuminate\Auth\Access\Events\GateEvaluated;
@@ -24,6 +25,43 @@ class ManageController extends Controller
     public function index(){
         return view('manage.index');
     }
+
+//PRESIDENT_MSG
+    public function presidentmsgIndex(){
+        $presidentmsg = PresidentMSG::get();
+//        dd($news);
+//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+        return view('manage.presidentmsg.index', compact("presidentmsg"));
+    }
+
+    public function presidentmsgCreate(){
+        $presidentmsg = User::all()->pluck('id');
+        return view('manage.presidentmsg.create', compact("presidentmsg"));
+    }
+
+    public function presidentmsgStore(Request $request){
+        $user = auth()->user();
+        $presidentmsg = new presidentmsg($request->all());
+        return redirect('manage/presidentmsg');
+    }
+
+    public function presidentmsgDestroy(PresidentMSG $id){
+        $id->delete();
+        return redirect('manage/presidentmsg');
+    }
+
+    public function presidentmsgUpdate(Request $request, $presidentmsg){
+        $formdata = $request->all();
+        $presidentmsg = PresidentMSG::findorfail($presidentmsg);
+        $presidentmsg->update($formdata);
+        return redirect('manage/presidentmsg');
+    }
+
+    public function presidentmsgShow($presidentmsg){
+        $presidentmsg = PresidentMSG::find($presidentmsg);
+        return view('manage.presidentmsg.show', compact("presidentmsg"));
+    }
+
 //MUSEUM
     public function museumIndex(){
         $museum = Museum::get();
@@ -85,13 +123,12 @@ class ManageController extends Controller
     public function newsIndex(){
         $news = NEWS::get();
 //        dd($news);
-        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
+//        Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
         return view('manage.news.index', compact("news"));
     }
 
     public function newsShow($news){
         $news = News::find($news);
-
         return view('manage.news.show', compact("news"));
     }
 

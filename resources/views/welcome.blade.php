@@ -9,6 +9,7 @@
 
     <div class="row justify-content-start">
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-0">
+            <img class="img-fluid d-none d-md-inline"  src="images/Logo-KBA.jpg"/>
 {{--            <img class="img-fluid d-none d-md-inline"  src="images/Blues Foundation logo - vertical stacked.jpg"/>--}}
         </div>
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-11">
@@ -62,6 +63,7 @@
             </div>
         </div>
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-0 col-sm-0 h-50 text-center">
+                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Logo-KBA.jpg"/>
 {{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Blues Foundation logo - vertical stacked.jpg"/>--}}
         </div>
     </div>
@@ -117,7 +119,7 @@
                         </svg>
                         <text class="text-muted "> {{date('l' . ', '. 'F Y', strtotime($object->date))}}</text>
 
-                    <p class="card-text mt-2">{{Str::limit($object->p1, 80)}}</p>
+                    <p class="card-text mt-2">{!! Str::limit($object->p1, 80)!!}</p>
                             <small class="text-primary fs-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
                                     <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>

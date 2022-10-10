@@ -40,6 +40,7 @@
                         <li><a class="nav-link cool-link" href="{{route('manage.member.index')}}">Members</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.news.index')}}">News</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.museum.index')}}">Museum</a></li>
+                        <li><a class="nav-link cool-link" href="{{route('manage.presidentmsg.index')}}">President MSG</a></li>
                         @can('isLevelTwo')
                         <li><a class="nav-link cool-link" href="{{route('manage.admin.index')}}">Manage Admins</a></li>
                         @endcan
@@ -55,12 +56,13 @@
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-
+                                @can('isLevelTwo')
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                                @endcan
 
                         @else
                             <li class="nav-item dropdown">
