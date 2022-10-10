@@ -246,7 +246,9 @@
     <div class="container mt-5 text-center ">
         <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif;">Message from our president</h1>
         <blockquote class="blockquote mt-4">
-            <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">Stay tuned.!</p>
+            @foreach ($pres_msg as $object)
+            <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">{{$object->message}}</p>
+            @endforeach
         </blockquote>
     </div>
 

@@ -62,6 +62,11 @@ class ManageController extends Controller
         return view('manage.presidentmsg.show', compact("presidentmsg"));
     }
 
+    public function presidentmsgEdit($presidentmsg){
+        $presidentmsg = PresidentMSG::findorFail($presidentmsg);
+        return view('manage.presidentmsg.edit', compact("presidentmsg"));
+    }
+
 //MUSEUM
     public function museumIndex(){
         $museum = Museum::get();
