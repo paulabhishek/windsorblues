@@ -34,9 +34,9 @@
             <div class="carousel-item">
                 <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" alt="Slide 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <p class="fs-6 badge text-bg-primary fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">Read more</p>
+                    <p class="fs-6 badge text-bg-primary fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read more</p>
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal1"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
