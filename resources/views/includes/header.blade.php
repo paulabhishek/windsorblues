@@ -251,7 +251,8 @@
                     <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>
                 </li>
                 <li class="nav-item px-3 h4">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('welcome.chatham')}}">Blues in Schools</a>
+{{--                    {{route('welcome.chatham')}}--}}
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="#">Blues in Schools</a>
                 </li>
                 <li class="nav-item px-3 h4">
                     <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('contact.index')}}">Contact</a>

@@ -46,12 +46,27 @@
                         {{method_field('DELETE')}}
                         {{csrf_field()}}
                         <a href="{{ url('/manage/member/')}}/{{$object->id }}/edit" class="btn btn-primary">update</a>
-                        <button class="btn btn-danger" type="submit">Delete</button>
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Delete</a>
+
+                        <div class="modal fade" id="exampleModalCenter" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Removing membership </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Are you SURE?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">cancel</button>
+                                        <button class="btn btn-danger" type="submit">Yes, Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
-{{--                <div class="card-footer">--}}
-{{--                    <small class="text-muted">Last updated 3 mins ago</small>--}}
-{{--                </div>--}}
             </div>
         </div>
         @endforeach
