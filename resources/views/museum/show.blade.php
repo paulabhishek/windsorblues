@@ -2,7 +2,7 @@
 <div class="container">
 
     <div class="row intext">
-        <div class="col-4">
+        <div class="col-lg-4 col-md-4">
             @php
                 $id =('carouselExampleControls' . $museum->id)
             @endphp
@@ -34,7 +34,7 @@
             <iframe width="100%" height="250"  src="https://www.youtube.com/watch?v=iUCyU_U0J2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
-        <div class="col-8" style="float: none;">
+        <div class="col-lg-8 col-md-8" style="float: none;">
             <h2>{{$museum->artist_name}}</h2>
             <h2>Inducted in: {{$museum->date}}</h2>
             <p class="text-lg-start fs-3"> {{$museum->p1}}</p>

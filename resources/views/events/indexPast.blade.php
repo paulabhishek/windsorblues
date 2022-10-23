@@ -4,18 +4,19 @@
 
 <div class="row header">
     <div class="col-3"></div>
-    <div class="col-12 col-md-6 text-light text-center p-5"><br><br>
-        <h1 style="font-weight:bold">WINDSOR BLUES PAST EVENTS</h1><br><br>
+    <div class="col-12 col-md-6 text-light text-center p-1"><br><br>
+        <p class="display-1" style="font-family: 'Fasthand', cursive; font-weight:bold; color:whitesmoke;">WINDSOR BLUES PAST EVENTS</p><br><br>
     </div>
+
     <div class="col-3"></div>
 </div>
 <div class="container text-center mt-4">
     <div class="row">
         <div class="col">
-           <a href="{{route('event.index')}}" style="text-decoration: none; "> <p class="fw-bold text-justify text-center fs-1 text-uppercase " style="color: #150185; font-family: 'Source Sans Pro', sans-serif; ">Upcoming Events</p></a>
+           <a href="{{route('event.index')}}" style="text-decoration: none; "> <p class="fw-bold text-justify text-center fs-2 text-uppercase " style="color: #150185; font-family: 'Playfair Display', serif;">Upcoming Events</p></a>
         </div>
         <div class="col">
-            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p href="{{route('event.index.past')}}" class="fw-bold text-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Past Events</p></a>
+            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p href="{{route('event.index.past')}}" class="fw-bold text-justify text-center fs-2 text-uppercase redline" style="color: #150185; font-family: 'Playfair Display', serif;">Past Events</p></a>
         </div>
     </div>
 </div>

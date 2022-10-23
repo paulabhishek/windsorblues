@@ -31,11 +31,18 @@
 
 <div class="container">
     <footer class="py-3 my-4">
+        <p class="text-center text-muted fs-1" style="font-family: 'Lobster', cursive;">Follow us on</p>
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-            <li class="nav-item"><a href="{{route('news.index')}}" class="nav-link px-2 text-muted">News</a></li>
-            <li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link px-2 text-muted">Contact</a></li>
+            <li class="nav-item">
+                <a href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277" class="nav-link px-2 text-muted">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" style=" fill:#0f0e40;">
+                        <path d="M12,0C5.373,0,0,5.373,0,12c0,6.016,4.432,10.984,10.206,11.852V15.18H7.237v-3.154h2.969V9.927c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L16.73,15.18h-3.106v8.697 C19.481,23.083,24,18.075,24,12C24,5.373,18.627,0,12,0z"></path>
+                    </svg>
+                </a>
+            </li>
+{{--            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>--}}
+{{--            <li class="nav-item"><a href="{{route('news.index')}}" class="nav-link px-2 text-muted">News</a></li>--}}
+{{--            <li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link px-2 text-muted">Contact</a></li>--}}
 {{--            <li class="nav-item"><a href="{{route('member.index')}}" class="nav-link px-2 text-muted">Membership</a></li>--}}
         </ul>
         <p class="text-center text-muted">© 2022 Windsor South Blues Society</p>

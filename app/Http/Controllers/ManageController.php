@@ -367,7 +367,7 @@ class ManageController extends Controller
 //            dump($lname);
             $fname = implode(" ", $parts);
             $fname = preg_replace('/[^A-Za-z0-9\-]/', '', $fname);
-            dump($fname);
+//            dump($fname);
             $arr = ['FNAME'=> $fname, 'LNAME'=>$lname,'PHONE'=>$obj->phone, 'EMAIL'=>$obj->email];
 //            dump($arr);
 

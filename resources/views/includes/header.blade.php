@@ -179,7 +179,7 @@
         }
 
         .header {
-            background-image: url('../images/8e7b2a399fb7688908cc2cb99fcd9fcf.jpg');
+            background-image: url('https://i.pinimg.com/originals/00/8c/75/008c75173308d7ae83aadb3d011303f1.jpg');
             background-position: 50% 90%;
             background-size: cover;
         }
@@ -221,7 +221,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Fasthand&family=Lobster&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 <div class=" text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
         <a href="/"> <img width="350" height="150" src="../images/windsorblues.png"/></a>
@@ -247,9 +247,9 @@
                 <li class="nav-item px-3  h4">
                     <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('news.index')}}">News</a>
                 </li>
-                <li class="nav-item px-3 h4">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>
-                </li>
+{{--                <li class="nav-item px-3 h4">--}}
+{{--                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>--}}
+{{--                </li>--}}
                 <li class="nav-item px-3 h4">
 {{--                    {{route('welcome.chatham')}}--}}
                     <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="#">Blues in Schools</a>

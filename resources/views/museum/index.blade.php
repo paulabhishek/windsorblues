@@ -1,6 +1,6 @@
 @include('includes.header');
 <div class="container mt-4 text-center">
-    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">This Day In History</h1>
+    <h1 class=" text-center hdline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">This Day In History</h1>
     <blockquote class="blockquote mt-4">
         <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{$object->artist_name}}</h5>
-                    <p class="card-text">{{ $object->p1 }}</p>
+                    <p class="card-text">{{Str::limit($object->p1, 40) }}</p>
                 </div>
                 <div class="card-footer">
                     <small class="text-muted">Inducted in {{ $object->date }}</small>

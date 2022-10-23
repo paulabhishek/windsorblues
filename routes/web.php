@@ -139,7 +139,7 @@ Route::group(['middleware' => 'auth'], function(){
 
         Route::post('unsubscribe', [ManageController::class, 'mailchimpUnsub'])->name('manage.mailchimp.unsubscribe');
 
-    //SYNC
+    //SYNC AND UPDATE
         Route::group(['middleware' => 'auth'], function(){
             Route::get('manage/mailchimp', [ManageController::class, 'mailchimpSync'])->name('manage.mailchimp.sync');
             Route::post('manage/mailchimp', [ManageController::class, 'mailchimpUpdate'])->name('manage.mailchimp.update');

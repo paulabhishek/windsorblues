@@ -4,8 +4,8 @@
 {{--<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Windsor Blues Events</text></svg>--}}
 <div class="row header">
     <div class="col-3"></div>
-    <div class="col-12 col-md-6 text-light text-center p-5"><br><br>
-        <h1 style="font-weight:bold">WINDSOR BLUES EVENT</h1><br><br>
+    <div class="col-12 col-md-6 text-light text-center p-1"><br><br>
+        <p class="display-1" style="font-family: 'Fasthand', cursive; font-weight:bold; color:whitesmoke;">WINDSOR BLUES EVENT</p><br><br>
 {{--        <p>Phasellus congue commodo magna ut ultricies. Curabitur a nisi et lectus fringilla sodales. Duis dictum at dolor non luctus. Donec dapibus arcu eget tortor ullamcorper bibendum. Quisque mattis scelerisque malesuada. Cras velit lectus, sagittis vitae dui vehicula, cursus consequat nunc. Integer a pulvinar ante, quis molestie nunc. Ut eget lacus in lacus venenatis dignissim a at sapien.</p>--}}
 {{--        <button type="button" class="btn btn-outline-light">Learn More</button>--}}
     </div>
@@ -14,10 +14,10 @@
 <div class="container text-center mt-4">
     <div class="row">
         <div class="col">
-            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold t ext-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Upcoming Events</p></a>
+            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-2 text-uppercase redline" style="color: #150185; font-family: 'Playfair Display', serif; ">Upcoming Events</p></a>
         </div>
         <div class="col">
-            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Past Events</p></a>
+            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-2 text-uppercase" style="color: #150185; font-family: 'Playfair Display', serif;">Past Events</p></a>
         </div>
     </div>
 </div>
