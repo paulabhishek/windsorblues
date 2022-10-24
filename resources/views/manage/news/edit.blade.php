@@ -4,7 +4,7 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-6 offset-md-1">
-                <form class="mt-4 mt-md-0" method="POST" action="{{ route ('manage.news.update', $news->id) }}">
+                <form class="mt-4 mt-md-0" method="POST" action="{{ route ('manage.news.update', $news->id) }}" enctype="multipart/form-data">
                     {{method_field('PATCH')}}
                     {{ csrf_field() }}
                     <div class="form-group">
@@ -39,30 +39,35 @@
                         <label for="p5" class="form-label">P5:</label>
                         <textarea class="form-control" name="p5" type="text" rows="5" required>{{$news->p5}}</textarea>
                     </div>
-
                     <div class="form-group">
                         <label for="img_banner" class="form-label">Image_banner:</label>
-                        <input class="form-control" name="img_banner" type="text" value="{{$news->img_banner}}" required/>
+                        <a href="http://build.windsorblues.ca/storage/{{$news->img_banner}}"target="_blank" class="link-primary">Current image</a>
+                        <input class="form-control" name="img_banner" type="file" accept="/image*" required/>
                     </div>
                     <div class="form-group">
                         <label for="img_highlight1" class="form-label">Image_highlight1:</label>
-                        <input class="form-control" name="img_highlight1" type="text" value="{{$news->img_highlight1}}" required/>
+                        <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight1}}"target="_blank" class="link-primary">Current image</a>
+                        <input class="form-control" name="img_highlight1" type="file" accept="/image*" required/>
                     </div>
                     <div class="form-group">
                         <label for="img_highlight2" class="form-label">Image_highlight2:</label>
-                        <input class="form-control" name="img_highlight2" type="text" value="{{$news->img_highlight2}}" required/>
+                        <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight2}}"target="_blank" class="link-primary">Current image</a>
+                        <input class="form-control" name="img_highlight2" type="file" accept="/image*" required/>
                     </div>
                     <div class="form-group">
-                        <label for="img_highlight3" class="form-label">Image_highlight3:</label>
-                        <input class="form-control" name="img_highlight3" type="text" value="{{$news->img_highlight3}}" required/>
+                        <label for="img_highlight3" class="form-label">Image_highlight3</label>
+                        <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight3}}"target="_blank" class="link-primary">Current image</a>
+                        <input class="form-control" name="img_highlight3" type="file" accept="/image*" required/>
                     </div>
                     <div class="form-group">
-                        <label for="img_highlight4" class="form-label">Image_highlight4:</label>
-                        <input class="form-control" name="img_highlight4" type="text" value="{{$news->img_highlight4}}" required/>
+                        <label for="img_highlight4" class="form-label">Image_highlight4</label>
+                        <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight4}}"target="_blank" class="link-primary">Current image</a>
+                        <input class="form-control" name="img_highlight4" type="file" accept="/image*" required/>
                     </div>
                     <div class="form-group">
-                        <label for="img_highlight5" class="form-label">Image_highlight5:</label>
-                        <input class="form-control" name="img_highlight5" type="text" value="{{$news->img_highlight5}}" required/>
+                        <label for="img_highlight5" class="form-label">Image_highlight5</label>
+                        <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight5}}"target="_blank" class="link-primary">Current image</a>
+                        <input class="form-control" name="img_highlight5" type="file" accept="/image*" required/>
                     </div>
                     <div class="form-group">
                         <label for="date" class="form-label">Date:</label>

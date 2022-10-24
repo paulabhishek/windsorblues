@@ -21,12 +21,14 @@
                     <p class="card-text">p3:{{ $object->p3 }}</p>
                     <p class="card-text">p4:{{ $object->p4 }}</p>
                     <p class="card-text">p5:{!! $object->p5 !!}</p>
-                    <p class="card-text">image_banner: {{$object->image_banner }}</p>
-                    <p class="card-text">img_highlight1: {{ $object->img_highlight1 }}</p>
-                    <p class="card-text">img_highlight2:{{ $object->img_highlight2 }}</p>
-                    <p class="card-text">img_highlight3:{{ $object->img_highlight3 }}</p>
-                    <p class="card-text">img_highlight4:{{ $object->img_highlight4 }}</p>
-                    <p class="card-text">img_highlight5:{{ $object->img_highlight5 }}</p>
+{{--                    <p class="card-text">image_banner: {{$object->img_banner }}</p>--}}
+                    image_banner: <a  target="_blank" href="http://build.windsorblues.ca/storage/{{$object->img_banner}}" class="link-primary">view image</a><br>
+                    img_highlight1: <a  target="_blank" href="http://build.windsorblues.ca/storage/{{$object->img_highlight1}}" class="link-primary">view image</a><br>
+                    img_highlight2: <a  target="_blank" href="http://build.windsorblues.ca/storage/{{$object->img_highlight2}}" class="link-primary">view image</a><br>
+                    img_highlight3: <a  target="_blank" href="http://build.windsorblues.ca/storage/{{$object->img_highlight3}}" class="link-primary">view image</a><br>
+                    img_highlight4: <a  target="_blank" href="http://build.windsorblues.ca/storage/{{$object->img_highlight4}}" class="link-primary">view image</a><br>
+                    img_highlight5: <a  target="_blank" href="http://build.windsorblues.ca/storage/{{$object->img_highlight5}}" class="link-primary">view image</a>
+
                     <p class="card-text">User ID: {{ $object->user_id }}</p>
                     <form method="POST" action="{{ route('manage.news.delete', $object->id) }}">
                         {{method_field('DELETE')}}

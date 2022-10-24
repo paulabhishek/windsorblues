@@ -31,7 +31,7 @@
 
 <div class="container">
     <footer class="py-3 my-4">
-        <p class="text-center text-muted fs-1" style="font-family: 'Lobster', cursive;">Follow us on</p>
+        <p class="text-center text-muted fs-3" style="font-family: 'Lobster', cursive;">Follow us on</p>
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
                 <a href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277" class="nav-link px-2 text-muted">

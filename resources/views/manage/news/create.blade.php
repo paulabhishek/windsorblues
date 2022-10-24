@@ -38,7 +38,7 @@
 
 
                     <div class="form-group">
-                        <label for="img_banner" class="form-label">Image_banner:</label>
+                        <label for="img_banner" class="form-label link-danger">Image_banner: size(278x140)</label>
                         <input class="form-control" name="img_banner" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
