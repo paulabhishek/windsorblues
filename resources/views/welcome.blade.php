@@ -18,8 +18,8 @@
             <div class="carousel-item active" data-bs-interval="100000">
                 <img src="images/slider1.jpg" class="d-block w-100 c-img" alt="Slide 1">
                 <div class="carousel-caption d-none d-sm-block 	d-md-none d-lg-block">
-                    <a type="button" href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary">Buy Tickets Now!</a><br>
-                    <p class="badge text-bg-success">The Cash Box Kings</p>
+                    <a type="button" href="https://www.ticketscene.ca/events/42349/" class="btn btn-danger fw-bold">Buy Tickets Now!</a><br>
+                    <p class="badge text-bg-warning">The Cash Box Kings</p>
                 </div>
             </div>
 
@@ -224,27 +224,27 @@
 <div class="container text-center mt-4">
     <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif;">Our Sponsors</h1>
     <div class="row">
-        <div class="col-sm-2 col-md-4">
+        <div class="col-sm-2 col-md-2">
 {{--            <img class="img-fluid d-block d-sm-none"  src="images/Blues Foundation logo - horizontal stacked.jpg"/>--}}
 
-            <img class="img-fluid pb-5"  width="100%" height="180" src="images/liuna.png"/>
+            <img class="img-fluid contain" src="images/liuna.png"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-4">
-            <img class="img-fluid pb-5"  width="100%" height="180" src="images/Long and McQuade sponsor shot.jpg"/>
+        <div class="col-sm-2 col-md-2">
+            <img class="img-fluid contain" src="images/Long and McQuade sponsor shot.jpg"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-4">
-            <img class="img-fluid pb-5"  width="100%" height="180" src="images/unifor2.png"/>
+        <div class="col-sm-2 col-md-2">
+            <img class="img-fluid contain" src="images/unifor2.png"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-4 mt-2">
-            <img class="img-fluid pb-5"  width="100%" height="180" src="images/unifor.png"/>
+        <div class="col-sm-2 col-md-2">
+            <img class="img-fluid contain" src="images/unifor.png"/>
 
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-4 mt-2">
-            <img class="img-fluid pb-5"  width="50%" height="50%" src="images/urbnbud.png"/>
+        <div class="col-sm-2 col-md-2">
+            <img class="img-fluid contain" width="50%" height="30%" src="images/urbnbud.png"/>
 
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>

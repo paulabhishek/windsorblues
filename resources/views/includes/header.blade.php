@@ -178,10 +178,17 @@
             width: 100%;
         }
 
+
         .header {
             background-image: url('https://i.pinimg.com/originals/00/8c/75/008c75173308d7ae83aadb3d011303f1.jpg');
             background-position: 50% 90%;
             background-size: cover;
+        }
+
+        .contain{
+            object-fit: contain;
+            width:200px;
+            height:300px;
         }
         /*.carousel-control-prev-icon,*/
         /*.carousel-control-next-icon {*/
@@ -213,6 +220,7 @@
         span.carousel-control-prev-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
         }
+
     </style>
 
     <!-- CSS only -->
