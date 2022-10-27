@@ -33,34 +33,48 @@
                         <img class="img-fluid rounded-start" src="{{ asset('storage/' . $object->file) }}"  height="150px" alt="Card image cap">
                     @endisset
                     @if(! isset( $object->file))
-                        <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
+                        <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
                     @endif
                 </div>
                 <div class="col-md-8">
-                    <div class=" text-center">
-                        <h1 class="card-title "> {{ $object->name }}</h1>
+                        <p class=" text-center display-1" style="font-family: 'Oswald', sans-serif;"> {{ $object->artist }}</p>
                         <div class="container ">
                             <div class="row">
                                 <div class="col">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                    </svg>
-                                    <p style="display:inline" class="card-text px-1">{{ $object->artist }}</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                                    </svg>
-                                    <p style="display:inline" class="card-text px-1">{{$object->location }}</p><br><br>
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">--}}
+{{--                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>--}}
+{{--                                    </svg>--}}
+                                    <p class="text-center px-1 fs-3"><strong>Presented by {{ $object->name }}</strong></p>
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">--}}
+{{--                                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>--}}
+{{--                                    </svg>--}}
+{{--                                    <p style="display:inline" class="card-text px-1">{{$object->location }}</p><br><br>--}}
                                 </div>
                             </div>
                         </div>
                         <div class="container">
-                                <div class="row">
-                                    <div class="col-xl-12 col-lg-12 justify-content-start">
-                                        <b>Overview:</b>
-                                        <p class="card-text">{{$object->description }}</p>
-                                        <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>
+                            <div class="row text-center">
+                                <div class="d-flex">
+                                    <div class="col-6">
+                                        <p class="fw-bold fs-4">Date</p>
+                                        <p> {{date('l' . ', '. 'F j' . ', ' .  'Y', strtotime($object->date))}}</p>
+                                    </div>
+                                    <div class="mt-3" style="border-left:1px solid #000;height:50px"></div>
+                                    <div class="col-6">
+                                        <p class="fw-bold fs-4">Location</p>
+                                        <p> {{$object->location}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                                <div class="row text-center">
+                                    <div class="col-xl-12 col-lg-12">
+{{--                                        <p>About</p>--}}
+{{--                                        <p class="text-right" style="text-align: left !important;">{{$object->description }}</p>--}}
+{{--                                        <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>--}}
 {{--                                        <button href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary" type="button">Buy ticket</button>--}}
-                                        <a href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary" type="button">Buy ticket</a>
+                                        <a href="https://www.ticketscene.ca/events/42349/" target="_blank" class="btn btn-primary btn-lg mb-2" type="button">Buy tickets on Tickets Scene</a>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 ">
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
@@ -75,7 +89,6 @@
                                     </div>
                                 </div>
                         </div>
-                    </div>
                 </div>
                 @endforeach
             </div>
