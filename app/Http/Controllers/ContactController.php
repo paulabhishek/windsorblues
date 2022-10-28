@@ -25,7 +25,7 @@ class ContactController extends Controller
         Mail::mailer('contact')->to('abhishek@windsorblues.ca')->send(new ContactMail($validatedData['name'], $validatedData['email'], $validatedData['message'] ));
 
         Mail::mailer('contact')->to('contact@windsorblues.ca')->send(new ContactMail($validatedData['name'], $validatedData['email'], $validatedData['message'] ));
-       return redirect('/');
+       return view('contact.index')->with('success');
     }
 
 }

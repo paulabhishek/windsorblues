@@ -221,7 +221,13 @@
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
         }
 
+
     </style>
+{{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon(asset('../images/windsorblues.png')) }}">--}}
+    <link rel="shortcut icon" href="{{ asset('../images/windsorblues.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('../images/windsorblues.png') }}">
+
+</head>
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">

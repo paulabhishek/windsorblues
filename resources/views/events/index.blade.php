@@ -5,7 +5,7 @@
 <div class="row header">
     <div class="col-3"></div>
     <div class="col-12 col-md-6 text-light text-center p-1"><br><br>
-        <p class="display-1" style="font-family: 'Fasthand', cursive; font-weight:bold; color:whitesmoke;">WINDSOR BLUES EVENT</p><br><br>
+        <p class="display-2" style="font-weight:bold">WINDSOR BLUES EVENT</p><br><br>
 {{--        <p>Phasellus congue commodo magna ut ultricies. Curabitur a nisi et lectus fringilla sodales. Duis dictum at dolor non luctus. Donec dapibus arcu eget tortor ullamcorper bibendum. Quisque mattis scelerisque malesuada. Cras velit lectus, sagittis vitae dui vehicula, cursus consequat nunc. Integer a pulvinar ante, quis molestie nunc. Ut eget lacus in lacus venenatis dignissim a at sapien.</p>--}}
 {{--        <button type="button" class="btn btn-outline-light">Learn More</button>--}}
     </div>
@@ -14,14 +14,15 @@
 <div class="container text-center mt-4">
     <div class="row">
         <div class="col">
-            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-2 text-uppercase redline" style="color: #150185; font-family: 'Playfair Display', serif; ">Upcoming Events</p></a>
+            <a href="{{route('event.index')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-2 text-uppercase redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Upcoming Events</p></a>
         </div>
         <div class="col">
-            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-2 text-uppercase" style="color: #150185; font-family: 'Playfair Display', serif;">Past Events</p></a>
+            <a href="{{route('event.index.past')}}" style="text-decoration: none; "><p class="fw-bold text-justify text-center fs-2 text-uppercase" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Past Events</p></a>
         </div>
     </div>
 </div>
 {{--{{dd(count($events))}}--}}
+
 @if(count($events) == 1)
     <div class="container mt-4">
         <div class="mb-3" style="max-width:100%;">
@@ -59,7 +60,7 @@
                                         <p class="fw-bold fs-4">Date</p>
                                         <p> {{date('l' . ', '. 'F j' . ', ' .  'Y', strtotime($object->date))}}</p>
                                     </div>
-                                    <div class="mt-3" style="border-left:1px solid #000;height:50px"></div>
+                                    <div class="mt-3 px-1" style="border-left:1px solid #000;height:50px"></div>
                                     <div class="col-6">
                                         <p class="fw-bold fs-4">Location</p>
                                         <p> {{$object->location}}</p>
@@ -76,11 +77,11 @@
 {{--                                        <button href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary" type="button">Buy ticket</button>--}}
                                         <a href="https://www.ticketscene.ca/events/42349/" target="_blank" class="btn btn-primary btn-lg mb-2" type="button">Buy tickets on Tickets Scene</a>
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 ">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20
-                                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="100%" height="250"  allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                                        </iframe>
-                                    </div>
+{{--                                    <div class="col-xl-6 col-lg-6 ">--}}
+{{--                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20--}}
+{{--                                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="100%" height="250"  allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">--}}
+{{--                                        </iframe>--}}
+{{--                                    </div>--}}
                                     <div class="col-xl-6 col-lg-6 col-sm-6 ">
                                         @php
                                             $video_id = substr($object->yt_url, -11);
@@ -94,7 +95,7 @@
             </div>
         </div>
     </div>
-@else
+@elseif(count($events) > 1)
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($events as $object)
@@ -119,6 +120,8 @@
             @endforeach
         </div>
     </div>
+@elseif(count($events) == 0)
+    <p class="text-center fs-4 mt-5">No Upcoming events</p>
 @endif
 {{--<div class="iframe-container">--}}
 {{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20--}}
