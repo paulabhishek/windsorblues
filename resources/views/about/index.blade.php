@@ -32,11 +32,11 @@
                     <div class="clearfix mb-3">
                     </div>
                     <div class="my-2 text-center">
-                        <h1>Glen Myers</h1>
+                        <h1>Mike Primeau</h1>
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">Vice President</h2>
-                        <h6 class=" mt-2 text-uppercase text-center role">glen@windsorblues.ca</h6>
+                        <h6 class=" mt-2 text-uppercase text-center role">mprimeau@windsorblues.ca</h6>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
             <div class="card h-100 shadow-sm">
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
-                        <img class="shadow" src="images/IMG_20221127_154301_Bokeh500.jpg"
+                        <img class="shadow" src="images/IMG_20221127_154301_Bokeh.jpg"
                              alt="Another Image zoom-on-hover effect">
                     </div>
                 </div>
