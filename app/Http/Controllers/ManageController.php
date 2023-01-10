@@ -409,7 +409,7 @@ class ManageController extends Controller
         $members = Member::get();
         return view('manage.member.index', compact("members"));
     }
-//YEAR_TO_DAYS
+//CONVERT YEAR_TO_DAYS
     public static function dateDiffInDays($date1){
         $date2 = date("d-m-Y");
         $timestamp = strtotime($date1);

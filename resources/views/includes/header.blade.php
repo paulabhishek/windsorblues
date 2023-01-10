@@ -10,6 +10,7 @@
             color: #0f0e40;
         }
 
+
         li {
             margin-bottom: 10px;
         }
@@ -46,6 +47,7 @@
         }
         body {
             overflow-x: hidden !important;
+            background-color: #6c7fd3bd;
         }
         .redline {
             display: inline-block;
@@ -220,14 +222,10 @@
         span.carousel-control-prev-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
         }
-
-
     </style>
 {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon(asset('../images/windsorblues.png')) }}">--}}
     <link rel="shortcut icon" href="{{ asset('../images/windsorblues.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('../images/windsorblues.png') }}">
-
-</head>
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -236,6 +234,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Fasthand&family=Lobster&family=Oswald:wght@700&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
 <div class=" text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
         <a href="/"> <img width="350" height="150" src="../images/windsorblues.png"/></a>

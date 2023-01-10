@@ -35,8 +35,8 @@
                         <h1>Mike Primeau</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Vice President</h2>
-                        <h6 class=" mt-2 text-uppercase text-center role">mprimeau@windsorblues.ca</h6>
+                        <h2 class="text-uppercase text-center role">Member at large</h2>
+{{--                        <h6 class=" mt-2 text-uppercase text-center role">n@windsorblues.ca</h6>--}}
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">President</h2>
-                        <h6 class=" mt-2 text-uppercase text-center role">michael@windsorblues.ca</h6>
+                        <h6 class=" mt-2 text-uppercase text-center role">info@windsorblues.ca</h6>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">Treasurer</h2>
-                        <h6 class=" mt-2 text-uppercase text-center role">mike@windsorblues.ca</h6>
+                        <h6 class=" mt-2 text-uppercase text-center role">info@windsorblues.ca</h6>
 
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                         <h1>Greg Brownley</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">no portfolio</h2>
+                        <h2 class="text-uppercase text-center role">Member at largeH</h2>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                         <h1>Dino Casagrande</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">no portfolio</h2>
+                        <h2 class="text-uppercase text-center role">Member at large</h2>
                     </div>
                 </div>
             </div>

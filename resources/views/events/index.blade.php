@@ -75,7 +75,7 @@
 {{--                                        <p class="text-right" style="text-align: left !important;">{{$object->description }}</p>--}}
 {{--                                        <a href="{{ url('/event/')}}/{{$object->id }}" class="btn btn-primary">Details</a>--}}
 {{--                                        <button href="https://www.ticketscene.ca/events/42349/" class="btn btn-primary" type="button">Buy ticket</button>--}}
-                                        <a href="https://www.ticketscene.ca/events/42349/" target="_blank" class="btn btn-primary btn-lg mb-2" type="button">Buy tickets on Tickets Scene</a>
+                                        <a href="https://www.ticketscene.ca/events/43289/" target="_blank" class="btn btn-primary btn-lg mb-2" type="button">Buy tickets on Tickets Scene</a>
                                     </div>
 {{--                                    <div class="col-xl-6 col-lg-6 ">--}}
 {{--                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20--}}

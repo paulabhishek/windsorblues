@@ -16,11 +16,11 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="100000">
-                <img src="images/slider1.jpg" class="d-block w-100 c-img" alt="Slide 1">
-                <div class="carousel-caption d-none d-sm-block 	d-md-none d-lg-block">
-                    <a type="button" href="https://www.ticketscene.ca/events/42349/" class="btn btn-danger fw-bold">Buy Tickets Now!</a><br>
-                    <p class="badge text-bg-warning">The Cash Box Kings</p>
-                </div>
+                <a adding the target="_blank" href="https://www.ticketscene.ca/events/43289/"><img src="images/BLACKBURN.jpg" class="d-block w-100 c-img" alt="Slide 1"></a>
+{{--                <div class="carousel-caption d-none d-sm-block 	d-md-none d-lg-block">--}}
+{{--                    <a type="button" href="https://www.ticketscene.ca/events/42349/" class="btn btn-danger fw-bold">Buy Tickets Now!</a><br>--}}
+{{--                    <p class="badge text-bg-warning">The Cash Box Kings</p>--}}
+{{--                </div>--}}
             </div>
 
             <div class="carousel-item" data-bs-interval="20000">
@@ -30,6 +30,7 @@
 {{--                    <p>Get discounted tickets on memberships</p>--}}
                 </div>
             </div>
+
 
             <div class="carousel-item">
                 <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" alt="Slide 1">
@@ -317,6 +318,7 @@
             @endforeach
         </blockquote>
     </div>
+
 
 @include('includes.footer')
 
