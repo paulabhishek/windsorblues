@@ -94,7 +94,7 @@ class ManageController extends Controller
             $museum->save();
             if ($request->hasFile('image2') &&
                 $request->file('image2')->isValid()) {
-                $path = $request->image2->storePublicly('images', 'public');
+                $path = $request->image2->storePublicly('museum', 'public');
                 $museum->image2 = $path;
                 $museum->save();
             }
@@ -167,7 +167,9 @@ class ManageController extends Controller
         if ($request->hasFile('img_banner') &&
             $request->file('img_banner')->isValid()) {
 //            dd( $request->hasFile('img_banner'));
-            $path = $request->img_banner->storePublicly('images', 'public');
+            $path = $request->img_banner->storePublicly('news', 'public');
+
+//            $path = $request->img_banner->storePublicly('images', 'public');
             $news->img_banner =$path;
             $news->save();
 
@@ -259,8 +261,9 @@ class ManageController extends Controller
 
         if ($request->hasFile('file') &&
             $request->file('file')->isValid()) {
-            $path = $request->file->storePublicly('images', 'public');
+            $path = $request->file->storePublicly('events', 'public');
             $event->file = $path;
+            dd($event);
             $event->save();
         }
         return redirect('manage/event');
@@ -273,7 +276,7 @@ class ManageController extends Controller
         if ($request->hasFile('file')){
             //deletes the previous file
             Storage::disk('public')->delete($event->file);
-            $path = $request->file->storePublicly('images', 'public');
+            $path = $request->file->storePublicly('events', 'public');
             $event->update($formdata);
             $event->file = $path;
             $event->update();

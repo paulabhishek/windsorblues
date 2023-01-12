@@ -42,32 +42,32 @@
                     <div class="form-group">
                         <label for="img_banner" class="form-label">Image_banner:</label>
                         <a href="http://build.windsorblues.ca/storage/{{$news->img_banner}}"target="_blank" class="link-primary">Current image</a>
-                        <input class="form-control" name="img_banner" type="file" accept="/image*" required/>
+                        <input class="form-control" name="img_banner" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight1" class="form-label">Image_highlight1:</label>
                         <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight1}}"target="_blank" class="link-primary">Current image</a>
-                        <input class="form-control" name="img_highlight1" type="file" accept="/image*" required/>
+                        <input class="form-control" name="img_highlight1" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight2" class="form-label">Image_highlight2:</label>
                         <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight2}}"target="_blank" class="link-primary">Current image</a>
-                        <input class="form-control" name="img_highlight2" type="file" accept="/image*" required/>
+                        <input class="form-control" name="img_highlight2" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight3" class="form-label">Image_highlight3</label>
                         <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight3}}"target="_blank" class="link-primary">Current image</a>
-                        <input class="form-control" name="img_highlight3" type="file" accept="/image*" required/>
+                        <input class="form-control" name="img_highlight3" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight4" class="form-label">Image_highlight4</label>
                         <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight4}}"target="_blank" class="link-primary">Current image</a>
-                        <input class="form-control" name="img_highlight4" type="file" accept="/image*" required/>
+                        <input class="form-control" name="img_highlight4" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="img_highlight5" class="form-label">Image_highlight5</label>
                         <a href="http://build.windsorblues.ca/storage/{{$news->img_highlight5}}"target="_blank" class="link-primary">Current image</a>
-                        <input class="form-control" name="img_highlight5" type="file" accept="/image*" required/>
+                        <input class="form-control" name="img_highlight5" type="file" accept="/image*" />
                     </div>
                     <div class="form-group">
                         <label for="date" class="form-label">Date:</label>

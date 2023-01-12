@@ -79,7 +79,6 @@
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">Treasurer</h2>
                         <h6 class=" mt-2 text-uppercase text-center role">info@windsorblues.ca</h6>
-
                     </div>
                 </div>
             </div>
@@ -100,7 +99,7 @@
                         <h1>Greg Brownley</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Member at largeH</h2>
+                        <h2 class="text-uppercase text-center role">Member at large</h2>
                     </div>
                 </div>
             </div>
@@ -119,6 +118,26 @@
                     </div>
                     <div class="my-2 text-center">
                         <h1>Dino Casagrande</h1>
+                    </div>
+                    <div class="mb-3">
+                        <h2 class="text-uppercase text-center role">Member at large</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="text-center">
+                    <div class="img-hover-zoom img-hover-zoom--colorize">
+                        <img class="shadow" src="images/IMG_20230108_144005_Bokeh.jpg"
+                             alt="Another Image zoom-on-hover effect">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="clearfix mb-3">
+                    </div>
+                    <div class="my-2 text-center">
+                        <h1></h1>
                     </div>
                     <div class="mb-3">
                         <h2 class="text-uppercase text-center role">Member at large</h2>
