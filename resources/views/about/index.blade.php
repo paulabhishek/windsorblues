@@ -22,7 +22,6 @@
 <div class="container p-5">
     <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
         <div class="col">
-            <div class="card h-100 shadow-sm">
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154507_Bokeh.jpg " alt="Another Image zoom-on-hover effect">
@@ -35,14 +34,13 @@
                         <h1>Mike Primeau</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Member at large</h2>
+                        <h2 class="text-uppercase text-center fs-6">Member at large</h2>
 {{--                        <h6 class=" mt-2 text-uppercase text-center role">n@windsorblues.ca</h6>--}}
                     </div>
                 </div>
-            </div>
         </div>
         <div class="col">
-            <div class="card h-100 shadow-sm">
+
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154710_Bokeh.jpg"
@@ -56,14 +54,14 @@
                         <h1>Mike Mccann</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">President</h2>
-                        <h6 class=" mt-2 text-uppercase text-center role">info@windsorblues.ca</h6>
+                        <h2 class="text-uppercase text-center fs-6">President</h2>
+                        <h6 class=" mt-2 text-uppercase text-center fs-6">info@windsorblues.ca</h6>
                     </div>
                 </div>
             </div>
-        </div>
+
         <div class="col">
-            <div class="card h-100 shadow-sm">
+
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154301_Bokeh.jpg"
@@ -77,15 +75,15 @@
                         <h1>Mike Meloche</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Treasurer</h2>
-                        <h6 class=" mt-2 text-uppercase text-center role">info@windsorblues.ca</h6>
+                        <h2 class="text-uppercase text-center fs-6">Treasurer</h2>
+                        <h6 class=" mt-2 text-uppercase text-center fs-6">info@windsorblues.ca</h6>
                     </div>
                 </div>
-            </div>
+
         </div>
 
         <div class="col">
-            <div class="card h-100 shadow-sm">
+
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154551_Bokeh.jpg"
@@ -99,14 +97,14 @@
                         <h1>Greg Brownley</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Member at large</h2>
+                        <h2 class="text-uppercase text-center fs-6  ">Member at large</h2>
                     </div>
                 </div>
-            </div>
+
         </div>
 
         <div class="col">
-            <div class="card h-100 shadow-sm">
+
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154338_Bokeh.jpg"
@@ -120,13 +118,12 @@
                         <h1>Dino Casagrande</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Member at large</h2>
+                        <h2 class="text-uppercase text-center fs-6">Member at large</h2>
                     </div>
                 </div>
-            </div>
+
         </div>
         <div class="col">
-            <div class="card h-100 shadow-sm">
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20230108_144005_Bokeh.jpg"
@@ -137,13 +134,12 @@
                     <div class="clearfix mb-3">
                     </div>
                     <div class="my-2 text-center">
-                        <h1></h1>
+                        <h1>Tim Stocker</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center role">Member at large</h2>
+                        <h2 class="text-uppercase text-center fs-6">Member at large</h2>
                     </div>
                 </div>
-            </div>
         </div>
 
 {{--        <div class="col">--}}

@@ -206,13 +206,13 @@
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-md-12 text-center ">
                 <div class="p-2 m-1">
-                    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
+                    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-weight: bold; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
                     <p class="px-4 fs-4" style="text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
-                    <h1 class="redline mb-4" style="color: #150185; font-family: 'Playfair Display', serif;">History</h1>
+                    <h1 class="redline mb-4" style="color: #150185; font-weight: bold; font-family: 'Playfair Display', serif;">History</h1>
                     <p class="text-right fs-4 px-2" style="text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012.
                         We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
                         In addition to hosting world class blues, rhythm & blues and roots artists on a regular basis we also host and/or support various benefits and charity fundraisers each year.

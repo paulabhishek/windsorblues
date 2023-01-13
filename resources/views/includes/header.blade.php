@@ -10,7 +10,6 @@
             color: #0f0e40;
         }
 
-
         li {
             margin-bottom: 10px;
         }
@@ -46,8 +45,8 @@
             font-size: 10px;
         }
         body {
-            overflow-x: hidden !important;
-            background-color: #6c7fd3bd;
+            /*overflow-x: hidden !important;*/
+            background-color: #6c7fd3bd !important;
         }
         .redline {
             display: inline-block;
@@ -80,7 +79,6 @@
             border-bottom: 5px solid #337ab7;
         }
 
-        .h1,
         h1 {
             font-size: 1.5rem;
         }
@@ -236,6 +234,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Fasthand&family=Lobster&family=Oswald:wght@700&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
 </head>
+<body>
 <div class=" text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
         <a href="/"> <img width="350" height="150" src="../images/windsorblues.png"/></a>
