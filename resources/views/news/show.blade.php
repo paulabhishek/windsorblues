@@ -37,7 +37,7 @@
 
             @isset($news->img_banner)
 {{--                <img class="" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="news">--}}
-                <img src="{{ asset('storage/' . $news->img_banner) }}" class="img-fluid" alt="...">
+                <img src="{{ asset('storage/' . $news->img_banner) }}" class="img-fluid" alt="img_banner">
             @endisset
 
             <p class="fs-5 mt-3">{!! $news->p1 !!}</p>

@@ -46,7 +46,7 @@
         }
         body {
             /*overflow-x: hidden !important;*/
-            background-color: #6c7fd3bd !important;
+            background-color: #adb2cabd !important;
         }
         .redline {
             display: inline-block;

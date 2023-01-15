@@ -144,7 +144,7 @@
         <div class="row text-center">
             <div class="col-md-3 col-sm-4">
                 <div>
-                    <img width="105" height="95" src="images/75274204C4084884AC8373DD486C0793.jpg"/>
+                    <img width="105" height="95" src="images/The_Blues_Foundation_logo_no_background.png"/>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mt-4 col-sm-4">
@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
-                <button href="{{route('welcome.chatham')}}" type="button"  class="btn btn-outline-primary" style="color: #150185">Visit Our Chatham Site</button>
+                <a target="_blank" href="http://canadasouthbluessocietyck.blogspot.com/" type="button"  class="btn btn-outline-primary" style="color: #150185">Visit Our Chatham Site</a>
             </div>
         </div>
 </div>
@@ -168,9 +168,9 @@
         </div>
         {{--News--}}
         <div class="col-lg-6 col-md-6">
-            <div class="card pt-10">
-                <div class="card-header text-center">
-                    <small class="fs-3" style="font-family: 'Lobster', cursive; color: #0f0e40">Windsor Blues News</small>
+            <div class="card pt-10" style="border-color: rgb(0 15 255);">
+                <div class="card-header text-center" style="border-color: rgb(0 15 255); background-color: white;">
+                    <small class="fs-3" style="font-family: 'Lobster', cursive; color: #0f0e40;">Windsor Blues News</small>
                 </div>
                 <div class="card-body overflow-auto" style="max-width: 100%; max-height: 400px;">
                     @foreach ($news as $object)
@@ -190,7 +190,7 @@
                             </small>
                         <a href="{{ url('/news/')}}/{{$object->id }}" class="btn btn-sm btn-primary btn-end">Read more</a>
                         @if (count($news) >! count($news)-1)
-                            <hr style="color: #150185; height: 3px;">
+                            <hr style="color: rgb(0 15 255); ">
                         @endif
 
                     @endforeach
@@ -206,15 +206,14 @@
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-md-12 text-center ">
                 <div class="p-2 m-1">
-                    <h1 class=" text-center redline  mb-4" style=" color: #150185; font-weight: bold; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
-                    <p class="px-4 fs-4" style="text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
+                    <h1 class="text-center redline  mb-4" style=" color: #150185; font-weight: bold; font-family: 'Playfair Display', serif;">Our Mission Statement</h1>
+                    <p class="px-4 fs-4" style="color:#000000; text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
-                    <h1 class="redline mb-4" style="color: #150185; font-weight: bold; font-family: 'Playfair Display', serif;">History</h1>
-                    <p class="text-right fs-4 px-2" style="text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012.
-                        We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
+                    <h1 class="text-center redline mb-4" style="color: #150185; font-weight: bold; font-family: 'Playfair Display', serif;">History</h1>
+                    <p class="text-right fs-4 px-2" style="color:#000000; text-align: left !important; font-family: 'Source Sans Pro', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012. We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
                         In addition to hosting world class blues, rhythm & blues and roots artists on a regular basis we also host and/or support various benefits and charity fundraisers each year.
                         We annually hold a regional competition for the Road to Memphis challenge for local blues artists.  The winner represents our Society at the international competition in Memphis.</p>
                 </div>
@@ -223,7 +222,7 @@
     </div>
 {{--Our Sponsors--}}
 <div class="container text-center mt-4">
-    <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif;">Our Sponsors</h1>
+    <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif; font-weight: bold;">Our Sponsors</h1>
     <div class="row">
         <div class="col-sm-2 col-md-2">
 {{--            <img class="img-fluid d-block d-sm-none"  src="images/Blues Foundation logo - horizontal stacked.jpg"/>--}}
@@ -262,20 +261,20 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input class="form-control" name="name" type="text" id="validationTextarea3" required/>
+                        <input placeholder="Name" class="form-control" name="name" type="text" id="validationTextarea3" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
                     <div class="form-group">
                         <label for="phone" class="form-label">Phone</label>
-                        <input class="form-control" name="phone" type="tel" id="validationTextarea2" required/>
+                        <input placeholder="Phone" class="form-control" name="phone" type="tel" id="validationTextarea2" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">E-mail</label>
-                        <input class="form-control" name="email" type="email" id="validationTextarea" required/>
+                        <input placeholder="name@example.com" class="form-control" name="email" type="email" id="validationTextarea" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
 
                     <div class="form-group mt-3">
                         <input class="form-check-input" name="newsletter" type="checkbox" value="1" id="validationFormCheck1" required/>
-                        <label for="validationFormCheck1" data-bs-toggle="modal" data-bs-target="#exampleModal" class="form-check-label text-primary">I accept terms and conditions</label>
+                        <label for="validationFormCheck1" data-bs-toggle="modal" data-bs-target="#exampleModal" class="form-check-label" style="color:#000000;">I accept terms and conditions</label>
 {{--                        <label data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary">read here</label>--}}
                     </div>
 
@@ -311,7 +310,7 @@
     </div>
 
     <div class="container mt-5 text-center ">
-        <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif;">Message from our president</h1>
+        <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif; font-weight: bold;">Message from our president</h1>
         <blockquote class="blockquote mt-4">
             @foreach ($pres_msg as $object)
             <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">{{$object->message}}</p>
