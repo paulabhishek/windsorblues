@@ -162,8 +162,8 @@
 <div class="container mt-4">
     <div class="row ">
         <div class="col-sm-12 col-lg-6 col-md-6 text-center .d-sm-none .d-md-block">
-            <div class="mt-5">
-                <img src="images/wingedwheel.png" width="350" height="300">
+            <div class="my-2 mx-1">
+                <img src="images/Canada South Blues Est 2000 .jpg" width="340" height="310">
             </div>
         </div>
         {{--News--}}
@@ -224,28 +224,31 @@
 <div class="container text-center mt-4">
     <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif; font-weight: bold;">Our Sponsors</h1>
     <div class="row">
-        <div class="col-sm-2 col-md-2">
+        <div class="col-sm-2 col-md-2 mt-2">
 {{--            <img class="img-fluid d-block d-sm-none"  src="images/Blues Foundation logo - horizontal stacked.jpg"/>--}}
 
             <img class="img-fluid contain" src="images/liuna.png"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-2">
+        <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain" src="images/Long and McQuade sponsor shot.jpg"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-2">
+        <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain" src="images/unifor2.png"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-2">
+        <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain" src="images/unifor.png"/>
 
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-2">
+        <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain" width="50%" height="30%" src="images/urbnbud.png"/>
-
+{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+        </div>
+        <div class="col-sm-2 col-md-2 mt-2">
+            <img class="img-fluid contain" width="50%" height="30%" src="images/AngelStar.jpg"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
     </div>
@@ -310,10 +313,10 @@
     </div>
 
     <div class="container mt-5 text-center ">
-        <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif; font-weight: bold;">Message from our president</h1>
+        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Playfair Display', serif; font-weight: bold;">Message from our president</h1>
         <blockquote class="blockquote mt-4">
             @foreach ($pres_msg as $object)
-            <p class="text-justify fs-4" style="font-family: 'Source Sans Pro', sans-serif;">{{$object->message}}</p>
+            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>
             @endforeach
         </blockquote>
     </div>

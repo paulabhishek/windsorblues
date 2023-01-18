@@ -31,7 +31,7 @@
 
 <div class="container">
     <footer class="py-3 my-4">
-        <p class="text-center text-muted fs-3" style="font-family: 'Lobster', cursive;">Follow us on</p>
+        <p class="text-center text-dark fs-3" style="font-family: 'Lobster', cursive;">Follow us on</p>
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
                 <a href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277" class="nav-link px-2 text-muted">
@@ -45,8 +45,8 @@
 {{--            <li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link px-2 text-muted">Contact</a></li>--}}
 {{--            <li class="nav-item"><a href="{{route('member.index')}}" class="nav-link px-2 text-muted">Membership</a></li>--}}
         </ul>
-        <p class="text-center text-muted">© 2022 Windsor South Blues Society</p>
-        <p class="text-center text-muted">This website is fully built and maintained by <a href="https://www.linkedin.com/in/paul-abhishek17/" class="link-primary">Abhishek Vincent</a> </p>
+        <p class="text-center text-dark">© 2022 Windsor South Blues Society</p>
+        <p class="text-center text-dark">This website is fully built and maintained by <a href="https://www.linkedin.com/in/paul-abhishek17/" class="link-primary">Abhishek Vincent</a> </p>
     </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
