@@ -71,8 +71,8 @@
 
 {{--    </div>--}}
 {{--        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-0 col-sm-0 h-50 text-center">--}}
-{{--            <img class="img-fluid d-none d-md-inline"  src="images/Logo-KBA.jpg"/>--}}
-{{--            <img class="img-fluid d-none d-md-inline"  src="images/Blues Foundation logo - vertical stacked.jpg"/>--}}
+{{--            <img class="img-fluid d-none d-md-inline"images/Logo-KBA.jpg"/>--}}
+{{--            <img class="img-fluid d-none d-md-inline"images/Blues Foundation logo - vertical stacked.jpg"/>--}}
 {{--        </div>--}}
 
 {{--        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-11">--}}
@@ -83,10 +83,10 @@
 {{--                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>--}}
 {{--                </div>--}}
 {{--                <div class="carousel-inner">--}}
-{{--                    --}}{{--        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532" src="images/Blues Foundation logo - horizontal stacked.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
+{{--                    --}}{{--        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532images/Blues Foundation logo - horizontal stacked.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
 
 {{--                    <div class="carousel-item active" data-bs-interval="10000">--}}
-{{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="337" height="532" src="images/Z3DsIGxE1FVfEj2eE7zVG1NSgBzk0PwZvYzAWWWo.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
+{{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="337" height="532images/Z3DsIGxE1FVfEj2eE7zVG1NSgBzk0PwZvYzAWWWo.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
 {{--                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">First slide</text></svg>--}}
 {{--                        <div class="carousel-caption d-none d-md-block">--}}
 {{--                            <button type="button" class="btn btn-outline-light">Buy Tickets Now!</button>--}}
@@ -95,7 +95,7 @@
 {{--                    </div>--}}
 
 {{--                    <div class="carousel-item" data-bs-interval="2000">--}}
-{{--                        --}}{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>--}}
+{{--                        --}}{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>--}}
 {{--                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Second slide</text></svg>--}}
 {{--                        <div class="carousel-caption d-none d-md-block">--}}
 {{--                            <button type="button" class="btn btn-outline-light">Sign up now!</button>--}}
@@ -106,7 +106,7 @@
 {{--                    </div>--}}
 
 {{--                    <div class="carousel-item">--}}
-{{--                        --}}{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" src="images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>--}}
+{{--                        --}}{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>--}}
 {{--                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>--}}
 {{--                        <div class="carousel-caption d-none d-md-block">--}}
 {{--                            <h5>Donate to the Blues Society</h5>--}}
@@ -126,8 +126,8 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-0 col-sm-0 h-50 text-center">--}}
-{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Logo-KBA.jpg"/>--}}
-{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inline" src="images/Blues Foundation logo - vertical stacked.jpg"/>--}}
+{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inlineimages/Logo-KBA.jpg"/>--}}
+{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inlineimages/Blues Foundation logo - vertical stacked.jpg"/>--}}
 {{--        </div>--}}
 
 {{--<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>--}}
@@ -225,7 +225,7 @@
     <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Playfair Display', serif; font-weight: bold;">Our Sponsors</h1>
     <div class="row">
         <div class="col-sm-2 col-md-2 mt-2">
-{{--            <img class="img-fluid d-block d-sm-none"  src="images/Blues Foundation logo - horizontal stacked.jpg"/>--}}
+{{--            <img class="img-fluid d-block d-sm-none"images/Blues Foundation logo - horizontal stacked.jpg"/>--}}
 
             <img class="img-fluid contain" src="images/liuna.png"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
