@@ -61,10 +61,9 @@ Route::get('about', [AboutController::class, 'index'])->name('about.index');
 
 
 //EVENT
-    Route::get('event', [EventController::class, 'index'])->name('event.index');
+    Route::get('events', [EventController::class, 'index'])->name('event.index');
     Route::get('eventpast', [EventController::class, 'eventIndexPast'])->name('event.index.past');
-
-Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
+    Route::get('event/{id}', [EventController::class, 'show'])->name('event.show');
 
 //NEWS
     Route::get('news', [NewsController::class, 'index'])->name('news.index');
