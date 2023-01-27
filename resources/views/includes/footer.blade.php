@@ -32,7 +32,7 @@
 <div class="container">
     <footer class="py-3 my-4">
         <p class="text-center text-dark fs-3" style="font-family: 'Lobster', cursive;">Follow us on</p>
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <ul class="nav justify-content-center border-bottom border-danger pb-3 mb-3">
             <li class="nav-item">
                 <a href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277" class="nav-link px-2 text-muted">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 24 24" style=" fill:#0f0e40;">
@@ -45,7 +45,7 @@
 {{--            <li class="nav-item"><a href="{{route('contact.index')}}" class="nav-link px-2 text-muted">Contact</a></li>--}}
 {{--            <li class="nav-item"><a href="{{route('member.index')}}" class="nav-link px-2 text-muted">Membership</a></li>--}}
         </ul>
-        <p class="text-center text-dark">© 2022 Windsor South Blues Society</p>
+        <p class="text-center text-dark">© 2023 Canada South Blues Society</p>
         <p class="text-center text-dark">This website is fully built and maintained by <a href="https://www.linkedin.com/in/paul-abhishek17/" class="link-primary">Abhishek Vincent</a> </p>
     </footer>
 </div>

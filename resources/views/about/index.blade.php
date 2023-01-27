@@ -75,7 +75,7 @@
                         <h1>Mike Meloche</h1>
                     </div>
                     <div class="mb-3">
-                        <h2 class="text-uppercase text-center fs-6">Treasurer</h2>
+                        <h2 class="text-uppercase text-center fs-6">Vice President and Treasurer</h2>
                         <h6 class=" mt-2 text-uppercase text-center fs-6">info@windsorblues.ca</h6>
                     </div>
                 </div>
