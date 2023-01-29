@@ -42,6 +42,10 @@
         @endforeach
     </div>
 </div>
+{{--<div class="text-center">--}}
+{{--    {{$events->links()}}--}}
+{{--</div>--}}
+
 @include('includes.footer')
 
 
