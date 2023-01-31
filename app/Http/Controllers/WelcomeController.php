@@ -26,12 +26,20 @@ class WelcomeController extends Controller
     }
 
     public function newsletterStore(Request $request){
+        $validatedData = $request->validate([
+            'name' => ['required'],
+            'phone' => ['required'],
+            'email' => ['required'],
+        ]);
         $member = new Member($request->all());
 
         if ($member->newsletter == 1) {
             $member->terms = 0;
             $member->user_id = 0;
             $member->date = Carbon::today()->toDateString();
+            $member->name = $validatedData['name'];
+            $member->phone = $validatedData['phone'];
+            $member->email = $validatedData['email'];
             $member->save();
         }
         return redirect('/');
