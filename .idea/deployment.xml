@@ -6,7 +6,7 @@
       <paths name="windsorblues">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public/beta" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

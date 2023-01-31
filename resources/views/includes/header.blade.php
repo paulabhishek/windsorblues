@@ -248,6 +248,9 @@
         </button>
         <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" >
             <ul class="navbar-nav">
+                <li class="nav-item px-3  h4">
+                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="/">Home</a>
+                </li>
                 <li class="nav-item px-3 h4">
                     <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;"  href="{{route('about.index')}}">About</a>
                 </li>
@@ -260,6 +263,7 @@
                 <li class="nav-item px-3  h4">
                     <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('news.index')}}">News</a>
                 </li>
+
 {{--                <li class="nav-item px-3 h4">--}}
 {{--                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>--}}
 {{--                </li>--}}
