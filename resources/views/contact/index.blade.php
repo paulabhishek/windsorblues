@@ -20,21 +20,21 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-6 text">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" name="name"  class="form-control" value="{{ old('name') }}" id="name" required/>
+                    <input type="text" name="name"  class="form-control shadow" value="{{ old('name') }}" id="name" required/>
                 </div>
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-md-6 text">
                     <label for="email" class="form-label">Email</label>
                     <div class="input-group has-validation">
-                        <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}" aria-describedby="validationTooltipUsernamePrepend" required/>
+                        <input type="email" name="email" class="form-control shadow" id="email" value="{{ old('email') }}" aria-describedby="validationTooltipUsernamePrepend" required/>
                     </div>
                 </div>
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-md-6 text">
                     <label for="message">Message</label>
-                    <textarea class="form-control" name="message" value="{{ old('message') }}" id="message" rows="3"></textarea>
+                    <textarea class="form-control shadow" name="message" value="{{ old('message') }}" id="message" rows="3"></textarea>
                 </div>
             </div>
             <div class="row g-2 justify-content-md-center">

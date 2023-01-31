@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12 text-center">
-            <img class="img-fluid d-block d-sm-none" style="width:100%; height:90%;"   src="images/Blues Foundation logo - horizontal stacked.jpg"/>
+            <img class="img-fluid d-block d-sm-none border border-primary" style="width:100%; height:90%;"   src="images/Blues Foundation logo - horizontal stacked.jpg"/>
         </div>
     </div>
 </div>
@@ -16,8 +16,10 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
         </div>
-        <div class="carousel-inner position-relative">
+        <div class="carousel-inner rounded border-primary border-bottom position-relative">
             <div class="carousel-item active  " data-bs-interval="100000">
                 <div class=" d-none d-sm-block 	d-md-block d-lg-block">
                     <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/43289/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x">Buy Tickets Now!</a><br>
@@ -25,28 +27,36 @@
                 </div>
                 <a target="_blank" href="https://www.ticketscene.ca/events/43289/"><img src="images/ticket-website.jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
             </div>
-
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/tim swaddling.jpg" class="d-block w-100 c-img" title="Slide 1">
+                <img src="images/Harding-Davis slider.jpg" class="d-block w-100 c-img" title="Slide 2">
             </div>
 
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/Harding-Davis slider.jpg" class="d-block w-100 c-img" title="Slide 4">
+                <img src="images/tim swaddling.jpg" class="d-block w-100 c-img" title="Slide 3">
             </div>
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/Sponsor slider.jpg" class="d-block w-100 c-img" title="Slide 5">
+                <img src="images/event-planner.jpg" class="d-block w-100 c-img" title="Slide 4">
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="images/jw-jones teazer slider.jpg" class="d-block w-100 c-img" title="Slide 5">
+            </div>
+
+
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="images/website sponsor sheet.jpg" class="d-block w-100 c-img" title="Slide 6">
 {{--                <div class="carousel-caption d-none d-md-block">--}}
 {{--                                        <button type="button" class="btn btn-outline-light">Sign up now!</button>--}}
 {{--                                        <p>Get discounted tickets on memberships</p>--}}
 {{--                </div>--}}
             </div>
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/slider-2.jpg" class="d-block w-100 c-img" title="Slide 3">
+                <img src="images/news collage.jpg" class="d-block w-100 c-img" title="Slide 7">
             </div>
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <p class="fs-6 badge text-bg-primary fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read more</p>
+                <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 8">
+                <div class="carousel-caption">
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1" >Read more</button>
+{{--                    <p class="fs-6 badge text-bg-primary fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal1">Read more</p>--}}
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal1"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
@@ -67,7 +77,7 @@
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon " aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
@@ -150,7 +160,7 @@
 
 <div class="container mt-4">
         <div class="row text-center">
-            <div class="col-md-3 col-sm-4">
+            <div class="col-md-3 col-sm-4 d-none d-sm-block">
                 <div>
                     <img width="105" height="95" src="images/The_Blues_Foundation_logo_no_background.png"/>
                 </div>
@@ -161,7 +171,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
-                <a target="_blank" href="http://canadasouthbluessocietyck.blogspot.com/" type="button"  class="btn btn-outline-primary" style="color: #150185">Visit Our Chatham Site</a>
+                <a target="_blank" href="http://canadasouthbluessocietyck.blogspot.com/" type="button"  class="btn btn-outline-primary" style="color: #150185; font-family: 'Abyssinica SIL', serif; font-weight: bold;">Visit Our Chatham Site</a>
             </div>
         </div>
 </div>
@@ -212,13 +222,13 @@
 
     <div class="container mt-5 text-center">
         <div class="row">
-            <div class="col-sm-6 col-lg-6 col-md-12 text-center ">
+            <div class="col-sm-12 col-lg-6 col-md-12 text-center ">
                 <div class="p-2 m-1">
                     <h1 class="text-center redline  mb-4" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Our Mission Statement</h1>
                     <p class="px-4 fs-3" style="color:#000000; text-align: left !important; font-family: 'Didact Gothic', sans-serif;">The mandate of the Canada South Blues Society as described in By-Law #1 of our Charter is to unite the blues community in the Canada South area and give it a central voice; to expand the overall awareness of the blues in the general population, to expose our youth to the art form via blues programs in our schools, to help support blues artists in Canada and abroad and to create an exciting social setting for blues lovers to meet.</p>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-6 col-md-12 text-black ">
+            <div class="col-sm-12 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
                     <h1 class="text-center redline mb-4" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">History</h1>
                     <p class="text-right fs-3 px-4" style="color:#000000; text-align: left !important; font-family: 'Didact Gothic', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012. We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
@@ -267,32 +277,44 @@
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/urbnbud.png" title="URBNBUD"/>
+            <img class="img-fluid contain shadow rounded" width="40%" height="20%" src="images/urbnbud.png" title="URBNBUD"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
 
     </div>
 </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5" id="news">
         <div class="row">
             <div class="col-md-5 d-flex align-items-center">
                 <p class="fw-bold text-justify text-center fs-1 text-uppercase " style="color: #150185; font-family: 'Carter One', cursive;">Sign up to our Newsletter today!</p>
             </div>
             <div class="col-md-6 offset-md-1">
+                <div class="container row g-3">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                </div>
                 <form class="mt-4 mt-md-0" method="POST" action=" {{route('welcome.newsletterStore')}}">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input placeholder="Name" class="form-control" name="name" type="text" id="validationTextarea3" style="border-width: 3px; border-color: #3029f438;" required/>
+                        <input placeholder="Name" class="form-control shadow rounded" name="name" type="text" id="validationTextarea3" style="border-width: 3px; border-color: #3029f438;" required />
+
                     </div>
                     <div class="form-group">
                         <label for="phone" class="form-label">Phone</label>
-                        <input placeholder="Phone" class="form-control" name="phone" type="tel" id="validationTextarea2" style="border-width: 3px; border-color: #3029f438;" required/>
+                        <input placeholder="Phone" class="form-control shadow rounded" name="phone" type="tel" id="validationTextarea2" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">E-mail</label>
-                        <input placeholder="name@example.com" class="form-control" name="email" type="email" id="validationTextarea" style="border-width: 3px; border-color: #3029f438;" required/>
+                        <input placeholder="name@example.com" class="form-control shadow rounded" name="email" type="email" id="validationTextarea" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
 
                     <div class="form-group mt-3">
@@ -325,7 +347,7 @@
                     </div>
 
                     <div class="col-12 mt-3">
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                        <button type="submit" class="btn btn-primary shadow rounded">Subscribe</button>
                     </div>
                 </form>
             </div>
