@@ -36,6 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        @auth
                         <li><a class="nav-link cool-link" href="{{route('manage.event.index')}}">Events</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.member.index')}}">Members</a></li>
                         <li><a class="nav-link cool-link" href="{{route('manage.news.index')}}">News</a></li>
@@ -44,7 +45,7 @@
                         @can('isLevelTwo')
                         <li><a class="nav-link cool-link" href="{{route('manage.admin.index')}}">Manage Admins</a></li>
                         @endcan
-
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -87,6 +88,7 @@
                 </div>
             </div>
         </nav>
+{{--        <h1 class="text-center text-danger">Authorised users only! login to manage</h1>--}}
 
         <main class="py-4">
             @yield('content')

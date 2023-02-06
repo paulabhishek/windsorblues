@@ -5,8 +5,9 @@
     <p>Email: {{$email}}</p>
     <p>Newsletter: {{$newsletter}}</p>
     <p>Terms: {{$terms}}</p>
-    <p>Note: '1' indicates user accepted terms '0' indicates he did not</p>
-@component('mail::button', ['url' => 'windsorblues.ca/manage/member/'])
+    <p>Note: '1' indicates user accepted terms '0' indicates they did not</p>
+{{--    <a href="windsorblues.ca/manage/member/create" type="button">Add user</a>--}}
+@component('mail::button', ['url' => 'windsorblues.ca/manage/member/create'])
 Add User
 @endcomponent
 @endcomponent

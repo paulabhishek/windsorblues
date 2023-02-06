@@ -175,32 +175,32 @@ class ManageController extends Controller
 
             if ($request->hasFile('img_highlight1') &&
                 $request->file('img_highlight1')->isValid()) {
-                $path = $request->img_highlight1->storePublicly('images', 'public');
+                $path = $request->img_highlight1->storePublicly('news', 'public');
                 $news->img_highlight1 = $path;
                 $news->save();
                 if ($request->hasFile('img_highlight2') &&
                     $request->file('img_highlight2')->isValid()) {
-                    $path = $request->img_highlight2->storePublicly('images', 'public');
+                    $path = $request->img_highlight2->storePublicly('news', 'public');
                     $news->img_highlight2 = $path;
                     $news->save();
                     if ($request->hasFile('img_highlight3') &&
                         $request->file('img_highlight3')->isValid()) {
-                        $path = $request->img_highlight3->storePublicly('images', 'public');
+                        $path = $request->img_highlight3->storePublicly('news', 'public');
                         $news->img_highlight3 = $path;
                         $news->save();
                         if ($request->hasFile('img_highlight3') &&
                             $request->file('img_highlight3')->isValid()) {
-                            $path = $request->img_highlight3->storePublicly('images', 'public');
+                            $path = $request->img_highlight3->storePublicly('news', 'public');
                             $news->img_highlight3 = $path;
                             $news->save();
                             if ($request->hasFile('img_highlight4') &&
                                 $request->file('img_highlight4')->isValid()) {
-                                $path = $request->img_highlight4->storePublicly('images', 'public');
+                                $path = $request->img_highlight4->storePublicly('news', 'public');
                                 $news->img_highlight4 = $path;
                                 $news->save();
                                 if ($request->hasFile('img_highlight5') &&
                                     $request->file('img_highlight5')->isValid()) {
-                                    $path = $request->img_highlight5->storePublicly('images', 'public');
+                                    $path = $request->img_highlight5->storePublicly('news', 'public');
                                     $news->img_highlight5 = $path;
                                     $news->save();
                                 }
@@ -236,7 +236,7 @@ class ManageController extends Controller
 
 //EVENTS
     public function eventIndex(){
-        $events = Event::get();
+        $events = Event::orderBy('date','desc')->get();
 //        dd($events);
         return view('manage.events.index', compact("events"));
 //        dd($events);
@@ -263,7 +263,7 @@ class ManageController extends Controller
             $request->file('file')->isValid()) {
             $path = $request->file->storePublicly('events', 'public');
             $event->file = $path;
-            dd($event);
+//            dd($event);
             $event->save();
         }
         return redirect('manage/event');
