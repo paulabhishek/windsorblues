@@ -37,7 +37,7 @@
 
             @isset($news->img_banner)
 {{--                <img class="" src="{{ asset('storage/' . $object->img_banner) }}"  height="200px" alt="news">--}}
-                <img src="{{ asset('storage/' . $news->img_banner) }}" class="img-fluid" alt="img_banner">
+                <img src="{{ asset('storage/' . $news->img_banner) }}" class="img-fluid shadow rounded" alt="img_banner">
             @endisset
 
             <p class="fs-5 mt-3">{!! $news->p1 !!}</p>
@@ -58,7 +58,7 @@
                 @else
                     <div class="col">
                         <div class="card" >
-                            <img src="{{ asset('storage/' . $news->img_highlight1) }}" class="img-fluid" alt="...">
+                            <img src="{{ asset('storage/' . $news->img_highlight1) }}" class="img-fluid shadow rounded" alt="...">
 {{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                 @else
                     <div class="col">
                         <div class="card">
-                            <img src="{{ asset('storage/' . $news->img_highlight2) }}" class="img-fluid" alt="...">
+                            <img src="{{ asset('storage/' . $news->img_highlight2) }}" class="img-fluid shadow rounded" alt="...">
 {{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                 @else
                     <div class="col">
                         <div class="card">
-                            <img src="{{ asset('storage/' . $news->img_highlight3) }}" class="img-fluid" alt="...">
+                            <img src="{{ asset('storage/' . $news->img_highlight3) }}" class="img-fluid shadow rounded" alt="...">
 {{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                 @else
                     <div class="col">
                         <div class="card">
-                            <img src="{{ asset('storage/' . $news->img_highlight4) }}" class="img-fluid" alt="...">
+                            <img src="{{ asset('storage/' . $news->img_highlight4) }}" class="img-fluid shadow rounded" alt="...">
 {{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                 @else
                     <div class="col">
                         <div class="card">
-                            <img src="{{ asset('storage/' . $news->img_highlight5) }}" class="img-fluid" alt="...">
+                            <img src="{{ asset('storage/' . $news->img_highlight5) }}" class="img-fluid shadow rounded" alt="...">
 {{--                            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
                         </div>
                     </div>

@@ -17,8 +17,6 @@
     <p class="fw-bold h1 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">OUR PRESENT BOARD OF DIRECTORS</p>
 </div>
 
-
-
 <div class="container p-5">
     <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
         <div class="col">
@@ -40,7 +38,6 @@
                 </div>
         </div>
         <div class="col">
-
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154710_Bokeh.jpg"
@@ -58,16 +55,14 @@
                         <h6 class=" mt-2 text-uppercase text-center fs-6">info@windsorblues.ca</h6>
                     </div>
                 </div>
-            </div>
-
+        </div>
         <div class="col">
-
-                <div class="text-center">
-                    <div class="img-hover-zoom img-hover-zoom--colorize">
+            <div class="text-center">
+                <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154301_Bokeh.jpg"
                              alt="Another Image zoom-on-hover effect">
-                    </div>
                 </div>
+            </div>
                 <div class="card-body">
                     <div class="clearfix mb-3">
                     </div>
@@ -79,11 +74,9 @@
                         <h6 class=" mt-2 text-uppercase text-center fs-6">info@windsorblues.ca</h6>
                     </div>
                 </div>
-
         </div>
 
         <div class="col">
-
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154551_Bokeh.jpg"
@@ -100,11 +93,8 @@
                         <h2 class="text-uppercase text-center fs-6  ">Member at large</h2>
                     </div>
                 </div>
-
         </div>
-
         <div class="col">
-
                 <div class="text-center">
                     <div class="img-hover-zoom img-hover-zoom--colorize">
                         <img class="shadow" src="images/IMG_20221127_154338_Bokeh.jpg"
@@ -121,7 +111,6 @@
                         <h2 class="text-uppercase text-center fs-6">Member at large</h2>
                     </div>
                 </div>
-
         </div>
         <div class="col">
                 <div class="text-center">
@@ -141,7 +130,26 @@
                     </div>
                 </div>
         </div>
-
+        <div class="col">
+            <div class="text-center">
+                <div class="img-hover-zoom img-hover-zoom--colorize">
+                    <img class="shadow" src="images/IMG_20230204_231033_Bokeh.jpg"
+                         alt="Another Image zoom-on-hover effect">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="clearfix mb-3">
+                </div>
+                <div class="my-2 text-center">
+                    <h1>Alex Polowick</h1>
+                </div>
+                <div class="mb-3">
+                    <h2 class="text-uppercase text-center fs-6">Chatham Liaison</h2>
+                    <h2 class="text-uppercase text-center fs-6">Representation</h2>
+                </div>
+            </div>
+        </div>
+{{--        Original Template--}}
 {{--        <div class="col">--}}
 {{--            <div class="card h-100 shadow-sm">--}}
 {{--                <div class="text-center">--}}

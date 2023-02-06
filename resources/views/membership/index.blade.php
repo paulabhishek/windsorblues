@@ -4,6 +4,7 @@
 <div class="container mt-5">
     <div class="col-12 text-center">
         <p class="fw-bold t ext-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Become a member today!</p>
+        <p class="fw-bold t ext-justify text-center fs-6 text-uppercase " style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">(Annual $30.00 Fee grants you a $5.00 discount to the general admission price of shows)</p>
     </div>
     <div class="container row g-3">
         @if ($errors->any())

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CSBS</title>
+    <title>Canada South Blues Society</title>
     <style>
         .bluecor{
             color: #0f0e40;
@@ -190,35 +190,121 @@
             width:200px;
             height:300px;
         }
-        /*.carousel-control-prev-icon,*/
-        /*.carousel-control-next-icon {*/
-        /*    height: 100px;*/
-        /*    width: 100px;*/
-        /*    outline: black;*/
-        /*    background-size: 100%, 100%;*/
-        /*    border-radius: 50%;*/
-        /*    border: 1px solid black;*/
-        /*    background-image: none;*/
-        /*}*/
-
-        /*.carousel-control-next-icon:after*/
-        /*{*/
-        /*    content: '>';*/
-        /*    font-size: 55px;*/
-        /*    color: red;*/
-        /*}*/
-
-        /*.carousel-control-prev-icon:after {*/
-        /*    content: '<';*/
-        /*    font-size: 55px;*/
-        /*    color: red;*/
-        /*}*/
         span.carousel-control-next-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
         }
 
         span.carousel-control-prev-icon {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            height: 100px;
+            width: 100px;
+            outline: black;
+            background-size: 100%, 100%;
+            border-radius: 70%;
+            border: 5px solid black;
+            background-image: none;
+        }
+
+        .carousel-indicators button {
+            width: 10px!important;
+            height: 10px!important;
+            border-radius: 50%;
+            outline: black !important;
+            border: 4px solid black !important;
+        }
+
+
+        .blurr{
+            border-radius: 25px; !important;
+            filter:blur(30px);
+            /* border:2px solid red; */
+            width:100vw;
+            height:90vh;
+        }
+        .clear{
+            /* border:2px solid red; */
+            width:33vw;
+            height:90vh;
+            position:absolute;
+            left:50%;
+            transform: translateX(-50%);
+        }
+        .img-holder
+        {
+            margin:auto;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+        }
+        @media (max-width:991px)
+        {
+            .img-holder{
+                height: 70vw;
+            }
+            .blurr{
+                height:70vw;
+            }
+            .clear{
+                height: 70vw;
+                width:50vw;
+            }
+        }
+        @media (max-width:865px)
+        {
+            .img-holder{
+                height: 75vw;
+            }
+            .blurr{
+                height:75vw;
+            }
+            .clear{
+                height: 75vw;
+                width:55vw;
+            }
+        }
+        @media (max-width:767px)
+        {
+            .img-holder{
+                height: 90vw;
+            }
+            .blurr{
+                height:90vw;
+            }
+            .clear{
+                height: 90vw;
+                width:60vw;
+            }
+        }
+        @media (max-width:575px)
+        {
+            .clear{
+                height:115vw;
+                width:75vw;
+            }
+            .blurr{
+                height:115vw;
+            }
+            .img-holder{
+                height:115vw;
+            }
+        }
+        @media(max-width:450px)
+        {
+            .img-holder{
+                height: 130vw;
+            }
+            .blurr{
+                height:130vw;
+            }
+            .clear{
+                height: 130vw;
+                width:95vw;
+            }
         }
     </style>
 {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon(asset('../images/windsorblues.png')) }}">--}}
@@ -231,7 +317,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Didact+Gothic&family=Fasthand&family=Josefin+Sans&family=Lobster&family=Oswald:wght@700&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Didact+Gothic&family=Fasthand&family=Josefin+Sans&family=Lobster&family=Oswald:wght@700&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap&family=Archivo+Black&display=swap&family=Archivo+Black&display=swap&family=Candal&display=swap" rel="stylesheet">
 
 </head>
 <body>

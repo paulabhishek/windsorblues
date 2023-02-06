@@ -17,7 +17,6 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
         </div>
         <div class="carousel-inner rounded border-primary border-bottom position-relative">
             <div class="carousel-item active  " data-bs-interval="100000">
@@ -25,23 +24,17 @@
                     <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/43289/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x">Buy Tickets Now!</a><br>
                     {{--                    <p class="badge text-bg-warning">The Cash Box Kings</p>--}}
                 </div>
-                <a target="_blank" href="https://www.ticketscene.ca/events/43289/"><img src="images/ticket-website.jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
+                <a target="_blank" href="https://www.ticketscene.ca/events/43289/"><img src="images/JW Jones Slider.jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
             </div>
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/Harding-Davis slider.jpg" class="d-block w-100 c-img" title="Slide 2">
             </div>
-
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/tim swaddling.jpg" class="d-block w-100 c-img" title="Slide 3">
+                <img src="images/Johnnle Johnson slider.jpg" class="d-block w-100 c-img" title="Slide 3">
             </div>
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/event-planner.jpg" class="d-block w-100 c-img" title="Slide 4">
             </div>
-            <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/jw-jones teazer slider.jpg" class="d-block w-100 c-img" title="Slide 5">
-            </div>
-
-
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/website sponsor sheet.jpg" class="d-block w-100 c-img" title="Slide 6">
 {{--                <div class="carousel-caption d-none d-md-block">--}}
@@ -52,14 +45,33 @@
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/news collage.jpg" class="d-block w-100 c-img" title="Slide 7">
             </div>
-            <div class="carousel-item" data-bs-interval="20000">
+            <div class="carousel-item" data-bs-interval="00000">
                 <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 8">
                 <div class="carousel-caption">
-                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1" >Read more</button>
+                    <div class="d-none d-sm-block">
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1-modal-xl" >Read more</button>
+                        <div class="modal fade" id="exampleModal1-modal-xl"  tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="images/windsor-declaration.jpg" class="d-block w-100 c-img" title="Slide 1">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{{--                    <button type="button" class="btn btn-primary btn-sm d-md-none d-lg-block" data-bs-toggle="modal" data-bs-target="#exampleModal1-modal-xl">Read more</button>--}}
+                    <a href="{{url('https://docs.google.com/document/d/1u0-NURCMT238GfWDygwVfDRiW7YgzGiTx4o28G4XgaU/edit?usp=sharing')}}" type="button" class="btn btn-primary btn-sm d-block d-sm-none" >Read more</a>
 {{--                    <p class="fs-6 badge text-bg-primary fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal1">Read more</p>--}}
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal1"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="exampleModal1-modal-xl"  tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -76,6 +88,7 @@
                 </div>
             </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon " aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -86,77 +99,6 @@
         </button>
     </div>
 </div>
-
-{{--    </div>--}}
-{{--        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-0 col-sm-0 h-50 text-center">--}}
-{{--            <img class="img-fluid d-none d-md-inline"images/Logo-KBA.jpg"/>--}}
-{{--            <img class="img-fluid d-none d-md-inline"images/Blues Foundation logo - vertical stacked.jpg"/>--}}
-{{--        </div>--}}
-
-{{--        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-11">--}}
-{{--            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">--}}
-{{--                <div class="carousel-indicators">--}}
-{{--                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>--}}
-{{--                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>--}}
-{{--                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>--}}
-{{--                </div>--}}
-{{--                <div class="carousel-inner">--}}
-{{--                    --}}{{--        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-20"  height="532images/Blues Foundation logo - horizontal stacked.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
-
-{{--                    <div class="carousel-item active" data-bs-interval="10000">--}}
-{{--                        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="337" height="532images/Z3DsIGxE1FVfEj2eE7zVG1NSgBzk0PwZvYzAWWWo.jpg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>--}}
-{{--                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">First slide</text></svg>--}}
-{{--                        <div class="carousel-caption d-none d-md-block">--}}
-{{--                            <button type="button" class="btn btn-outline-light">Buy Tickets Now!</button>--}}
-{{--                            <p>The Cash Box Kings</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="carousel-item" data-bs-interval="2000">--}}
-{{--                        --}}{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532images/65-og.jpg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>--}}
-{{--                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Second slide</text></svg>--}}
-{{--                        <div class="carousel-caption d-none d-md-block">--}}
-{{--                            <button type="button" class="btn btn-outline-light">Sign up now!</button>--}}
-
-{{--                            --}}{{--                    <h5>Sign up now!</h5>--}}
-{{--                            <p>Get discounted tickets on memberships</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-{{--                    <div class="carousel-item">--}}
-{{--                        --}}{{--                <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532images/monkeyjunk1.png" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>--}}
-{{--                        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="532" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>--}}
-{{--                        <div class="carousel-caption d-none d-md-block">--}}
-{{--                            <h5>Donate to the Blues Society</h5>--}}
-{{--                            --}}{{--                    <p>Some representative placeholder content for the third slide.</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
-{{--                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">--}}
-{{--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
-{{--                    <span class="visually-hidden">Previous</span>--}}
-{{--                </button>--}}
-{{--                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">--}}
-{{--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
-{{--                    <span class="visually-hidden">Next</span>--}}
-{{--                </button>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-0 col-sm-0 h-50 text-center">--}}
-{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inlineimages/Logo-KBA.jpg"/>--}}
-{{--                <img class="img-fluid d-md-none d-lg-inline d-none d-md-inlineimages/Blues Foundation logo - vertical stacked.jpg"/>--}}
-{{--        </div>--}}
-
-{{--<title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>--}}
-{{--<text x="50%" y="50%" fill="#555" dy=".3em">--}}
-
-{{--</text>--}}
-
-
-
-
-{{--Chatham Site--}}
 
 <div class="container mt-4">
         <div class="row text-center">
@@ -231,9 +173,7 @@
             <div class="col-sm-12 col-lg-6 col-md-12 text-black ">
                 <div class="p-2 m-1">
                     <h1 class="text-center redline mb-4" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">History</h1>
-                    <p class="text-right fs-3 px-4" style="color:#000000; text-align: left !important; font-family: 'Didact Gothic', sans-serif;">The Canada South Blues Society, based in Windsor Ontario, was founded November 19th, 2000. The Chatham-Kent chapter was established in 2012. We are a certified non-profit volunteer group and are affiliated with the International Blues Foundation in Memphis Tennessee.
-                        In addition to hosting world class blues, rhythm & blues and roots artists on a regular basis we also host and/or support various benefits and charity fundraisers each year.
-                        We annually hold a regional competition for the Road to Memphis challenge for local blues artists.  The winner represents our Society at the international competition in Memphis.</p>
+                    <p class="text-right fs-3 px-4" style="color:#000000; text-align: left !important; font-family: 'Didact Gothic', sans-serif;">Founded November 19, 2000 and adding the Chatham-Kent chapter in 2012, the Canada South Blues Society is a registered non-profit. As a member of the Blues Foundation we annually send the winner of our competition to the International Blues Challenge. Recognized by the Blues Foundation with the 2011 Historical Preservation Award. Survivors of the Covid shutdown, we bring you world class blues music, promote local aspiring musicians, and support local charities. We are community focused.</p>
                 </div>
             </div>
         </div>
@@ -268,19 +208,20 @@
             <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/Little Glenn's.jpg" title="Little Glenn's"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
+    </div>
+    <div class="row">
         <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/D&R.jpg" title="D&R Vacuum Sewing Centre"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/Dean's Beans.jpg" title="Deans's BBQ Sauce"/>
+            <img class="img-fluid contain shadow rounded bg-light" style="width:80%; height:70%;" src="images/444 Retiree sponsor image.jpg" title="Deans's BBQ Sauce"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="40%" height="20%" src="images/urbnbud.png" title="URBNBUD"/>
+            <img class="img-fluid contain shadow rounded bg-light" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-
     </div>
 </div>
 
@@ -362,7 +303,6 @@
             @endforeach
         </blockquote>
     </div>
-
 
 @include('includes.footer')
 
