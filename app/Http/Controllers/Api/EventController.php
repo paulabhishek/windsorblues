@@ -14,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return Event::all();
+        return Event::get(['id', 'name', 'location', 'description', 'artist', 'yt_url', 'date', 'file']);
     }
 
     /**

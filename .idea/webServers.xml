@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="70478fa8-5f95-4803-b347-476e6019985b" name="windsorblues" url="http://82.180.174.138">
-        <fileTransfer rootFolder="/domains/windsorblues.ca" accessType="FTPS" host="82.180.174.138" port="21">
+        <fileTransfer rootFolder="/domains/windsorblues.ca/public/beta" accessType="FTPS" host="82.180.174.138" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

@@ -17,8 +17,9 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
         </div>
-        <div class="carousel-inner rounded border-primary border-bottom position-relative">
+        <div class="carousel-inner rounded border-2 border-bottom border-primary position-relative">
             <div class="carousel-item active  " data-bs-interval="100000">
                 <div class=" d-none d-sm-block 	d-md-block d-lg-block">
                     <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/43289/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x">Buy Tickets Now!</a><br>
@@ -45,8 +46,11 @@
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/news collage.jpg" class="d-block w-100 c-img" title="Slide 7">
             </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="images/CJ Lee slider.jpg" class="d-block w-100 c-img" title="Slide 8">
+            </div>
             <div class="carousel-item" data-bs-interval="00000">
-                <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 8">
+                <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 9">
                 <div class="carousel-caption">
                     <div class="d-none d-sm-block">
                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1-modal-xl" >Read more</button>
@@ -200,10 +204,11 @@
 
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/AngelStar.jpg" title="Angel Star"/>
-            {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
-        </div>
+
+{{--        <div class="col-sm-2 col-md-2 mt-2">--}}
+{{--            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/AngelStar.jpg" title="Angel Star"/>--}}
+{{--            --}}{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+{{--        </div>--}}
         <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/Little Glenn's.jpg" title="Little Glenn's"/>
 {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
@@ -215,11 +220,11 @@
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded bg-light" style="width:80%; height:70%;" src="images/444 Retiree sponsor image.jpg" title="Deans's BBQ Sauce"/>
+            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/444 Retiree sponsor image.jpg" title="Deans's BBQ Sauce"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded bg-light" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD"/>
+            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
     </div>
