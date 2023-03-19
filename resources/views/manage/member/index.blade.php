@@ -5,7 +5,7 @@
     <form class="d-flex" role="search" accept-charset="utf-8" method="GET" action=" {{route('manage.member.search')}}">
                     <input class="form-control " name="search" type="search" placeholder="search by name, phone, email" aria-label="Search" required>
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+    </form>
     <h1 class="text-3xl font-bold underline">Sync members to MailChimp</h1>
     <form method="post" action="{{route('manage.mailchimp.update')}}">
         {{ csrf_field() }}
@@ -20,7 +20,28 @@
     {{--        <a class="btn btn-primary" href="{{route('manage.mailchimp.update')}}">Update</a>--}}
 
     <h1 class="text-3xl font-bold underline">Member page</h1>
-    <p class="small-text">(sorting function work in progress  )</p>
+    <div class="dropdown pb-3">
+        <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter here
+        </a>
+        <ul class="dropdown-menu">
+            @php
+                function tgPanel(){
+                    dump('Hello');
+                }
+            @endphp
+{{--            {{route ('manage.member.update', $member->id)}}--}}
+            <li><a class="dropdown-item" href="{{ route('manage.member.index', 'active') }}">Active members</a></li>
+            <li><a class="dropdown-item" href="{{ route('manage.member.index', 'expired') }}">Expired members</a></li>
+            <li><a class="dropdown-item" href="{{ route('manage.member.index', 'newsletter') }}">Members receiving newsletter</a></li>
+            <li><a class="dropdown-item" href="{{ route('manage.member.index', 'website') }}">Members opted for newsletter via website</a></li>
+            <li><a class="dropdown-item" href="{{ route('manage.member.index', 'admin') }}">Members added by Admins</a></li>
+        </ul>
+{{--        {{\App\Http\Controllers\ManageController::dateDiffInDays($object->date)}}--}}
+    </div>
+
+{{--    <p class="small-text">(sorting function work in progress  )</p>--}}
+
 
     <a href="{{ url('/manage/member/create')}}" class="btn btn-primary mb-3">Add new member</a>
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -28,12 +49,12 @@
         <div class="col">
             <div class="card h-100">
                 <div class="card-body">
-
-{{--                    <h5 class="card-title">Name:   {{ $object->name }}</h5>--}}
+{{--                <h5 class="card-title">Name:   {{ $object->name }}</h5>--}}
                     <p class="card-text"> Name: {{ $object->name }}</p>
                     <p class="card-text"> Email: {{ $object->email }}</p>
                     <p class="card-text"> Phone: {{ $object->phone }}<br></p>
                     <p class="card-text">Member ID:   {{ $object->id }}</p>
+                    <p class="card-text">Membership end day:   {{ $object->date }}</p>
 {{--                    {{\App\Http\Controllers\WelcomeController::time_elapsed_string($object->date, false)}}--}}
 {{--                    {{\App\Http\Controllers\ManageController::dateDiffInDays($object->date)}}--}}
                     <p class="card-text"> Days remaining: {{\App\Http\Controllers\ManageController::dateDiffInDays($object->date)}}</p>

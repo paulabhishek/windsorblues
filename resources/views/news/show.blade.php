@@ -49,6 +49,20 @@
             @isset($news->p5)
                 <p class="fs-5">{!! $news->p5 !!}</p>
             @endisset
+{{--            <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1" aria-hidden="true" style="display: none;">--}}
+{{--                <div class="modal-dialog modal-dialog-centered">--}}
+{{--                    <div class="modal-content">--}}
+{{--                        <div class="modal-header">--}}
+{{--                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>--}}
+{{--                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+{{--                        </div>--}}
+{{--                        <div class="modal-body">--}}
+{{--                            <img src="{{ asset('storage/' . $news->img_highlight1) }}" class="img-fluid shadow rounded" alt="...">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>--}}
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
                 @if($news->img_highlight1 == Null)
                 @else

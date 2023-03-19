@@ -118,7 +118,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::group(['middleware' => 'auth'], function(){
         Route::get('manage/member/create', [ManageController::class, 'memberCreate'])->name('manage.member.create');
         Route::post('manage/member', [ManageController::class, 'memberStore'])->name('manage.member.store');
-        Route::get('manage/member', [ManageController::class, 'memberIndex'])->name('manage.member.index');
+        Route::get('manage/member{filter?}', [ManageController::class, 'memberIndex'])->name('manage.member.index');
         Route::get('manage/member/{id}/edit', [ManageController::class, 'memberEdit'])->name('manage.member.edit');
         Route::patch('manage/member/{id}', [ManageController::class, 'memberUpdate'])->name('manage.member.update');
         Route::delete('manage/member/{id}', [ManageController::class, 'memberDestroy'])->name('manage.member.delete');

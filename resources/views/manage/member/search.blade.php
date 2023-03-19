@@ -2,21 +2,10 @@
 @section('content')
 
     <div class="container">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="d-flex" role="search" accept-charset="utf-8" method="GET" action=" {{route('manage.member.search')}}">
-
-                        <input class="form-control me-2" name="search" type="search" placeholder="search by name, phone, email" aria-label="Search" required>
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-
+        <form class="d-flex" role="search" accept-charset="utf-8" method="GET" action=" {{route('manage.member.search')}}">
+            <input class="form-control me-2" name="search" type="search" placeholder="search by name, phone, email" aria-label="Search" required>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
         <h2 class="text-3xl font-bold ">search result for "{{$get_name}}"</h2>
         @if($member->isEmpty())
             <h5 class="text-danger">no records match</h5>

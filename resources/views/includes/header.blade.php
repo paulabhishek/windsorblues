@@ -209,11 +209,12 @@
         }
 
         .carousel-indicators button {
-            width: 10px!important;
-            height: 10px!important;
+            width: 20px!important;
+            height: 20px!important;
             border-radius: 50%;
             outline: black !important;
-            border: 4px solid black !important;
+            border: 2px solid red !important;
+            background-color: #c73434 !important;
         }
 
 
@@ -310,6 +311,9 @@
 {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon(asset('../images/windsorblues.png')) }}">--}}
     <link rel="shortcut icon" href="{{ asset('../images/windsorblues.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('../images/windsorblues.png') }}">
+{{--JS--}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">

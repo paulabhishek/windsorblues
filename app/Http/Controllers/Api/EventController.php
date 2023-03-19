@@ -14,7 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return Event::get(['id', 'name', 'location', 'description', 'artist', 'yt_url', 'date', 'file']);
+        return Event::where('date', '>', date('Y-m-d'))->get(['id', 'name', 'location', 'description', 'artist', 'yt_url', 'date', 'file']);
     }
 
     /**
