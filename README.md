@@ -62,3 +62,29 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Newsletter and Memberships website rules
+
+Users can send a membership request and opt to receive newsletters on the website
+
+
+Newsletter rule:
+
+if user_id and terms field show '0' and newsletter show '1' it means the user opted to receive
+news letter on the website
+
+newsletter: 1
+terms: 0               
+user_id: 0
+
+
+Memberships Rule:
+
+Users cannot become a member without accepting terms and newsletter. so when they submit the membershp request they accept to
+receive newsletters and membership terms
+
+
+terms: 1               
+newsletter: 1
+user_id: 1

@@ -9,6 +9,7 @@ use App\Models\News;
 use App\Models\PresidentMSG;
 use App\Models\User;
 //use http\Env\Response;
+use DateTime;
 use Illuminate\Auth\Access\Events\GateEvaluated;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
 use Newsletter;
+
 
 class ManageController extends Controller
 {
@@ -292,6 +294,14 @@ class ManageController extends Controller
     }
 
     public function eventDestroy(Event $id){
+        $imgPathinDB = DB::table('events')->where('id', '=', $id->id)->get('file');
+////        dd(Storage::delete($imgPathinDB[0]->file));
+//        Storage::delete('storage/' .$imgPathinDB[0]->file);
+////        $post = Event::find($id);
+////        \Storage::delete($post->image);
+////        if(File::exists('storage/' . $imgPathinDB[0]->file)) {
+////            File::delete($image_path);
+//        }
         $id->delete();
         return redirect('manage/event');
     }
@@ -408,22 +418,68 @@ class ManageController extends Controller
 
 //MEMBER
 
-    public function memberIndex(){
-        $members = Member::get();
-        return view('manage.member.index', compact("members"));
+    public function memberIndex($filter = null){
+        switch ($filter) {
+            case "active":
+                $members = Member::where('date', '>=', date("Y-m-d"))->get();
+                return view('manage.member.index', compact("members"));
+            case "expired":
+                $members = Member::where('date', '<', date("Y-m-d"))->get();
+                return view('manage.member.index', compact("members"));
+                break;
+            case "newsletter":
+                $members = Member::where('newsletter', '=', 1)->get();
+                return view('manage.member.index', compact("members"));
+            case "website":
+                $members = Member::where('user_id', '=', 0)->get();
+                return view('manage.member.index', compact("members"));
+            case "admin":
+                $members = Member::where('user_id', '!=', 0)->get();
+                return view('manage.member.index', compact("members"));
+            default:
+                $members = Member::orderBy('name', 'asc')->get();
+                return view('manage.member.index', compact("members"));
+        }
+
     }
 //CONVERT YEAR_TO_DAYS
     public static function dateDiffInDays($date1){
-        $date2 = date("d-m-Y");
-        $timestamp = strtotime($date1);
-        $date1 = date("d-m-Y", $timestamp);
-        $diff = strtotime($date2) - strtotime($date1);
-        $dateDiff = abs(round($diff / 86400));
-        if ($dateDiff >= 365){
-            return '-'. $dateDiff .' days' . ' (expired)';
+        $datetime1 = date_create(date("d-m-Y"));
+        $datetime2 = date_create(date("d-m-Y", strtotime($date1)));
+        $interval = date_diff($datetime1, $datetime2);
+        if(intval($interval->format('%R%a')) < 0)
+        {
+            return $interval->format('%R%a days') . ' (expired)';
         }
-        else
-        return $dateDiff . ' days';
+        elseif (intval($interval->format('%R%a')) === 0){
+            return $interval->format('%a days remaining') . ' (Last day)';
+        }
+        elseif (intval($interval->format('%R%a')) > 0){
+            return $interval->format('%R%a days');
+        }
+
+//            if (str_contains($interval->format('%R%a days'), '-')) {
+//            return $interval->format('%R%a days') . ' (expired)';
+//        }
+//        elseif(str_contains($interval->format('%R%a days'), '0')) {
+//            return $interval->format('%a days remaining') . ' (Last day)';
+//        }
+//        elseif(str_contains($interval->format('%R%a days'), '+')) {
+//            return $interval->format('%R%a days');
+//        }
+
+
+
+//        $currentDate = date("d-m-Y");
+//        $timestamp = strtotime($date1);
+//        $date1 = date("d-m-Y", $timestamp);
+//        $diff = strtotime($currentDate) - strtotime($date1);
+//        $dateDiff = abs(round($diff / 86400));
+//        if ($dateDiff <= 365){
+//            return '-'. $dateDiff .' days' . ' (expired)';
+//        }
+//        else
+//        return $dateDiff . ' days';
     }
 
 

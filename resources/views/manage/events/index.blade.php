@@ -33,9 +33,6 @@
                             <button class="btn btn-danger" type="submit">Delete</button>
                         </form> <br><br>
                     </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
                 </div>
             </div>
         @endforeach

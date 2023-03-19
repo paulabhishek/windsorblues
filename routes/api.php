@@ -18,7 +18,7 @@ use App\Http\Controllers\Api\EventController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get("events", [EventController::class, 'index']);
+Route::get("upcomingevent", [EventController::class, 'index']);
 //Route::group(['namespace' => 'Api', 'prefix' => 'v1'], function () {
 //    Route::apiResource('events', 'EventController');
 ////    Route::apiResource('images', 'ImageController');

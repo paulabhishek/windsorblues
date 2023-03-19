@@ -65,6 +65,35 @@
                 <div class="col-lg-4  col-md-4 col-sm-6" >
                     <div class="row mb-4"><h3 style="font-family: 'Archivo Black', sans-serif;">When: {{date('l' . ', '. 'F j', strtotime($event->date))}}</h3></div>
                     <div class="row mb-4 "><h3 style="font-family: 'Archivo Black', sans-serif;">Where: <a target="_blank" href="https://maps.google.com/?saddr=Current+Location&daddr={{$event->location}}" style="color: black; text-decoration: none;"  onmouseover='this.style.textDecoration="underline"'  onmouseout='this.style.textDecoration="none"' >{{$event->location}}</a></h3></div>
+                    @php
+                    function showButton($date){
+                        $datetime1 = date_create(date("d-m-Y"));
+//                        dump($datetime1);
+                        $datetime2 = date_create(date("d-m-Y", strtotime($date)));
+                        $interval = date_diff($datetime1, $datetime2);
+//                        dump(intval($interval->format('%R%a')));
+//                        dump(intval($interval->format('%R%a')) < 0);
+//                        dump(intval($interval->format('%R%a')) === 0);
+                        if(intval($interval->format('%R%a')) === 0 || intval($interval->format('%R%a')) >  0 )
+                            {
+//                                dump(intval($interval->format('%R%a')) < 0);
+//                                dump(str_contains($interval->format('%R%a days'), '0') || str_contains($interval->format('%R%a days'), '+'));
+                                return true;
+                            }
+                        else{
+
+                            return false;
+                        }
+
+                    }
+                        @endphp
+                    @if(showButton($event->date))
+                        @dump($event->date)
+                        <div class="row mb-4 px-5"><a href="https://www.ticketscene.ca/events/43289/" target="_blank" class="btn btn-danger btn-lg mb-2 text-center shadow rounded border border-3 border-primary" type="button">Buy tickets on Ticketscene</a>
+                        </div>
+
+                    @endif
+
                 </div>
             </div>
             <div class ="row">

@@ -4,7 +4,7 @@
 {{--<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Windsor Blues Events</text></svg>--}}
 
     <div class="col text-light text-center p-1 header"><br><br>
-        <p class="display-2" style="font-weight:bold">WINDSOR BLUES EVENT</p>
+        <p class="display-2" style="font-weight:bold">WINDSOR BLUES EVENTS</p>
 {{--        <p>Phasellus congue commodo magna ut ultricies. Curabitur a nisi et lectus fringilla sodales. Duis dictum at dolor non luctus. Donec dapibus arcu eget tortor ullamcorper bibendum. Quisque mattis scelerisque malesuada. Cras velit lectus, sagittis vitae dui vehicula, cursus consequat nunc. Integer a pulvinar ante, quis molestie nunc. Ut eget lacus in lacus venenatis dignissim a at sapien.</p>--}}
 {{--        <button type="button" class="btn btn-outline-light">Learn More</button>--}}
     </div>
@@ -25,13 +25,13 @@
 
     </style>
 @if(count($events) == 1)
-
     @foreach ($events as $object)
-        <div class="container">
+        <div class="container" id="event">
             <div class = "img-holder" style="overflow: hidden;">
                 @isset($object->file)
                     <img src = "{{ asset('storage/' . $object->file) }}" alt = "blur-img" class = "blurr">
-                    <img src = "{{ asset('storage/' . $object->file) }}" alt = "clear-img" class = "clear shadow rounded">                @endisset
+                    <img src = "{{ asset('storage/' . $object->file) }}" alt = "clear-img" class = "clear shadow rounded">
+                @endisset
                 @if(! isset( $object->file))
                     <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="150px" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
                 @endif
@@ -71,7 +71,7 @@
         </div>
     @endforeach
 @elseif(count($events) > 1)
-    <div class="container">
+    <div class="container" id="events">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($events as $object)
 
@@ -97,12 +97,28 @@
     </div>
 @elseif(count($events) == 0)
     <p class="text-center fs-4 mt-5" style="font-family: 'Archivo Black', sans-serif;">No Upcoming events</p>
+    <p class="text-center fs-4 mt-5"><a class="link-dark" style="font-family: 'Archivo Black', sans-serif; text-decoration: none; " href="{{route('event.index.past')}}">(Checkout our past events)</a></p>
 @endif
 {{--<div class="iframe-container">--}}
 {{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.4937262696244!2d-83.02891038470538!3d42.2893293791917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2c4fb69a96fb%3A0xf1ce8b13ec8e800a!2s2401%20Dougall%20--}}
 {{--                            {{$object->location}}%201T3!5e0!3m2!1sen!2sca!4v1664163013670!5m2!1sen!2sca" width="550" height="350" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>--}}
 {{--</div>--}}
 {{--{{$events->links()}}--}}
+{{--<script>--}}
+{{--    $(document).ready(function() {--}}
+{{--        $.get('https://beta.windsorblues.ca/api/upcomingevent', (data)=>{--}}
+{{--            if(data.length == 1){--}}
+{{--                console.log('event');--}}
+{{--            }else{--}}
+{{--                console.log('events');--}}
+{{--            }--}}
+
+{{--        });--}}
+
+
+
+{{--    });--}}
+{{--</script>--}}
 @include('includes.footer')
 
 
