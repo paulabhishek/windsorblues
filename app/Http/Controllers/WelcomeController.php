@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use App\Models\News;
+use App\Models\Event;
 use App\Models\PresidentMSG;
 use Carbon\Carbon;
 use DateTime;
@@ -15,9 +16,10 @@ class WelcomeController extends Controller
 
     public function index(){
         $news = News::orderByDesc('date')->limit(5)->get();
+        $event = Event::orderByDesc('date')->limit(1)->get();
         $pres_msg = PresidentMSG::get();
 //        dump($news, count($news));
-        return view('welcome', compact("news", "pres_msg"));
+        return view('welcome', compact("news", "pres_msg", "event"));
 //        dd($events);
     }
 

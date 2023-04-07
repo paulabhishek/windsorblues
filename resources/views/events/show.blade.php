@@ -89,7 +89,7 @@
                         @endphp
                     @if(showButton($event->date))
                         @dump($event->date)
-                        <div class="row mb-4 px-5"><a href="https://www.ticketscene.ca/events/43289/" target="_blank" class="btn btn-danger btn-lg mb-2 text-center shadow rounded border border-3 border-primary" type="button">Buy tickets on Ticketscene</a>
+                        <div class="row mb-4 px-5"><a href="https://www.ticketscene.ca/events/43804/" target="_blank" class="btn btn-danger btn-lg mb-2 text-center shadow rounded border border-3 border-primary" type="button">Buy tickets on Ticketscene</a>
                         </div>
 
                     @endif

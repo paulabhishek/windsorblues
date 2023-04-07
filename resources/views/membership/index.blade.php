@@ -19,27 +19,27 @@
     </div>
     <form class="row g-2 mt-5" method="POST" action=" {{route('membership.submit')}}">
         {{ csrf_field() }}
-        <div class="row justify-content-md-center">
-            <div class="col-md-6 text">
-                <label for="first_name" class="form-label ">First name</label>
+        <div class="row g-2 justify-content-md-center">
+            <div class="col-md-6 text h5">
+                <label for="first_name" class="form-label" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">First name</label>
                 <input type="text" name="first_name"  class="form-control shadow" id="first_name" value="{{ old('first_name') }}" required/>
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
-            <div class="col-md-6">
-                <label for="last_name" class="form-label">Last name</label>
+            <div class="col-md-6 h5">
+                <label for="last_name" class="form-label" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Last name</label>
                 <input type="text" name="last_name" class="form-control shadow" id="last_name" value="{{ old('last_name') }}" required/>
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
-            <div class="col-md-6">
-                <label for="phone" class="form-label">Phone</label>
+            <div class="col-md-6 h5">
+                <label for="phone" class="form-label" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Phone</label>
                 <input type="phone" name="phone" class="form-control shadow" id="phone" value="{{ old('phone') }}" required/>
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
+            <div class="col-md-6 h5">
+                <label for="email" class="form-label" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;" >Email</label>
                 <input type="email" name="email" class="form-control shadow" id="email" value="{{ old('email') }}" required/>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="col-md-6">
                 <div class="form-check">
                     <input class="form-check-input" name="terms" type="checkbox" value="1" id="terms" >
-                    <label class="form-check-label text-primary" for="terms" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <label class="form-check-label text-primary" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;" for="terms" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Agree to terms and conditions
                     </label>
                 </div>
@@ -80,14 +80,14 @@
                         time as deemed by the board of directors.
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Agree & Close</button>
+                        <button type="button" class="btn btn-primary" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;" data-bs-dismiss="modal">I Agree & Close</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row g-2 justify-content-md-center">
                 <div class="col-md-6">
-                    <button class="btn btn-primary shadow" type="submit">Submit request</button>
+                    <button class="btn btn-primary shadow" style="color: white; font-family: 'Aref Ruqaa Ink', serif;" type="submit">Submit request</button>
                 </div>
         </div>
     </form>

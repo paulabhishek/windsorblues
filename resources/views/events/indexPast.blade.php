@@ -1,15 +1,12 @@
 @include('includes.header')
 {{--<h1 class="text-3xl font-bold underline text-center mb-4">Events</h1>--}}
 {{--<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>--}}
-
-<div class="row header">
-    <div class="col-3"></div>
-    <div class="col-12 col-md-6 text-light text-center p-1"><br><br>
-        <p class="display-2" style="font-weight:bold">WINDSOR BLUES PAST EVENTS</p><br><br>
-    </div>
-
-    <div class="col-3"></div>
+<div class="col text-light text-center p-1 header"><br><br>
+    <p class="display-2" style="font-weight:bold">WINDSOR BLUES PAST EVENTS</p>
+    {{--        <p>Phasellus congue commodo magna ut ultricies. Curabitur a nisi et lectus fringilla sodales. Duis dictum at dolor non luctus. Donec dapibus arcu eget tortor ullamcorper bibendum. Quisque mattis scelerisque malesuada. Cras velit lectus, sagittis vitae dui vehicula, cursus consequat nunc. Integer a pulvinar ante, quis molestie nunc. Ut eget lacus in lacus venenatis dignissim a at sapien.</p>--}}
+    {{--        <button type="button" class="btn btn-outline-light">Learn More</button>--}}
 </div>
+
 <div class="container text-center mt-4">
     <div class="row">
         <div class="col">
@@ -30,7 +27,7 @@
                     {{--                    @dump($object->file)--}}
                     @isset($object->file)
                         <a href="{{ url('/event/')}}/{{$object->id }}">
-                            <img class="card-img-top" src="{{ asset('storage/' . $object->file) }}" alt="Card image cap">
+                            <img class="card-img-top" loading="lazy" src="{{ asset('storage/' . $object->file) }}" alt="Card image cap">
                         </a>
                     @endisset
 {{--                    --}}{{--                    <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>--}}
