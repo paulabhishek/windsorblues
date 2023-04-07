@@ -20,10 +20,12 @@
         <div class="carousel-inner rounded border-2 border-bottom border-primary position-relative">
             <div class="carousel-item active  " data-bs-interval="100000">
                 <div class=" d-none d-sm-block 	d-md-block d-lg-block">
-                    <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/43289/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x border border-2 border-danger">Buy Tickets Now!</a><br>
+                    <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/44331/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x border border-2 border-danger">Buy Tickets Now!</a><br>
                     {{--                    <p class="badge text-bg-warning">The Cash Box Kings</p>--}}
                 </div>
-                <a  href="https://windsorblues.ca/event/78"><img src="images/JW Jones Slider.jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
+                @foreach ($event as $object)
+                <a  href="https://windsorblues.ca/event/{{$object->id}}"><img src="images/Crystal Shawanda slider .jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
+                @endforeach
             </div>
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/Johnnle Johnson slider.jpg" class="d-block w-100 c-img" title="Slide 3">
@@ -212,9 +214,10 @@
     </div>
     <div class="row">
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/444 Retiree sponsor image.jpg" title="Deans's BBQ Sauce"/>
+            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/444 Retiree image 3.jpg" title="444 Retiree"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
         </div>
+
         <div class="col-sm-2 col-md-2 mt-2">
             <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD"/>
             {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
@@ -241,35 +244,35 @@
                 </div>
                 <form class="mt-4 mt-md-0" method="POST" action=" {{route('welcome.newsletterStore')}}">
                     {{ csrf_field() }}
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
+                    <div class="form-group pb-3">
+                        <label for="name" class="form-label h5" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Name</label>
                         <input placeholder="Name" class="form-control shadow rounded" name="name" type="text" id="validationTextarea3" style="border-width: 3px; border-color: #3029f438;" required />
 
                     </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">Phone</label>
+                    <div class="form-group pb-3">
+                        <label for="phone" class="form-label h5" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Phone</label>
                         <input placeholder="Phone" class="form-control shadow rounded" name="phone" type="tel" id="validationTextarea2" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-mail</label>
+                    <div class="form-group pb-3">
+                        <label for="email" class="form-label h5" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">E-mail</label>
                         <input placeholder="name@example.com" class="form-control shadow rounded" name="email" type="email" id="validationTextarea" style="border-width: 3px; border-color: #3029f438;" required/>
                     </div>
 
                     <div class="form-group mt-3">
                         <input class="form-check-input" name="newsletter" type="checkbox" value="1" id="validationFormCheck1" required/>
-                        <label for="validationFormCheck1" data-bs-toggle="modal" data-bs-target="#exampleModal" class="form-check-label" style="color:#000000;">I accept terms and conditions</label>
+                        <label for="validationFormCheck1" data-bs-toggle="modal" data-bs-target="#exampleModal" class="form-check-label" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">I accept terms and conditions</label>
 {{--                        <label data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-primary">read here</label>--}}
                     </div>
 
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
+                            <div class="modal-content" style="border-color: rgb(0 15 255); background-color: white;">
+                                <div class="modal-header" style="border-color: rgb(0 15 255); background-color: white;">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel">Terms and Conditions/ Privacy Policy</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div class="modal-body" >
                                     By agreeing to the terms and conditions of our privacy policy you give the Canada South Blues Society
                                     the right to communicate with you via the contact information provided. At no time will your
                                     information be shared with a third party. Our communications will consist of mainly notices of upcoming
@@ -277,29 +280,29 @@
                                     forwarded to (contact@windsorblues.ca). These terms and conditions may be updated from time to
                                     time as deemed by the board of directors.
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Agree & Close</button>
+                                <div class="modal-footer" style="border-color: rgb(0 15 255); background-color: white;">
+                                    <button type="button" class="btn btn-primary" style="color: white; font-family: 'Aref Ruqaa Ink', serif;" data-bs-dismiss="modal">I Agree & Close</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 mt-3">
-                        <button type="submit" class="btn btn-primary shadow rounded">Subscribe</button>
+                        <button type="submit" class="btn btn-primary shadow rounded" style="color: white; font-family: 'Aref Ruqaa Ink', serif;">Subscribe</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5 text-center ">
-        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Message from our president</h1>
-        <blockquote class="blockquote mt-4">
-            @foreach ($pres_msg as $object)
-            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>
-            @endforeach
-        </blockquote>
-    </div>
+{{--    <div class="container mt-5 text-center ">--}}
+{{--        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Message from our president</h1>--}}
+{{--        <blockquote class="blockquote mt-4">--}}
+{{--            @foreach ($pres_msg as $object)--}}
+{{--            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>--}}
+{{--            @endforeach--}}
+{{--        </blockquote>--}}
+{{--    </div>--}}
 
 @include('includes.footer')
 
