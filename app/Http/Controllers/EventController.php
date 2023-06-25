@@ -15,8 +15,41 @@ class EventController extends Controller
     }
 
     public function eventIndexPast(){
+        $event_year = Event::select([Event::raw('EXTRACT(YEAR FROM events.date) as year')])->groupBy('year')->pluck('year')->sortBy('asc');
         $events = Event::where('date', '<', date('Y-m-d'))->orderByDesc('date')->get();
-        return view('events.indexPast', compact("events"));
+
+        return view('events.indexPast', compact('events', 'event_year'));
+    }
+    public function eventSort($sort){
+        $event_year = Event::select([Event::raw('EXTRACT(YEAR FROM events.date) as year')])->groupBy('year')->pluck('year')->sortBy('asc');
+
+        $events = Event::whereYear('date', '=', $sort)->get();
+//        dd($events);
+        return view('events.indexPast', compact("events", 'event_year'));
+
+
+//        switch ($sort) {
+//            case "active":
+//                $members = Member::where('date', '>=', date("Y-m-d"))->get();
+//                return view('manage.member.index', compact("members"));
+//            case "expired":
+//                $members = Member::where('date', '<', date("Y-m-d"))->get();
+//                return view('manage.member.index', compact("members"));
+//                break;
+//            case "newsletter":
+//                $members = Member::where('newsletter', '=', 1)->get();
+//                return view('manage.member.index', compact("members"));
+//            case "website":
+//                $members = Member::where('user_id', '=', 0)->get();
+//                return view('manage.member.index', compact("members"));
+//            case "admin":
+//                $members = Member::where('user_id', '!=', 0)->get();
+//                return view('manage.member.index', compact("members"));
+//            default:
+//                $members = Member::orderBy('name', 'asc')->get();
+//                return view('manage.member.index', compact("members"));
+//        }
+
     }
 
 

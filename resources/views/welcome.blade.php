@@ -1,4 +1,5 @@
 @include('includes.header')
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12 text-center">
@@ -6,7 +7,23 @@
         </div>
     </div>
 </div>
-
+<div class="container mt-4">
+    <div class="row text-center">
+        <div class="col-md-3 col-sm-4 d-none d-sm-block">
+            <div>
+                <img width="105" height="95" src="images/The_Blues_Foundation_logo_no_background.png"/>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 col-sm-4">
+            <div>
+                <p class="fs-5" style="font-family: 'Roboto Slab', serif; color: #150185">WHERE WE STRIVE TO KEEP THE BLUES ALIVE</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-3 mt-3 mb-3 col-sm-4">
+            <a target="_blank" href="http://canadasouthbluessocietyck.blogspot.com/" type="button"  class="btn btn-outline-primary" style="color: #150185; font-family: 'Abyssinica SIL', serif; font-weight: bold;">Visit Our Chatham Site</a>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -20,11 +37,11 @@
         <div class="carousel-inner rounded border-2 border-bottom border-primary position-relative">
             <div class="carousel-item active  " data-bs-interval="100000">
                 <div class=" d-none d-sm-block 	d-md-block d-lg-block">
-                    <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/44331/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x border border-2 border-danger">Buy Tickets Now!</a><br>
+                    <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x border border-2 border-danger">Buy Tickets Now!</a><br>
                     {{--                    <p class="badge text-bg-warning">The Cash Box Kings</p>--}}
                 </div>
                 @foreach ($event as $object)
-                <a  href="https://windsorblues.ca/event/{{$object->id}}"><img src="images/Crystal Shawanda slider .jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
+                <a  href="https://windsorblues.ca/event/{{$object->id}}"><img src="images/promo angel forrest .jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
                 @endforeach
             </div>
             <div class="carousel-item" data-bs-interval="20000">
@@ -34,7 +51,13 @@
                 <img src="images/event-planner.jpg" class="d-block w-100 c-img" title="Slide 4">
             </div>
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/website sponsor sheet.jpg" class="d-block w-100 c-img" title="Slide 6">
+                <img src="images/Windsor Chatham ad.jpg" class="d-block w-100 c-img" title="Slide 4">
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="images/Road to Memphis .jpg" class="d-block w-100 c-img" title="Slide 4">
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="images/latest sponsor.jpg" class="d-block w-100 c-img" title="Slide 6">
 {{--                <div class="carousel-caption d-none d-md-block">--}}
 {{--                                        <button type="button" class="btn btn-outline-light">Sign up now!</button>--}}
 {{--                                        <p>Get discounted tickets on memberships</p>--}}
@@ -43,48 +66,49 @@
             <div class="carousel-item" data-bs-interval="20000">
                 <img src="images/news collage.jpg" class="d-block w-100 c-img" title="Slide 7">
             </div>
-            <div class="carousel-item" data-bs-interval="00000">
-                <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 9">
-                <div class="carousel-caption">
-                    <div class="d-none d-sm-block">
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1-modal-xl" >Read more</button>
-                        <div class="modal fade" id="exampleModal1-modal-xl"  tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="images/windsor-declaration.jpg" class="d-block w-100 c-img" title="Slide 1">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--            Windsor Proclamation Model--}}
+{{--            <div class="carousel-item" data-bs-interval="00000">--}}
+{{--                <img src="images/slider-3.jpg" class="d-block h-80 w-100 c-img" title="Slide 9">--}}
+{{--                <div class="carousel-caption">--}}
+{{--                    <div class="d-none d-sm-block">--}}
+{{--                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1-modal-xl" >Read more</button>--}}
+{{--                        <div class="modal fade" id="exampleModal1-modal-xl"  tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+{{--                            <div class="modal-dialog modal-xl modal-dialog-centered">--}}
+{{--                                <div class="modal-content">--}}
+{{--                                    <div class="modal-header">--}}
+{{--                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="modal-body">--}}
+{{--                                        <img src="images/windsor-declaration.jpg" class="d-block w-100 c-img" title="Slide 1">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="modal-footer">--}}
+{{--                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 {{--                    <button type="button" class="btn btn-primary btn-sm d-md-none d-lg-block" data-bs-toggle="modal" data-bs-target="#exampleModal1-modal-xl">Read more</button>--}}
-                    <a href="{{url('https://docs.google.com/document/d/1u0-NURCMT238GfWDygwVfDRiW7YgzGiTx4o28G4XgaU/edit?usp=sharing')}}" type="button" class="btn btn-primary btn-sm d-block d-sm-none" >Read more</a>
+{{--                    <a href="{{url('https://docs.google.com/document/d/1u0-NURCMT238GfWDygwVfDRiW7YgzGiTx4o28G4XgaU/edit?usp=sharing')}}" type="button" class="btn btn-primary btn-sm d-block d-sm-none" >Read more</a>--}}
 {{--                    <p class="fs-6 badge text-bg-primary fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal1">Read more</p>--}}
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal1-modal-xl"  tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="images/windsor-declaration.jpg" class="d-block w-100 c-img" title="Slide 1">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{--                    <!-- Modal -->--}}
+{{--                    <div class="modal fade" id="exampleModal1-modal-xl"  tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">--}}
+{{--                        <div class="modal-dialog modal-xl modal-dialog-centered">--}}
+{{--                            <div class="modal-content">--}}
+{{--                                <div class="modal-header">--}}
+{{--                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--}}
+{{--                                </div>--}}
+{{--                                <div class="modal-body">--}}
+{{--                                    <img src="images/windsor-declaration.jpg" class="d-block w-100 c-img" title="Slide 1">--}}
+{{--                                </div>--}}
+{{--                                <div class="modal-footer">--}}
+{{--                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -98,23 +122,23 @@
     </div>
 </div>
 
-<div class="container mt-4">
-        <div class="row text-center">
-            <div class="col-md-3 col-sm-4 d-none d-sm-block">
-                <div>
-                    <img width="105" height="95" src="images/The_Blues_Foundation_logo_no_background.png"/>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-4 col-sm-4">
-                <div>
-                    <p class="fs-5" style="font-family: 'Roboto Slab', serif; color: #150185">WHERE WE STRIVE TO KEEP THE BLUES ALIVE</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-3 mt-3 col-sm-4">
-                <a target="_blank" href="http://canadasouthbluessocietyck.blogspot.com/" type="button"  class="btn btn-outline-primary" style="color: #150185; font-family: 'Abyssinica SIL', serif; font-weight: bold;">Visit Our Chatham Site</a>
-            </div>
-        </div>
-</div>
+{{--<div class="container mt-4">--}}
+{{--        <div class="row text-center">--}}
+{{--            <div class="col-md-3 col-sm-4 d-none d-sm-block">--}}
+{{--                <div>--}}
+{{--                    <img width="105" height="95" src="images/The_Blues_Foundation_logo_no_background.png"/>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6 mt-4 col-sm-4">--}}
+{{--                <div>--}}
+{{--                    <p class="fs-5" style="font-family: 'Roboto Slab', serif; color: #150185">WHERE WE STRIVE TO KEEP THE BLUES ALIVE</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-3 mt-3 col-sm-4">--}}
+{{--                <a target="_blank" href="http://canadasouthbluessocietyck.blogspot.com/" type="button"  class="btn btn-outline-primary" style="color: #150185; font-family: 'Abyssinica SIL', serif; font-weight: bold;">Visit Our Chatham Site</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--</div>--}}
 
 {{--Wing man--}}
 <div class="container mt-4">
@@ -181,46 +205,50 @@
     <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Our Sponsors</h1>
     <div class="row">
         <div class="col-sm-2 col-md-2 mt-2">
-{{--            <img class="img-fluid d-block d-sm-none"images/Blues Foundation logo - horizontal stacked.jpg"/>--}}
-            <img class="img-fluid contain shadow rounded" src="images/liuna.png" title="LiUNA!625"/>
-{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
-        </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" src="images/Long and McQuade sponsor shot.jpg" title="Long & McQuade"/>
-{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
-        </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" src="images/unifor2.png" title="UNIFOR Local195"/>
-{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
-        </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" src="images/unifor.png" title="UNIFOR Local2458"/>
 
-{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+            <img class="img-fluid contain shadow rounded" src="images/liuna.png" title="LiUNA!625">
+
+        </div>
+        <div class="col-sm-2 col-md-2 mt-2">
+            <img class="img-fluid contain shadow rounded" src="images/Long and McQuade sponsor shot.jpg" title="Long &amp; McQuade">
+
+        </div>
+        <div class="col-sm-2 col-md-2 mt-2">
+            <img class="img-fluid contain shadow rounded" src="images/unifor2.png" title="UNIFOR Local195">
+
+        </div>
+        <div class="col-sm-2 col-md-2 mt-2">
+            <img class="img-fluid contain shadow rounded" src="images/unifor.png" title="UNIFOR Local2458">
+
+
         </div>
 
-{{--        <div class="col-sm-2 col-md-2 mt-2">--}}
-{{--            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/AngelStar.jpg" title="Angel Star"/>--}}
-{{--            --}}{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
-{{--        </div>--}}
+
+
+
+
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/Little Glenn's.jpg" title="Little Glenn's"/>
-{{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/Little Glenn's.jpg" title="Little Glenn's">
+
         </div>
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/D&R.jpg" title="D&R Vacuum Sewing Centre"/>
-            {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/D&amp;R.jpg" title="D&amp;R Vacuum Sewing Centre">
+
         </div>
     </div>
     <div class="row">
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/444 Retiree image 3.jpg" title="444 Retiree"/>
-            {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/444 Retiree image 3.jpg" title="444 Retiree">
+
         </div>
 
         <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD"/>
-            {{--            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>--}}
+            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD">
+
+        </div>
+        <div class="col-sm-2 col-md-2 mt-2">
+            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/couvillon logo remade.jpg" title="URBNBUD">
+
         </div>
     </div>
 </div>
@@ -295,14 +323,73 @@
         </div>
     </div>
 
-{{--    <div class="container mt-5 text-center ">--}}
-{{--        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Message from our president</h1>--}}
-{{--        <blockquote class="blockquote mt-4">--}}
-{{--            @foreach ($pres_msg as $object)--}}
-{{--            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>--}}
-{{--            @endforeach--}}
-{{--        </blockquote>--}}
+    <div class="container mt-5 text-center ">
+        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Message from our president</h1>
+        <blockquote class="blockquote mt-4">
+            @foreach ($pres_msg as $object)
+            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>
+            @endforeach
+        </blockquote>
+    </div>
+{{--Sponsors redesign--}}
+{{--<div class="demo-row">--}}
+{{--    <div class="container" id="id-sponsors">--}}
+{{--        <div class="text-center">--}}
+{{--            <h2 style="margin:20px 0;color:#fff;">Platinum Sponsors</h2>--}}
+{{--        </div>--}}
+{{--        <div id="sponsor-carousel" class="carousel slide" data-ride="carousel">--}}
+{{--            <!-- Indicators -->--}}
+{{--            <ol class="carousel-indicators">--}}
+{{--                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>--}}
+{{--                <li data-target="#carousel-example-generic" data-slide-to="1"></li>--}}
+{{--                <li data-target="#carousel-example-generic" data-slide-to="2"></li>--}}
+{{--            </ol>--}}
+{{--            <!-- Wrapper for slides -->--}}
+{{--            <div class="carousel-inner" role="listbox">--}}
+{{--                <div class="item active">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/liuna.png" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/Long and McQuade sponsor shot.jpg" style="width: 155px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/Little Glenn's.jpg" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/D&R.jpg" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/unifor2.png" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/unifor.png" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/444 Retiree image.jpg" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/444 Retiree image 3.jpg" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/couvillon logo remade.jpg" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-sm-5 col-md-4 col-xs-6">--}}
+{{--                            <div class="sponsor-feature"><img alt="" src="images/urbnbud.png" style="width: 200px;" /></div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 {{--    </div>--}}
+{{--</div>--}}
+{{--<script>--}}
+{{--    $('#sponsor-carousel').carousel({--}}
+{{--        interval: 3000,--}}
+{{--        cycle: true,--}}
+{{--    });--}}
+{{--</script>--}}
 
 @include('includes.footer')
 

@@ -2,7 +2,7 @@
 @include('includes.header')
 <div class="container">
     <div class="col-12 text-center">
-        <p class="fw-bold t ext-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Contact US</p>
+        <p class="fw-bold ext-justify text-center fs-1 text-uppercase redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif; ">Contact US</p>
     </div>
     <div class="container row g-3">
         @if ($errors->any())

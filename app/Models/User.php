@@ -58,4 +58,12 @@ public function museums(){
     return $this->hasmany(Museum::class);
 }
 
+public function gallery(){
+    return $this->hasmany(Gallery::class);
+}
+
+public function collection(){
+    return $this->hasmany(Collection::class);
+}
+
 }

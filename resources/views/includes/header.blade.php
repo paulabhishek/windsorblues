@@ -6,6 +6,13 @@
 
     <title>Canada South Blues Society</title>
     <style>
+
+        .sponsors{
+            width: 50%;
+            aspect-ratio: 3/3;
+            object-fit: contain;
+
+        }
         .bluecor{
             color: #0f0e40;
         }
@@ -13,11 +20,9 @@
         li {
             margin-bottom: 10px;
         }
-
-        .cool-link {
-            display: inline-block;
-            color: #8e1212;
-            text-decoration: none;
+        .highlight{
+            border-bottom: solid red !important;
+            border-bottom-width: 4px !important;
         }
 
         .cool-link::after {
@@ -85,6 +90,9 @@
 
         .container-fluid {
             max-width: 1400px;
+        }
+        .ignore-css{
+            all:unset;
         }
 
         .card {
@@ -180,9 +188,10 @@
 
 
         .header {
-            background-image: url('https://i.pinimg.com/originals/00/8c/75/008c75173308d7ae83aadb3d011303f1.jpg');
+            background-image: url('https://images.unsplash.com/photo-1610900603480-c0a85ac8e315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1963&q=80');
             background-position: 50% 90%;
             background-size: cover;
+            height: 300px;
         }
 
         .contain{
@@ -307,6 +316,35 @@
                 width:95vw;
             }
         }
+
+        /*for Demo Only*/
+        .demo-row {
+            background-color: #333;
+            padding: 50px 0;
+        }
+
+
+        /*Implement*/
+        .sponsor-feature {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px 0;
+        }
+
+        #id-sponsors .carousel {
+            margin-bottom: 20px;
+        }
+        #id-sponsors .item {
+            padding-bottom: 20px;
+        }
+        #id-sponsors .carousel-indicators {
+            bottom: -25px;
+        }
     </style>
 {{--    <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon(asset('../images/windsorblues.png')) }}">--}}
     <link rel="shortcut icon" href="{{ asset('../images/windsorblues.png') }}">
@@ -317,14 +355,17 @@
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Didact+Gothic&family=Fasthand&family=Josefin+Sans&family=Lobster&family=Oswald:wght@700&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap&family=Archivo+Black&display=swap&family=Archivo+Black&display=swap&family=Candal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Aref+Ruqaa+Ink&family=Bebas+Neue&family=Carter+One&family=Cormorant+Garamond&family=Didact+Gothic&family=Fasthand&family=Josefin+Sans&family=Lobster&family=Oswald:wght@700&family=Playfair+Display&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap&family=Archivo+Black&display=swap&family=Archivo+Black&display=swap&family=Candal&display=swap&family=Poppins:wght@400;500&display=swap&family=Gloock&display=swap"" rel="stylesheet">
+
 
 </head>
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="VO80LMkz"></script>
 <div class=" text-center">
     <div class="col-lg-12 col-md-12 col-sm-12 ">
         <a href="/"><img width="350" height="150" src="{{URL("images/windsorblues.png")}}"/></a>
@@ -339,16 +380,22 @@
         <div class="navbar-collapse justify-content-md-center collapse " id="navbarsExample08" >
             <ul class="navbar-nav">
                 <li class="nav-item px-3 h4">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;"  href="{{route('about.index')}}">About</a>
+                    <a @if(\Illuminate\Support\Facades\Request::is("about")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;"  href="{{route('about.index')}}">About</a>
                 </li>
                 <li class="nav-item px-3 h4 ">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('event.index')}}">Events</a>
+                    <a @if(\Illuminate\Support\Facades\Request::is("events")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('event.index')}}">Events</a>
                 </li>
                 <li class="nav-item px-3 h4">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('membership.showform')}}">Become a Member</a>
+                    <a @if(\Illuminate\Support\Facades\Request::is("membership")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('membership.showform')}}">Become a Member</a>
                 </li>
                 <li class="nav-item px-3  h4">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('news.index')}}">News</a>
+                    <a @if(\Illuminate\Support\Facades\Request::is("news")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('news.index')}}">News</a>
+                </li>
+                <li class="nav-item px-3  h4">
+                    <a @if(\Illuminate\Support\Facades\Request::is("museum")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>
+                </li>
+                <li class="nav-item px-3  h4">
+                    <a @if(\Illuminate\Support\Facades\Request::is("gallery")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Gallery</a>
                 </li>
 {{--                <li class="nav-item px-3 h4">--}}
 {{--                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('museum.index')}}">Museum</a>--}}
@@ -358,7 +405,10 @@
 {{--                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="#">Blues in Schools</a>--}}
 {{--                </li>--}}
                 <li class="nav-item px-3 h4">
-                    <a class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('contact.index')}}">Contact</a>
+                    <a @if(\Illuminate\Support\Facades\Request::is("contact")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('contact.index')}}">Contact</a>
+                </li>
+                <li class="nav-item px-3 h4">
+                    <a target="_blank" @if(\Illuminate\Support\Facades\Request::is("contact")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277">Facebook</a>
                 </li>
             </ul>
         </div>

@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Event extends Model
+class Gallery extends Model
 {
-    protected $fillable =["name", "description", "location", "artist", "yt_url", "date", "user_id", "file", "ticketscene_id"  ];
-
-    use HasFactory, SoftDeletes;
+    use SoftDeletes, HasFactory;
 
     public function user(){
         return $this->belongsTo(User::class);
+    }
+    public function collection(){
+        return $this->belongsTo(Collection::class);
     }
 }
