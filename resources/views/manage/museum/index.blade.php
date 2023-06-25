@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <h1 class="text-3xl font-bold underline text-center mb-4">Museum page</h1>
-<a href="{{ url('/manage/museum/create')}}" class="btn btn-primary text-center">Create new</a>
+<a href="{{ url('/manage/museum/create')}}" class="btn btn-primary text-center">Create Museum</a>
 
 <div class="container mt-4">
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">

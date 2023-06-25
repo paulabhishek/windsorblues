@@ -30,21 +30,63 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <iframe width="100%" height="250"  src="https://www.youtube.com/watch?v=iUCyU_U0J2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe width="100%" height="250"  src="https://www.youtube.com/watch?v=iUCyU_U0J2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            @php
+                    $video_id1 = substr($museum->video_url1, -11);
+                    $video_id2 = substr($museum->video_url2, -11);
+            @endphp
+            <div class ="row">
+                <div class="col-lg-12 col-md-6 mt-4 d-md-none d-lg-block d-sm-none d-md-block d-none d-sm-block">
+                    <h3 style="font-family: 'Archivo Black', sans-serif;">Watch {{$museum->artist_name}}:</h3>
+                    @isset($museum->video_url1)
+                        <iframe class="shadow rounded" width="100%" height="250"  src="https://www.youtube.com/embed/{{$video_id1}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    @endisset
+                    @isset($museum->video_url2)
+                        <iframe class="shadow rounded" width="100%" height="250"  src="https://www.youtube.com/embed/{{$video_id2}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    @endisset
+                </div>
+            </div>
+{{--            @isset($museum->video_url1)--}}
+{{--                <iframe class="shadow rounded" width="100%" height="250"  src="https://www.youtube.com/embed/{{$video_id1}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+{{--            @endisset--}}
+{{--            @isset($museum->video_url2)--}}
+{{--                <iframe class="shadow rounded" width="100%" height="250"  src="https://www.youtube.com/embed/{{$video_id2}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+{{--            @endisset--}}
+
+{{--            <iframe width="100%" height="250"  src="https://www.youtube.com/watch?v=iUCyU_U0J2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+{{--            <iframe width="100%" height="250"  src="https://www.youtube.com/watch?v=iUCyU_U0J2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
 
         </div>
-        <div class="col-lg-8 col-md-8" style="float: none;">
-            <h2>{{$museum->artist_name}}</h2>
-            <h2>Inducted in: {{$museum->date}}</h2>
-            <p class="text-lg-start fs-3"> {{$museum->p1}}</p>
-            <p class="text-lg-start fs-3"> {{$museum->p2}}</p>
-            <p class="text-lg-start fs-3"> {{$museum->p3}}</p>
+        <div class="col">
+            <h1 class="text-center text-light display-1" style="font-family: 'Candal', sans-serif; -webkit-text-stroke: 0.2vw rgb(9, 34, 148);">{{$museum->artist_name}}</h1>
+            <h4 class="text-center display-6" style="font-family: 'Gloock', serif; color: red">Inducted in: {{$museum->date}}</h4><br>
+            <p class="text-lg-start fs-5" style="font-family: 'Poppins', sans-serif;"> {{$museum->p1}}</p><br>
+            <p class="text-lg-start fs-5" style="font-family: 'Poppins', sans-serif;"> {{$museum->p2}}</p><br>
+            <p class="text-lg-start fs-5" style="font-family: 'Poppins', sans-serif;"> {{$museum->p3}}</p>
         </div>
+
+{{--        <div class="col-lg-8 col-md-8" style="float: none;">--}}
+{{--            <h2>{{$museum->artist_name}}</h2>--}}
+{{--            <h2>Inducted in: {{$museum->date}}</h2>--}}
+{{--            <p class="text-lg-start fs-3"> {{$museum->p1}}</p>--}}
+{{--            <p class="text-lg-start fs-3"> {{$museum->p2}}</p>--}}
+{{--            <p class="text-lg-start fs-3"> {{$museum->p3}}</p>--}}
+{{--        </div>--}}
 {{--        <div class="col-12">--}}
 {{--            {{$museum->video_url1}}--}}
 {{--            {{$museum->video_url2}}--}}
 {{--        </div>--}}
+
+        <div class ="row">
+            <div class="col-md-6 col-sm-10 d-lg-none d-xl-block d-xl-none">
+                <h3 class="mt-5" style="font-family: 'Archivo Black', sans-serif;">Watch {{$museum->artist_name}}:</h3>
+                @isset($museum->video_url1)
+                    <iframe class="shadow rounded" width="100%" height="250"  src="https://www.youtube.com/embed/{{$video_id1}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                @endisset
+                @isset($museum->video_url2)
+                    <iframe class="shadow rounded" width="100%" height="250"  src="https://www.youtube.com/embed/{{$video_id2}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                @endisset
+            </div>
+        </div>
     </div>
 </div>
 

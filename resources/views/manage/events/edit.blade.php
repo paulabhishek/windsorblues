@@ -36,6 +36,13 @@
                     <input class="form-control" name="file" type="file" accept="/images*" />
 {{--                    <input class="form-control" name="oldfile" type="hidden" value="{{$event->file}}" accept="/images*" required/>--}}
                 </div>
+                <div class="form-group">
+                    <label for="ticketscene_id" class="form-label">Ticketscene Event ID:</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon3">https://www.ticketscene.ca/events/</span>
+                        <input type="text" class="form-control" name="ticketscene_id" id="basic-url" aria-describedby="basic-addon3 basic-addon4" required>
+                    </div>
+                </div>
                 <div class="col-12 mt-3">
                     <button type="submit" class="btn btn-primary">Update</button>
                 </div>

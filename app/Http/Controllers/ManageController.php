@@ -19,7 +19,7 @@ use Illuminate\Auth\Access\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
-use Newsletter;
+use Spatie\Newsletter\Newsletter;
 
 
 class ManageController extends Controller
@@ -87,16 +87,17 @@ class ManageController extends Controller
         $user = auth()->user();
         $museum = new Museum($request->all());
 //        dd($museum);
+//        dd($museum);
         $user->museums()->save($museum);
 
-        if ($request->hasFile('image1') &&
-            $request->file('image1')->isValid()) {
-            $path = $request->image1->storePublicly('images', 'public');
+        if ($request->hasFile('image1') && $request->file('image2')->isValid()) {
+            $path = $request->image1->storePublicly('museums', 'public');
             $museum->image1 = $path;
+//            dd($museum->save());
             $museum->save();
             if ($request->hasFile('image2') &&
                 $request->file('image2')->isValid()) {
-                $path = $request->image2->storePublicly('museum', 'public');
+                $path = $request->image2->storePublicly('museums', 'public');
                 $museum->image2 = $path;
                 $museum->save();
             }
@@ -112,9 +113,32 @@ class ManageController extends Controller
     public function museumUpdate(Request $request, $museum){
         $formdata = $request->all();
         $museum = Museum::findorfail($museum);
-        $museum->update($formdata);
+//        dd($request,$museum );
+        // checks if request has file
+        if ($request->hasFile('image1') && $request->hasFile('image2')){
+            //deletes the previous file
+            Storage::disk('public')->delete($museum->image1);
+            Storage::disk('public')->delete($museum->image2);
+            $path1 = $request->image1->storePublicly('museums', 'public');
+
+            $path2 = $request->image2->storePublicly('museums', 'public');
+            $museum->update($formdata);
+            $museum->image1 = $path1;
+            $museum->image2 = $path2;
+            $museum->update();
+        }
+        // if there was no file submitted in the update form
+        else{
+            $old_file1 = $museum->image1;
+            $old_file2 = $museum->image2;
+            $museum->update($formdata);
+            $museum->image1 = $old_file1;
+            $museum->image2 = $old_file2;
+            $museum->update();
+        }
         return redirect('manage/museum');
     }
+
 
     public function museumShow($museum){
         $museum = Museum::find($museum);
@@ -255,12 +279,9 @@ class ManageController extends Controller
     }
 
     public function eventStore(Request $request){
-//        dd($request->file('file'));
         $user = auth()->user();
         $event = new Event($request->all());
-//        dd($event);
         $user->events()->save($event);
-
         if ($request->hasFile('file') &&
             $request->file('file')->isValid()) {
             $path = $request->file->storePublicly('events', 'public');
@@ -316,7 +337,7 @@ class ManageController extends Controller
         $admin = User::get();
         Gate::allows('isLevelTwo') ? Response::allow() : abort(403);
         return view('manage.admin.index', compact("admin"));
-        dd($admin);
+//        dd($admin);
     }
 
     public function adminShow($id){

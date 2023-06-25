@@ -23,11 +23,18 @@
                         </svg>
                         <p style="display:inline" class="card-text px-1">{{$event->location }}</p><br><br>
 
-                        <b>Overview:</b><p class="card-text">{{$event->description }}</p>
-
-                        <a href="https://www.ticketscene.ca/events/42349/"  target="_blank" class="btn btn-primary">Buy Tickets</a>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <b>Overview:</b><p class="card-text">{{$event->description }}</p><br>
+                        <b>YT Link</b><a href="{{$event->yt_url }}"><p class="card-text">{{$event->yt_url }}</p></a><br>
+                        <b>Ticketscene Link</b><a href="{{$event->ticketscene_id }}"><p class="card-text">{{$event->ticketscene_id }}</p></a><br>
+                        <b>Date</b><p class="card-text">{{$event->date }}</p><br>
+                        <b>User_ID</b><p class="card-text">{{$event->user_id }}</p>
                     </div>
+                    <form method="POST" action="{{ route('manage.event.delete', $event->id) }}">
+                        {{method_field('DELETE')}}
+                        {{csrf_field()}}
+                        <a href="{{ url('/manage/event/')}}/{{$event->id }}/edit" class="btn btn-primary">Edit</a>
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form> <br><br>
                 </div>
             </div>
         </div>

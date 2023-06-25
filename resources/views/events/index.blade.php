@@ -3,8 +3,8 @@
 {{--<p class="fw-bold text-justify text-center fs-1 text-uppercase" style="color: #150185; font-family: 'Source Sans Pro', sans-serif;">Upcoming Events</p>--}}
 {{--<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Responsive image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Windsor Blues Events</text></svg>--}}
 
-    <div class="col text-light text-center p-1 header"><br><br>
-        <p class="display-2" style="font-weight:bold">WINDSOR BLUES EVENTS</p>
+    <div class="text-light text-center p-1 header"><br><br>
+        <p class="display-2 my-6" style="font-weight:bold">WINDSOR BLUES EVENTS</p>
 {{--        <p>Phasellus congue commodo magna ut ultricies. Curabitur a nisi et lectus fringilla sodales. Duis dictum at dolor non luctus. Donec dapibus arcu eget tortor ullamcorper bibendum. Quisque mattis scelerisque malesuada. Cras velit lectus, sagittis vitae dui vehicula, cursus consequat nunc. Integer a pulvinar ante, quis molestie nunc. Ut eget lacus in lacus venenatis dignissim a at sapien.</p>--}}
 {{--        <button type="button" class="btn btn-outline-light">Learn More</button>--}}
     </div>
@@ -54,7 +54,7 @@
                     <div class="row mb-4 pt-3"><h3 style="font-family: 'Archivo Black', sans-serif;">When: {{date('l' . ', '. 'F j', strtotime($object->date))}}</h3></div>
                     <div class="row mb-4"><h3 style="font-family: 'Archivo Black', sans-serif;">Where: <a target="_blank" href="https://maps.google.com/?saddr=Current+Location&daddr={{$object->location}}" style="color: black; text-decoration: none;"  onmouseover='this.style.textDecoration="underline"'  onmouseout='this.style.textDecoration="none"' >{{$object->location}}</a></h3></div>
 
-                    <a href="https://www.ticketscene.ca/events/43289/" target="_blank" class="btn btn-danger btn-lg mb-2 text-center shadow rounded" type="button">Buy tickets on Ticketscene</a>
+                    <a href="https://www.ticketscene.ca/events/{{$object->ticketscene_id}}" target="_blank" class="btn btn-danger btn-lg mb-2 text-center shadow rounded" type="button">Buy tickets on Ticketscene</a>
                 </div>
             </div>
             <div class ="row">
