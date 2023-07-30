@@ -408,7 +408,7 @@
                     <a @if(\Illuminate\Support\Facades\Request::is("contact")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="{{route('contact.index')}}">Contact</a>
                 </li>
                 <li class="nav-item px-3 h4">
-                    <a target="_blank" @if(\Illuminate\Support\Facades\Request::is("contact")) class="highlight nav-link Playfair fw-bold fs-3" @endif class="nav-link cool-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277">Facebook</a>
+                    <a target="_blank" class="nav-link Playfair fw-bold fs-3" style=" color: #0f0e40;" href="https://www.facebook.com/Canada-South-Blues-Society-Windsor-591421181200277">Facebook</a>
                 </li>
             </ul>
         </div>

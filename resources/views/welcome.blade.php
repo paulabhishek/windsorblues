@@ -32,39 +32,38 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner rounded border-2 border-bottom border-primary position-relative">
-            <div class="carousel-item active  " data-bs-interval="100000">
-                <div class=" d-none d-sm-block 	d-md-block d-lg-block">
-                    <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x border border-2 border-danger">Buy Tickets Now!</a><br>
-                    {{--                    <p class="badge text-bg-warning">The Cash Box Kings</p>--}}
-                </div>
-                @foreach ($event as $object)
-                <a  href="https://windsorblues.ca/event/{{$object->id}}"><img src="images/promo angel forrest .jpg" class="d-block w-100 c-img " title="Upcoming event"></a>
-                @endforeach
+
+{{--            EVENT POSTER--}}
+{{--            <div class="carousel-item active  " data-bs-interval="100000">--}}
+{{--                <div class=" d-none d-sm-block 	d-md-block d-lg-block">--}}
+{{--                    <a target="_blank type=" type="button" href="https://www.ticketscene.ca/events/" class="btn btn-primary btn-lg fw-bold position-absolute top-0 start-50 translate-middle-x border border-2 border-danger">Buy Tickets Now!</a><br>--}}
+{{--                                        <p class="badge text-bg-warning">The Cash Box Kings</p>--}}
+{{--                </div>--}}
+{{--                @foreach ($event as $object)--}}
+{{--                <a  href="https://windsorblues.ca/event/{{$object->id}}"><img src="images/promo angel forrest .jpg" class="d-block w-100 c-img " title="Upcoming event"></a>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+            <div class="carousel-item active" data-bs-interval="20000">
+                <img src="images/Add Current Road to Memphis slider.jpg" class="d-block w-100 c-img" title="Slide 1">
             </div>
-            <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/Johnnle Johnson slider.jpg" class="d-block w-100 c-img" title="Slide 3">
+            <div class="carousel-item " data-bs-interval="20000">
+                <img src="images/Johnnle Johnson slider.jpg" class="d-block w-100 c-img" title="Slide 2">
             </div>
+
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/event-planner.jpg" class="d-block w-100 c-img" title="Slide 4">
-            </div>
-            <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/Windsor Chatham ad.jpg" class="d-block w-100 c-img" title="Slide 4">
-            </div>
-            <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/Road to Memphis .jpg" class="d-block w-100 c-img" title="Slide 4">
-            </div>
-            <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/latest sponsor.jpg" class="d-block w-100 c-img" title="Slide 6">
+                <img src="images/latest sponsor.jpg" class="d-block w-100 c-img" title="Slide 3">
 {{--                <div class="carousel-caption d-none d-md-block">--}}
 {{--                                        <button type="button" class="btn btn-outline-light">Sign up now!</button>--}}
 {{--                                        <p>Get discounted tickets on memberships</p>--}}
 {{--                </div>--}}
             </div>
             <div class="carousel-item" data-bs-interval="20000">
-                <img src="images/news collage.jpg" class="d-block w-100 c-img" title="Slide 7">
+                <img src="images/news collage.jpg" class="d-block w-100 c-img" title="Slide 4">
+            </div>
+            <div class="carousel-item" data-bs-interval="20000">
+                <img src="images/Windsor Chatham ad.jpg" class="d-block w-100 c-img" title="Slide 4">
             </div>
 {{--            Windsor Proclamation Model--}}
 {{--            <div class="carousel-item" data-bs-interval="00000">--}}
@@ -204,51 +203,34 @@
 <div class="container text-center mt-4">
     <h1 class="text-center  mb-4 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Our Sponsors</h1>
     <div class="row">
-        <div class="col-sm-2 col-md-2 mt-2">
-
-            <img class="img-fluid contain shadow rounded" src="images/liuna.png" title="LiUNA!625">
-
-        </div>
-        <div class="col-sm-2 col-md-2 mt-2">
+        <div class="col-sm-2 col-md-2 col-lg-3">
             <img class="img-fluid contain shadow rounded" src="images/Long and McQuade sponsor shot.jpg" title="Long &amp; McQuade">
-
-        </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" src="images/unifor2.png" title="UNIFOR Local195">
-
-        </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" src="images/unifor.png" title="UNIFOR Local2458">
-
-
         </div>
 
-
-
-
-
-        <div class="col-sm-2 col-md-2 mt-2">
+        <div class="col-sm-2 col-md-2 col-lg-3">
             <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/Little Glenn's.jpg" title="Little Glenn's">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-3">
+            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/D&amp;R.jpg" title="D&amp;R Vacuum Sewing Centre">
 
         </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/D&amp;R.jpg" title="D&amp;R Vacuum Sewing Centre">
+        <div class="col-sm-2 col-md-2 col-lg-3">
+            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/444 Retiree image 3.jpg" title="444 Retiree">
 
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" width="50%" height="30%" src="images/444 Retiree image 3.jpg" title="444 Retiree">
-
-        </div>
-
-        <div class="col-sm-2 col-md-2 mt-2">
+        <div class="col-sm-2 col-md-2 col-lg-3">
             <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/urbnbud.png" title="URBNBUD">
 
         </div>
-        <div class="col-sm-2 col-md-2 mt-2">
-            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/couvillon logo remade.jpg" title="URBNBUD">
+        <div class="col-sm-2 col-md-2 col-lg-3">
+            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/couvillon logo remade.jpg" title="couvillon">
 
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-3">
+            <img class="img-fluid contain shadow rounded" style="width:80%; height:70%;" src="images/Add IMG_2275.jpg" title="Victoria Tavern">
         </div>
     </div>
 </div>
@@ -323,14 +305,15 @@
         </div>
     </div>
 
-    <div class="container mt-5 text-center ">
-        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Message from our president</h1>
-        <blockquote class="blockquote mt-4">
-            @foreach ($pres_msg as $object)
-            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>
-            @endforeach
-        </blockquote>
-    </div>
+{{--    <div class="container mt-5 text-center ">--}}
+{{--        <h1 class="text-center  mb-3 redline" style="color: #150185; font-family: 'Aref Ruqaa Ink', serif;">Message from our president</h1>--}}
+{{--        <blockquote class="blockquote mt-4">--}}
+{{--            @foreach ($pres_msg as $object)--}}
+{{--            <p class="text-justify fs-1" style="font-family: 'Josefin Sans', sans-serif;">{{$object->message}}</p>--}}
+{{--            @endforeach--}}
+{{--        </blockquote>--}}
+{{--    </div>--}}
+
 {{--Sponsors redesign--}}
 {{--<div class="demo-row">--}}
 {{--    <div class="container" id="id-sponsors">--}}

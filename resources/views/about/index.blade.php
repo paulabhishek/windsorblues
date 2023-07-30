@@ -8,8 +8,20 @@
 {{--</div>--}}
 <div class="container mt-5">
     <p class="display-6" style="font-family: 'Cormorant Garamond', serif;">
-        The <text class="fw-bold" style=" color: #150185;">Canada South Blues Society</text> is governed by a board of directors that are elected on a one year term.
-        These elections are held at the annual general meeting usually held in November.
+        Prior to November 29th, 2000, the <text class="fw-bold" style=" color: #150185;">Canada South Blues Society</text> was comprised of a group of volunteers concentrating their efforts on the  summertime Blues Fest held annually in Windsor’s downtown.
+    </p>
+
+        <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;">That date marked the official start of our status as a non profit corporation.</p>
+
+    <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;">The love of the blues led us to create the Canada South Blues Museum with Johnnie Johnson becoming the inaugural inductee. Once the museum was established at the Oasis bar inaugurations became part of the live performance of the evening. </p>
+    <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;">Our ten year anniversary was special with the mayor declaring a Canada South Blues Museum week in response to our award from the International Blues Foundation. </p>
+       <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;"> The Historical Preservation Award was given in recognition of having the only live performance blues museum in the world as well as being the first blues society to receive the award.</p>
+        <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;">Today the museum is waiting for a home. In the meantime we have begun a virtual version on our website and we continue to induct musicians during live shows.</p>
+       <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;"> Community involvement has and will continue to be one of our core values. Whether raising money for the less fortunate among us or helping aspiring musicians get a leg up we thank you for helping us achieve our goals.</p>
+      <p  class="display-6" style="font-family: 'Cormorant Garamond', serif;">  Canada South Blues Society, where we strive to keep the blues alive.
+
+{{--        The <text class="fw-bold" style=" color: #150185;">Canada South Blues Society</text> is governed by a board of directors that are elected on a one year term.--}}
+{{--        These elections are held at the annual general meeting usually held in November.--}}
     </p>
 
 </div>
